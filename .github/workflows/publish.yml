@@ -1,0 +1,68 @@
+name: release and publish
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "package.json"
+
+env:
+  COREPACK_ENABLE_STRICT: 0
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: pnpm/action-setup@v6
+        with:
+          version: latest
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: pnpm
+          registry-url: https://registry.npmjs.org
+
+      - run: pnpm install --ignore-scripts
+
+      - name: Check if version already exists
+        id: version-check
+        run: |
+          package_version=$(node -p "require('./package.json').version")
+          echo "version=$package_version" >> $GITHUB_OUTPUT
+
+          if gh api repos/${{ github.repository }}/releases/tags/v$package_version >/dev/null 2>&1; then
+            echo "GitHub release v$package_version already exists, skipping"
+            echo "release_exists=true" >> $GITHUB_OUTPUT
+          else
+            echo "release_exists=false" >> $GITHUB_OUTPUT
+          fi
+
+          if npm view @dokploy/sdk@$package_version version >/dev/null 2>&1; then
+            echo "npm version $package_version already exists, skipping"
+            echo "npm_exists=true" >> $GITHUB_OUTPUT
+          else
+            echo "npm_exists=false" >> $GITHUB_OUTPUT
+          fi
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+      - name: Create GitHub Release
+        if: steps.version-check.outputs.release_exists == 'false'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ steps.version-check.outputs.version }}
+          name: v${{ steps.version-check.outputs.version }}
+          generate_release_notes: true
+
+      - name: Publish to npm
+        if: steps.version-check.outputs.npm_exists == 'false'
+        run: pnpm publish --no-git-checks --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
