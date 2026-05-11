@@ -1,0 +1,11 @@
+{
+  "name": "dokploy-sdk-example",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@dokploy/sdk": "workspace:*",
+    "dotenv": "^17.4.2"
+  }
+}

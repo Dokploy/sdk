@@ -21,6 +21,15 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5(vite@8.0.11(jiti@2.7.0))
 
+  example:
+    dependencies:
+      '@dokploy/sdk':
+        specifier: workspace:*
+        version: link:..
+      dotenv:
+        specifier: ^17.4.2
+        version: 17.4.2
+
 packages:
 
   '@biomejs/biome@2.4.14':

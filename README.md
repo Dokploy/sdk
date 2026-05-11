@@ -19,7 +19,7 @@ import { client, applicationCreate, applicationOne, projectCreate } from "@dokpl
 client.setConfig({
   baseUrl: "https://your-dokploy-instance.com/api",
   headers: {
-    Authorization: "Bearer YOUR_API_TOKEN",
+    "x-api-key": "YOUR_API_TOKEN",
   },
 });
 ```
