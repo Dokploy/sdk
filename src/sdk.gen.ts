@@ -1244,6 +1244,9 @@ import type {
 	ServerSetupMonitoringErrors,
 	ServerSetupMonitoringResponses,
 	ServerSetupResponses,
+	ServerUpdateBuildsConcurrencyData,
+	ServerUpdateBuildsConcurrencyErrors,
+	ServerUpdateBuildsConcurrencyResponses,
 	ServerUpdateData,
 	ServerUpdateErrors,
 	ServerUpdateResponses,
@@ -1376,6 +1379,9 @@ import type {
 	SettingsToggleRequestsData,
 	SettingsToggleRequestsErrors,
 	SettingsToggleRequestsResponses,
+	SettingsUpdateBuildsConcurrencyData,
+	SettingsUpdateBuildsConcurrencyErrors,
+	SettingsUpdateBuildsConcurrencyResponses,
 	SettingsUpdateDockerCleanupData,
 	SettingsUpdateDockerCleanupErrors,
 	SettingsUpdateDockerCleanupResponses,
@@ -6452,6 +6458,24 @@ export const serverUpdate = <ThrowOnError extends boolean = false>(
 		},
 	});
 
+export const serverUpdateBuildsConcurrency = <
+	ThrowOnError extends boolean = false,
+>(
+	options: Options<ServerUpdateBuildsConcurrencyData, ThrowOnError>,
+) =>
+	(options.client ?? client).post<
+		ServerUpdateBuildsConcurrencyResponses,
+		ServerUpdateBuildsConcurrencyErrors,
+		ThrowOnError
+	>({
+		url: "/server.updateBuildsConcurrency",
+		...options,
+		headers: {
+			"Content-Type": "application/json",
+			...options.headers,
+		},
+	});
+
 export const serverPublicIp = <ThrowOnError extends boolean = false>(
 	options?: Options<ServerPublicIpData, ThrowOnError>,
 ) =>
@@ -6756,6 +6780,24 @@ export const settingsUpdateRemoteServersOnly = <
 		ThrowOnError
 	>({
 		url: "/settings.updateRemoteServersOnly",
+		...options,
+		headers: {
+			"Content-Type": "application/json",
+			...options.headers,
+		},
+	});
+
+export const settingsUpdateBuildsConcurrency = <
+	ThrowOnError extends boolean = false,
+>(
+	options: Options<SettingsUpdateBuildsConcurrencyData, ThrowOnError>,
+) =>
+	(options.client ?? client).post<
+		SettingsUpdateBuildsConcurrencyResponses,
+		SettingsUpdateBuildsConcurrencyErrors,
+		ThrowOnError
+	>({
+		url: "/settings.updateBuildsConcurrency",
 		...options,
 		headers: {
 			"Content-Type": "application/json",

@@ -16714,6 +16714,50 @@ export type ServerUpdateResponses = {
 export type ServerUpdateResponse =
 	ServerUpdateResponses[keyof ServerUpdateResponses];
 
+export type ServerUpdateBuildsConcurrencyData = {
+	body: {
+		serverId: string;
+		buildsConcurrency: number;
+	};
+	path?: never;
+	query?: never;
+	url: "/server.updateBuildsConcurrency";
+};
+
+export type ServerUpdateBuildsConcurrencyErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type ServerUpdateBuildsConcurrencyError =
+	ServerUpdateBuildsConcurrencyErrors[keyof ServerUpdateBuildsConcurrencyErrors];
+
+export type ServerUpdateBuildsConcurrencyResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type ServerUpdateBuildsConcurrencyResponse =
+	ServerUpdateBuildsConcurrencyResponses[keyof ServerUpdateBuildsConcurrencyResponses];
+
 export type ServerPublicIpData = {
 	body?: never;
 	path?: never;
@@ -17709,6 +17753,49 @@ export type SettingsUpdateRemoteServersOnlyResponses = {
 
 export type SettingsUpdateRemoteServersOnlyResponse =
 	SettingsUpdateRemoteServersOnlyResponses[keyof SettingsUpdateRemoteServersOnlyResponses];
+
+export type SettingsUpdateBuildsConcurrencyData = {
+	body: {
+		buildsConcurrency: number;
+	};
+	path?: never;
+	query?: never;
+	url: "/settings.updateBuildsConcurrency";
+};
+
+export type SettingsUpdateBuildsConcurrencyErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type SettingsUpdateBuildsConcurrencyError =
+	SettingsUpdateBuildsConcurrencyErrors[keyof SettingsUpdateBuildsConcurrencyErrors];
+
+export type SettingsUpdateBuildsConcurrencyResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type SettingsUpdateBuildsConcurrencyResponse =
+	SettingsUpdateBuildsConcurrencyResponses[keyof SettingsUpdateBuildsConcurrencyResponses];
 
 export type SettingsUpdateEnforceSsoData = {
 	body: {
