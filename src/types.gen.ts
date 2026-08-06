@@ -23125,6 +23125,137 @@ export type SsoUpdateTrustedOriginResponses = {
 export type SsoUpdateTrustedOriginResponse =
 	SsoUpdateTrustedOriginResponses[keyof SsoUpdateTrustedOriginResponses];
 
+export type ScimListProvidersData = {
+	body?: never;
+	path?: never;
+	query?: never;
+	url: "/scim.listProviders";
+};
+
+export type ScimListProvidersErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Not found
+	 */
+	404: ErrorNotFound;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type ScimListProvidersError =
+	ScimListProvidersErrors[keyof ScimListProvidersErrors];
+
+export type ScimListProvidersResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type ScimListProvidersResponse =
+	ScimListProvidersResponses[keyof ScimListProvidersResponses];
+
+export type ScimGenerateTokenData = {
+	body: {
+		providerId: string;
+	};
+	path?: never;
+	query?: never;
+	url: "/scim.generateToken";
+};
+
+export type ScimGenerateTokenErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type ScimGenerateTokenError =
+	ScimGenerateTokenErrors[keyof ScimGenerateTokenErrors];
+
+export type ScimGenerateTokenResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type ScimGenerateTokenResponse =
+	ScimGenerateTokenResponses[keyof ScimGenerateTokenResponses];
+
+export type ScimDeleteProviderData = {
+	body: {
+		providerId: string;
+	};
+	path?: never;
+	query?: never;
+	url: "/scim.deleteProvider";
+};
+
+export type ScimDeleteProviderErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type ScimDeleteProviderError =
+	ScimDeleteProviderErrors[keyof ScimDeleteProviderErrors];
+
+export type ScimDeleteProviderResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type ScimDeleteProviderResponse =
+	ScimDeleteProviderResponses[keyof ScimDeleteProviderResponses];
+
 export type ForwardAuthGetAuthDomainData = {
 	body?: never;
 	path?: never;

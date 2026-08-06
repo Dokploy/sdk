@@ -1190,6 +1190,15 @@ import type {
 	ScheduleUpdateData,
 	ScheduleUpdateErrors,
 	ScheduleUpdateResponses,
+	ScimDeleteProviderData,
+	ScimDeleteProviderErrors,
+	ScimDeleteProviderResponses,
+	ScimGenerateTokenData,
+	ScimGenerateTokenErrors,
+	ScimGenerateTokenResponses,
+	ScimListProvidersData,
+	ScimListProvidersErrors,
+	ScimListProvidersResponses,
 	SecurityCreateData,
 	SecurityCreateErrors,
 	SecurityCreateResponses,
@@ -8216,6 +8225,47 @@ export const ssoUpdateTrustedOrigin = <ThrowOnError extends boolean = false>(
 		ThrowOnError
 	>({
 		url: "/sso.updateTrustedOrigin",
+		...options,
+		headers: {
+			"Content-Type": "application/json",
+			...options.headers,
+		},
+	});
+
+export const scimListProviders = <ThrowOnError extends boolean = false>(
+	options?: Options<ScimListProvidersData, ThrowOnError>,
+) =>
+	(options?.client ?? client).get<
+		ScimListProvidersResponses,
+		ScimListProvidersErrors,
+		ThrowOnError
+	>({ url: "/scim.listProviders", ...options });
+
+export const scimGenerateToken = <ThrowOnError extends boolean = false>(
+	options: Options<ScimGenerateTokenData, ThrowOnError>,
+) =>
+	(options.client ?? client).post<
+		ScimGenerateTokenResponses,
+		ScimGenerateTokenErrors,
+		ThrowOnError
+	>({
+		url: "/scim.generateToken",
+		...options,
+		headers: {
+			"Content-Type": "application/json",
+			...options.headers,
+		},
+	});
+
+export const scimDeleteProvider = <ThrowOnError extends boolean = false>(
+	options: Options<ScimDeleteProviderData, ThrowOnError>,
+) =>
+	(options.client ?? client).post<
+		ScimDeleteProviderResponses,
+		ScimDeleteProviderErrors,
+		ThrowOnError
+	>({
+		url: "/scim.deleteProvider",
 		...options,
 		headers: {
 			"Content-Type": "application/json",
