@@ -467,6 +467,36 @@ import type {
 	EnvironmentUpdateData,
 	EnvironmentUpdateErrors,
 	EnvironmentUpdateResponses,
+	ForwardAuthDeployOnServerData,
+	ForwardAuthDeployOnServerErrors,
+	ForwardAuthDeployOnServerResponses,
+	ForwardAuthDisableData,
+	ForwardAuthDisableErrors,
+	ForwardAuthDisableResponses,
+	ForwardAuthEnableData,
+	ForwardAuthEnableErrors,
+	ForwardAuthEnableResponses,
+	ForwardAuthGetAuthDomainData,
+	ForwardAuthGetAuthDomainErrors,
+	ForwardAuthGetAuthDomainResponses,
+	ForwardAuthListProvidersData,
+	ForwardAuthListProvidersErrors,
+	ForwardAuthListProvidersResponses,
+	ForwardAuthRemoveAuthDomainData,
+	ForwardAuthRemoveAuthDomainErrors,
+	ForwardAuthRemoveAuthDomainResponses,
+	ForwardAuthRemoveOnServerData,
+	ForwardAuthRemoveOnServerErrors,
+	ForwardAuthRemoveOnServerResponses,
+	ForwardAuthServerStatusData,
+	ForwardAuthServerStatusErrors,
+	ForwardAuthServerStatusResponses,
+	ForwardAuthSetAuthDomainData,
+	ForwardAuthSetAuthDomainErrors,
+	ForwardAuthSetAuthDomainResponses,
+	ForwardAuthStatusData,
+	ForwardAuthStatusErrors,
+	ForwardAuthStatusResponses,
 	GiteaCreateData,
 	GiteaCreateErrors,
 	GiteaCreateResponses,
@@ -8144,6 +8174,140 @@ export const ssoUpdateTrustedOrigin = <ThrowOnError extends boolean = false>(
 		ThrowOnError
 	>({
 		url: "/sso.updateTrustedOrigin",
+		...options,
+		headers: {
+			"Content-Type": "application/json",
+			...options.headers,
+		},
+	});
+
+export const forwardAuthGetAuthDomain = <ThrowOnError extends boolean = false>(
+	options: Options<ForwardAuthGetAuthDomainData, ThrowOnError>,
+) =>
+	(options.client ?? client).get<
+		ForwardAuthGetAuthDomainResponses,
+		ForwardAuthGetAuthDomainErrors,
+		ThrowOnError
+	>({ url: "/forwardAuth.getAuthDomain", ...options });
+
+export const forwardAuthSetAuthDomain = <ThrowOnError extends boolean = false>(
+	options: Options<ForwardAuthSetAuthDomainData, ThrowOnError>,
+) =>
+	(options.client ?? client).post<
+		ForwardAuthSetAuthDomainResponses,
+		ForwardAuthSetAuthDomainErrors,
+		ThrowOnError
+	>({
+		url: "/forwardAuth.setAuthDomain",
+		...options,
+		headers: {
+			"Content-Type": "application/json",
+			...options.headers,
+		},
+	});
+
+export const forwardAuthRemoveAuthDomain = <
+	ThrowOnError extends boolean = false,
+>(
+	options: Options<ForwardAuthRemoveAuthDomainData, ThrowOnError>,
+) =>
+	(options.client ?? client).post<
+		ForwardAuthRemoveAuthDomainResponses,
+		ForwardAuthRemoveAuthDomainErrors,
+		ThrowOnError
+	>({
+		url: "/forwardAuth.removeAuthDomain",
+		...options,
+		headers: {
+			"Content-Type": "application/json",
+			...options.headers,
+		},
+	});
+
+export const forwardAuthListProviders = <ThrowOnError extends boolean = false>(
+	options?: Options<ForwardAuthListProvidersData, ThrowOnError>,
+) =>
+	(options?.client ?? client).get<
+		ForwardAuthListProvidersResponses,
+		ForwardAuthListProvidersErrors,
+		ThrowOnError
+	>({ url: "/forwardAuth.listProviders", ...options });
+
+export const forwardAuthServerStatus = <ThrowOnError extends boolean = false>(
+	options?: Options<ForwardAuthServerStatusData, ThrowOnError>,
+) =>
+	(options?.client ?? client).get<
+		ForwardAuthServerStatusResponses,
+		ForwardAuthServerStatusErrors,
+		ThrowOnError
+	>({ url: "/forwardAuth.serverStatus", ...options });
+
+export const forwardAuthDeployOnServer = <ThrowOnError extends boolean = false>(
+	options: Options<ForwardAuthDeployOnServerData, ThrowOnError>,
+) =>
+	(options.client ?? client).post<
+		ForwardAuthDeployOnServerResponses,
+		ForwardAuthDeployOnServerErrors,
+		ThrowOnError
+	>({
+		url: "/forwardAuth.deployOnServer",
+		...options,
+		headers: {
+			"Content-Type": "application/json",
+			...options.headers,
+		},
+	});
+
+export const forwardAuthRemoveOnServer = <ThrowOnError extends boolean = false>(
+	options: Options<ForwardAuthRemoveOnServerData, ThrowOnError>,
+) =>
+	(options.client ?? client).post<
+		ForwardAuthRemoveOnServerResponses,
+		ForwardAuthRemoveOnServerErrors,
+		ThrowOnError
+	>({
+		url: "/forwardAuth.removeOnServer",
+		...options,
+		headers: {
+			"Content-Type": "application/json",
+			...options.headers,
+		},
+	});
+
+export const forwardAuthStatus = <ThrowOnError extends boolean = false>(
+	options: Options<ForwardAuthStatusData, ThrowOnError>,
+) =>
+	(options.client ?? client).get<
+		ForwardAuthStatusResponses,
+		ForwardAuthStatusErrors,
+		ThrowOnError
+	>({ url: "/forwardAuth.status", ...options });
+
+export const forwardAuthEnable = <ThrowOnError extends boolean = false>(
+	options: Options<ForwardAuthEnableData, ThrowOnError>,
+) =>
+	(options.client ?? client).post<
+		ForwardAuthEnableResponses,
+		ForwardAuthEnableErrors,
+		ThrowOnError
+	>({
+		url: "/forwardAuth.enable",
+		...options,
+		headers: {
+			"Content-Type": "application/json",
+			...options.headers,
+		},
+	});
+
+export const forwardAuthDisable = <ThrowOnError extends boolean = false>(
+	options: Options<ForwardAuthDisableData, ThrowOnError>,
+) =>
+	(options.client ?? client).post<
+		ForwardAuthDisableResponses,
+		ForwardAuthDisableErrors,
+		ThrowOnError
+	>({
+		url: "/forwardAuth.disable",
 		...options,
 		headers: {
 			"Content-Type": "application/json",

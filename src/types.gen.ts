@@ -5824,6 +5824,7 @@ export type DomainCreateData = {
 		internalPath?: string | null;
 		stripPath?: boolean;
 		middlewares?: Array<string> | null;
+		forwardAuthEnabled?: boolean;
 	};
 	path?: never;
 	query?: never;
@@ -6062,6 +6063,7 @@ export type DomainUpdateData = {
 		internalPath?: string | null;
 		stripPath?: boolean;
 		middlewares?: Array<string> | null;
+		forwardAuthEnabled?: boolean;
 		domainId: string;
 	};
 	path?: never;
@@ -16065,6 +16067,7 @@ export type ServerCreateData = {
 		username: string;
 		sshKeyId: string | null;
 		serverType: "deploy" | "build";
+		enableDockerCleanup?: boolean;
 	};
 	path?: never;
 	query?: never;
@@ -16670,6 +16673,7 @@ export type ServerUpdateData = {
 		username: string;
 		sshKeyId: string | null;
 		serverType: "deploy" | "build";
+		enableDockerCleanup?: boolean;
 		command?: string;
 	};
 	path?: never;
@@ -23033,6 +23037,453 @@ export type SsoUpdateTrustedOriginResponses = {
 
 export type SsoUpdateTrustedOriginResponse =
 	SsoUpdateTrustedOriginResponses[keyof SsoUpdateTrustedOriginResponses];
+
+export type ForwardAuthGetAuthDomainData = {
+	body?: never;
+	path?: never;
+	query: {
+		serverId: string | null;
+	};
+	url: "/forwardAuth.getAuthDomain";
+};
+
+export type ForwardAuthGetAuthDomainErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Not found
+	 */
+	404: ErrorNotFound;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type ForwardAuthGetAuthDomainError =
+	ForwardAuthGetAuthDomainErrors[keyof ForwardAuthGetAuthDomainErrors];
+
+export type ForwardAuthGetAuthDomainResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type ForwardAuthGetAuthDomainResponse =
+	ForwardAuthGetAuthDomainResponses[keyof ForwardAuthGetAuthDomainResponses];
+
+export type ForwardAuthSetAuthDomainData = {
+	body: {
+		serverId: string | null;
+		authDomain: string;
+		https?: boolean;
+		certificateType?: "none" | "letsencrypt" | "custom";
+		customCertResolver?: string;
+	};
+	path?: never;
+	query?: never;
+	url: "/forwardAuth.setAuthDomain";
+};
+
+export type ForwardAuthSetAuthDomainErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type ForwardAuthSetAuthDomainError =
+	ForwardAuthSetAuthDomainErrors[keyof ForwardAuthSetAuthDomainErrors];
+
+export type ForwardAuthSetAuthDomainResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type ForwardAuthSetAuthDomainResponse =
+	ForwardAuthSetAuthDomainResponses[keyof ForwardAuthSetAuthDomainResponses];
+
+export type ForwardAuthRemoveAuthDomainData = {
+	body: {
+		serverId: string | null;
+	};
+	path?: never;
+	query?: never;
+	url: "/forwardAuth.removeAuthDomain";
+};
+
+export type ForwardAuthRemoveAuthDomainErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type ForwardAuthRemoveAuthDomainError =
+	ForwardAuthRemoveAuthDomainErrors[keyof ForwardAuthRemoveAuthDomainErrors];
+
+export type ForwardAuthRemoveAuthDomainResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type ForwardAuthRemoveAuthDomainResponse =
+	ForwardAuthRemoveAuthDomainResponses[keyof ForwardAuthRemoveAuthDomainResponses];
+
+export type ForwardAuthListProvidersData = {
+	body?: never;
+	path?: never;
+	query?: never;
+	url: "/forwardAuth.listProviders";
+};
+
+export type ForwardAuthListProvidersErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Not found
+	 */
+	404: ErrorNotFound;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type ForwardAuthListProvidersError =
+	ForwardAuthListProvidersErrors[keyof ForwardAuthListProvidersErrors];
+
+export type ForwardAuthListProvidersResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type ForwardAuthListProvidersResponse =
+	ForwardAuthListProvidersResponses[keyof ForwardAuthListProvidersResponses];
+
+export type ForwardAuthServerStatusData = {
+	body?: never;
+	path?: never;
+	query?: never;
+	url: "/forwardAuth.serverStatus";
+};
+
+export type ForwardAuthServerStatusErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Not found
+	 */
+	404: ErrorNotFound;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type ForwardAuthServerStatusError =
+	ForwardAuthServerStatusErrors[keyof ForwardAuthServerStatusErrors];
+
+export type ForwardAuthServerStatusResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type ForwardAuthServerStatusResponse =
+	ForwardAuthServerStatusResponses[keyof ForwardAuthServerStatusResponses];
+
+export type ForwardAuthDeployOnServerData = {
+	body: {
+		serverId: string | null;
+		providerId: string;
+	};
+	path?: never;
+	query?: never;
+	url: "/forwardAuth.deployOnServer";
+};
+
+export type ForwardAuthDeployOnServerErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type ForwardAuthDeployOnServerError =
+	ForwardAuthDeployOnServerErrors[keyof ForwardAuthDeployOnServerErrors];
+
+export type ForwardAuthDeployOnServerResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type ForwardAuthDeployOnServerResponse =
+	ForwardAuthDeployOnServerResponses[keyof ForwardAuthDeployOnServerResponses];
+
+export type ForwardAuthRemoveOnServerData = {
+	body: {
+		serverId: string | null;
+	};
+	path?: never;
+	query?: never;
+	url: "/forwardAuth.removeOnServer";
+};
+
+export type ForwardAuthRemoveOnServerErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type ForwardAuthRemoveOnServerError =
+	ForwardAuthRemoveOnServerErrors[keyof ForwardAuthRemoveOnServerErrors];
+
+export type ForwardAuthRemoveOnServerResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type ForwardAuthRemoveOnServerResponse =
+	ForwardAuthRemoveOnServerResponses[keyof ForwardAuthRemoveOnServerResponses];
+
+export type ForwardAuthStatusData = {
+	body?: never;
+	path?: never;
+	query: {
+		domainId: string;
+	};
+	url: "/forwardAuth.status";
+};
+
+export type ForwardAuthStatusErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Not found
+	 */
+	404: ErrorNotFound;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type ForwardAuthStatusError =
+	ForwardAuthStatusErrors[keyof ForwardAuthStatusErrors];
+
+export type ForwardAuthStatusResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type ForwardAuthStatusResponse =
+	ForwardAuthStatusResponses[keyof ForwardAuthStatusResponses];
+
+export type ForwardAuthEnableData = {
+	body: {
+		domainId: string;
+	};
+	path?: never;
+	query?: never;
+	url: "/forwardAuth.enable";
+};
+
+export type ForwardAuthEnableErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type ForwardAuthEnableError =
+	ForwardAuthEnableErrors[keyof ForwardAuthEnableErrors];
+
+export type ForwardAuthEnableResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type ForwardAuthEnableResponse =
+	ForwardAuthEnableResponses[keyof ForwardAuthEnableResponses];
+
+export type ForwardAuthDisableData = {
+	body: {
+		domainId: string;
+	};
+	path?: never;
+	query?: never;
+	url: "/forwardAuth.disable";
+};
+
+export type ForwardAuthDisableErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type ForwardAuthDisableError =
+	ForwardAuthDisableErrors[keyof ForwardAuthDisableErrors];
+
+export type ForwardAuthDisableResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type ForwardAuthDisableResponse =
+	ForwardAuthDisableResponses[keyof ForwardAuthDisableResponses];
 
 export type WhitelabelingGetData = {
 	body?: never;
