@@ -26,6 +26,9 @@ import type {
 	AiGetAllData,
 	AiGetAllErrors,
 	AiGetAllResponses,
+	AiGetCustomProvidersData,
+	AiGetCustomProvidersErrors,
+	AiGetCustomProvidersResponses,
 	AiGetData,
 	AiGetEnabledProvidersData,
 	AiGetEnabledProvidersErrors,
@@ -38,6 +41,9 @@ import type {
 	AiOneData,
 	AiOneErrors,
 	AiOneResponses,
+	AiSaveCustomProvidersData,
+	AiSaveCustomProvidersErrors,
+	AiSaveCustomProvidersResponses,
 	AiSuggestData,
 	AiSuggestErrors,
 	AiSuggestResponses,
@@ -7784,6 +7790,31 @@ export const aiDelete = <ThrowOnError extends boolean = false>(
 		ThrowOnError
 	>({
 		url: "/ai.delete",
+		...options,
+		headers: {
+			"Content-Type": "application/json",
+			...options.headers,
+		},
+	});
+
+export const aiGetCustomProviders = <ThrowOnError extends boolean = false>(
+	options?: Options<AiGetCustomProvidersData, ThrowOnError>,
+) =>
+	(options?.client ?? client).get<
+		AiGetCustomProvidersResponses,
+		AiGetCustomProvidersErrors,
+		ThrowOnError
+	>({ url: "/ai.getCustomProviders", ...options });
+
+export const aiSaveCustomProviders = <ThrowOnError extends boolean = false>(
+	options: Options<AiSaveCustomProvidersData, ThrowOnError>,
+) =>
+	(options.client ?? client).post<
+		AiSaveCustomProvidersResponses,
+		AiSaveCustomProvidersErrors,
+		ThrowOnError
+	>({
+		url: "/ai.saveCustomProviders",
 		...options,
 		headers: {
 			"Content-Type": "application/json",

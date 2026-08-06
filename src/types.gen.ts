@@ -21508,6 +21508,97 @@ export type AiDeleteResponses = {
 
 export type AiDeleteResponse = AiDeleteResponses[keyof AiDeleteResponses];
 
+export type AiGetCustomProvidersData = {
+	body?: never;
+	path?: never;
+	query?: never;
+	url: "/ai.getCustomProviders";
+};
+
+export type AiGetCustomProvidersErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Not found
+	 */
+	404: ErrorNotFound;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type AiGetCustomProvidersError =
+	AiGetCustomProvidersErrors[keyof AiGetCustomProvidersErrors];
+
+export type AiGetCustomProvidersResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type AiGetCustomProvidersResponse =
+	AiGetCustomProvidersResponses[keyof AiGetCustomProvidersResponses];
+
+export type AiSaveCustomProvidersData = {
+	body: {
+		providers: Array<{
+			name: string;
+			apiUrl: string;
+		}>;
+	};
+	path?: never;
+	query?: never;
+	url: "/ai.saveCustomProviders";
+};
+
+export type AiSaveCustomProvidersErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type AiSaveCustomProvidersError =
+	AiSaveCustomProvidersErrors[keyof AiSaveCustomProvidersErrors];
+
+export type AiSaveCustomProvidersResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type AiSaveCustomProvidersResponse =
+	AiSaveCustomProvidersResponses[keyof AiSaveCustomProvidersResponses];
+
 export type AiGetEnabledProvidersData = {
 	body?: never;
 	path?: never;
