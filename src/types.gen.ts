@@ -23585,7 +23585,7 @@ export type ScheduleCreateData = {
 		applicationId?: string | null;
 		composeId?: string | null;
 		serverId?: string | null;
-		userId?: string | null;
+		organizationId?: string | null;
 		enabled?: boolean;
 		timezone?: string | null;
 		createdAt?: string;
@@ -23644,7 +23644,7 @@ export type ScheduleUpdateData = {
 		applicationId?: string | null;
 		composeId?: string | null;
 		serverId?: string | null;
-		userId?: string | null;
+		organizationId?: string | null;
 		enabled?: boolean;
 		timezone?: string | null;
 		createdAt?: string;
