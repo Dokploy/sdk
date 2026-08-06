@@ -1821,6 +1821,7 @@ export type BackupCreateData = {
 		backupType?: "database" | "compose";
 		composeId?: string | null;
 		serviceName?: string | null;
+		includeEncryptionKey?: boolean;
 		metadata?: unknown | null;
 	};
 	path?: never;
@@ -1924,6 +1925,7 @@ export type BackupUpdateData = {
 			| "mongo"
 			| "web-server"
 			| "libsql";
+		includeEncryptionKey?: boolean;
 	};
 	path?: never;
 	query?: never;
