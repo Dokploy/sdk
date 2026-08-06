@@ -1349,12 +1349,18 @@ import type {
 	SettingsUpdateDockerCleanupData,
 	SettingsUpdateDockerCleanupErrors,
 	SettingsUpdateDockerCleanupResponses,
+	SettingsUpdateEnforceSsoData,
+	SettingsUpdateEnforceSsoErrors,
+	SettingsUpdateEnforceSsoResponses,
 	SettingsUpdateLogCleanupData,
 	SettingsUpdateLogCleanupErrors,
 	SettingsUpdateLogCleanupResponses,
 	SettingsUpdateMiddlewareTraefikConfigData,
 	SettingsUpdateMiddlewareTraefikConfigErrors,
 	SettingsUpdateMiddlewareTraefikConfigResponses,
+	SettingsUpdateRemoteServersOnlyData,
+	SettingsUpdateRemoteServersOnlyErrors,
+	SettingsUpdateRemoteServersOnlyResponses,
 	SettingsUpdateServerData,
 	SettingsUpdateServerErrors,
 	SettingsUpdateServerIpData,
@@ -1403,6 +1409,9 @@ import type {
 	SsoDeleteProviderData,
 	SsoDeleteProviderErrors,
 	SsoDeleteProviderResponses,
+	SsoEnforceSsoData,
+	SsoEnforceSsoErrors,
+	SsoEnforceSsoResponses,
 	SsoGetTrustedOriginsData,
 	SsoGetTrustedOriginsErrors,
 	SsoGetTrustedOriginsResponses,
@@ -6706,6 +6715,40 @@ export const settingsUpdateDockerCleanup = <
 		},
 	});
 
+export const settingsUpdateRemoteServersOnly = <
+	ThrowOnError extends boolean = false,
+>(
+	options: Options<SettingsUpdateRemoteServersOnlyData, ThrowOnError>,
+) =>
+	(options.client ?? client).post<
+		SettingsUpdateRemoteServersOnlyResponses,
+		SettingsUpdateRemoteServersOnlyErrors,
+		ThrowOnError
+	>({
+		url: "/settings.updateRemoteServersOnly",
+		...options,
+		headers: {
+			"Content-Type": "application/json",
+			...options.headers,
+		},
+	});
+
+export const settingsUpdateEnforceSso = <ThrowOnError extends boolean = false>(
+	options: Options<SettingsUpdateEnforceSsoData, ThrowOnError>,
+) =>
+	(options.client ?? client).post<
+		SettingsUpdateEnforceSsoResponses,
+		SettingsUpdateEnforceSsoErrors,
+		ThrowOnError
+	>({
+		url: "/settings.updateEnforceSSO",
+		...options,
+		headers: {
+			"Content-Type": "application/json",
+			...options.headers,
+		},
+	});
+
 export const settingsReadTraefikConfig = <ThrowOnError extends boolean = false>(
 	options?: Options<SettingsReadTraefikConfigData, ThrowOnError>,
 ) =>
@@ -7976,6 +8019,15 @@ export const ssoShowSignInWithSso = <ThrowOnError extends boolean = false>(
 		SsoShowSignInWithSsoErrors,
 		ThrowOnError
 	>({ url: "/sso.showSignInWithSSO", ...options });
+
+export const ssoEnforceSso = <ThrowOnError extends boolean = false>(
+	options?: Options<SsoEnforceSsoData, ThrowOnError>,
+) =>
+	(options?.client ?? client).get<
+		SsoEnforceSsoResponses,
+		SsoEnforceSsoErrors,
+		ThrowOnError
+	>({ url: "/sso.enforceSSO", ...options });
 
 export const ssoListProviders = <ThrowOnError extends boolean = false>(
 	options?: Options<SsoListProvidersData, ThrowOnError>,

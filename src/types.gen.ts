@@ -17663,6 +17663,92 @@ export type SettingsUpdateDockerCleanupResponses = {
 export type SettingsUpdateDockerCleanupResponse =
 	SettingsUpdateDockerCleanupResponses[keyof SettingsUpdateDockerCleanupResponses];
 
+export type SettingsUpdateRemoteServersOnlyData = {
+	body: {
+		remoteServersOnly: boolean;
+	};
+	path?: never;
+	query?: never;
+	url: "/settings.updateRemoteServersOnly";
+};
+
+export type SettingsUpdateRemoteServersOnlyErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type SettingsUpdateRemoteServersOnlyError =
+	SettingsUpdateRemoteServersOnlyErrors[keyof SettingsUpdateRemoteServersOnlyErrors];
+
+export type SettingsUpdateRemoteServersOnlyResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type SettingsUpdateRemoteServersOnlyResponse =
+	SettingsUpdateRemoteServersOnlyResponses[keyof SettingsUpdateRemoteServersOnlyResponses];
+
+export type SettingsUpdateEnforceSsoData = {
+	body: {
+		enforceSSO: boolean;
+	};
+	path?: never;
+	query?: never;
+	url: "/settings.updateEnforceSSO";
+};
+
+export type SettingsUpdateEnforceSsoErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type SettingsUpdateEnforceSsoError =
+	SettingsUpdateEnforceSsoErrors[keyof SettingsUpdateEnforceSsoErrors];
+
+export type SettingsUpdateEnforceSsoResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type SettingsUpdateEnforceSsoResponse =
+	SettingsUpdateEnforceSsoResponses[keyof SettingsUpdateEnforceSsoResponses];
+
 export type SettingsReadTraefikConfigData = {
 	body?: never;
 	path?: never;
@@ -22352,6 +22438,50 @@ export type SsoShowSignInWithSsoResponses = {
 
 export type SsoShowSignInWithSsoResponse =
 	SsoShowSignInWithSsoResponses[keyof SsoShowSignInWithSsoResponses];
+
+export type SsoEnforceSsoData = {
+	body?: never;
+	path?: never;
+	query?: never;
+	url: "/sso.enforceSSO";
+};
+
+export type SsoEnforceSsoErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Not found
+	 */
+	404: ErrorNotFound;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type SsoEnforceSsoError = SsoEnforceSsoErrors[keyof SsoEnforceSsoErrors];
+
+export type SsoEnforceSsoResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type SsoEnforceSsoResponse =
+	SsoEnforceSsoResponses[keyof SsoEnforceSsoResponses];
 
 export type SsoListProvidersData = {
 	body?: never;
