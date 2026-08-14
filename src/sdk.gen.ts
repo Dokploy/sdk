@@ -389,6 +389,51 @@ import type {
 	DestinationUpdateData,
 	DestinationUpdateErrors,
 	DestinationUpdateResponses,
+	DnsProviderAllData,
+	DnsProviderAllErrors,
+	DnsProviderAllResponses,
+	DnsProviderCreateData,
+	DnsProviderCreateErrors,
+	DnsProviderCreateRecordData,
+	DnsProviderCreateRecordErrors,
+	DnsProviderCreateRecordResponses,
+	DnsProviderCreateResponses,
+	DnsProviderDeleteRecordData,
+	DnsProviderDeleteRecordErrors,
+	DnsProviderDeleteRecordResponses,
+	DnsProviderListRecordsData,
+	DnsProviderListRecordsErrors,
+	DnsProviderListRecordsResponses,
+	DnsProviderListZonesData,
+	DnsProviderListZonesErrors,
+	DnsProviderListZonesResponses,
+	DnsProviderOneData,
+	DnsProviderOneErrors,
+	DnsProviderOneResponses,
+	DnsProviderRemoveData,
+	DnsProviderRemoveErrors,
+	DnsProviderRemoveResponses,
+	DnsProviderTestConnectionData,
+	DnsProviderTestConnectionErrors,
+	DnsProviderTestConnectionResponses,
+	DnsProviderUpdateData,
+	DnsProviderUpdateErrors,
+	DnsProviderUpdateRecordData,
+	DnsProviderUpdateRecordErrors,
+	DnsProviderUpdateRecordResponses,
+	DnsProviderUpdateResponses,
+	DockerDeleteContainerFileData,
+	DockerDeleteContainerFileErrors,
+	DockerDeleteContainerFileResponses,
+	DockerDiskUsageGetBuildCacheData,
+	DockerDiskUsageGetBuildCacheErrors,
+	DockerDiskUsageGetBuildCacheResponses,
+	DockerDiskUsageGetDiskUsageData,
+	DockerDiskUsageGetDiskUsageErrors,
+	DockerDiskUsageGetDiskUsageResponses,
+	DockerDiskUsagePruneBuildCacheData,
+	DockerDiskUsagePruneBuildCacheErrors,
+	DockerDiskUsagePruneBuildCacheResponses,
 	DockerGetConfigData,
 	DockerGetConfigErrors,
 	DockerGetConfigResponses,
@@ -401,15 +446,36 @@ import type {
 	DockerGetContainersData,
 	DockerGetContainersErrors,
 	DockerGetContainersResponses,
+	DockerGetEventsData,
+	DockerGetEventsErrors,
+	DockerGetEventsResponses,
+	DockerGetServerHealthData,
+	DockerGetServerHealthErrors,
+	DockerGetServerHealthResponses,
 	DockerGetServiceContainersByAppNameData,
 	DockerGetServiceContainersByAppNameErrors,
 	DockerGetServiceContainersByAppNameResponses,
 	DockerGetStackContainersByAppNameData,
 	DockerGetStackContainersByAppNameErrors,
 	DockerGetStackContainersByAppNameResponses,
+	DockerImageGetImageConfigData,
+	DockerImageGetImageConfigErrors,
+	DockerImageGetImageConfigResponses,
+	DockerImageGetImagesData,
+	DockerImageGetImagesErrors,
+	DockerImageGetImagesResponses,
+	DockerImageRemoveImageData,
+	DockerImageRemoveImageErrors,
+	DockerImageRemoveImageResponses,
 	DockerKillContainerData,
 	DockerKillContainerErrors,
 	DockerKillContainerResponses,
+	DockerListContainerFilesData,
+	DockerListContainerFilesErrors,
+	DockerListContainerFilesResponses,
+	DockerReadContainerFileData,
+	DockerReadContainerFileErrors,
+	DockerReadContainerFileResponses,
 	DockerRemoveContainerData,
 	DockerRemoveContainerErrors,
 	DockerRemoveContainerResponses,
@@ -425,6 +491,33 @@ import type {
 	DockerUploadFileToContainerData,
 	DockerUploadFileToContainerErrors,
 	DockerUploadFileToContainerResponses,
+	DockerVolumeDeleteVolumeFileData,
+	DockerVolumeDeleteVolumeFileErrors,
+	DockerVolumeDeleteVolumeFileResponses,
+	DockerVolumeGetVolumeConfigData,
+	DockerVolumeGetVolumeConfigErrors,
+	DockerVolumeGetVolumeConfigResponses,
+	DockerVolumeGetVolumesData,
+	DockerVolumeGetVolumesErrors,
+	DockerVolumeGetVolumesResponses,
+	DockerVolumeGetVolumesSizeData,
+	DockerVolumeGetVolumesSizeErrors,
+	DockerVolumeGetVolumesSizeResponses,
+	DockerVolumeListVolumeFilesData,
+	DockerVolumeListVolumeFilesErrors,
+	DockerVolumeListVolumeFilesResponses,
+	DockerVolumeReadVolumeFileData,
+	DockerVolumeReadVolumeFileErrors,
+	DockerVolumeReadVolumeFileResponses,
+	DockerVolumeRemoveVolumeData,
+	DockerVolumeRemoveVolumeErrors,
+	DockerVolumeRemoveVolumeResponses,
+	DockerVolumeWriteVolumeFileData,
+	DockerVolumeWriteVolumeFileErrors,
+	DockerVolumeWriteVolumeFileResponses,
+	DockerWriteContainerFileData,
+	DockerWriteContainerFileErrors,
+	DockerWriteContainerFileResponses,
 	DomainByApplicationIdData,
 	DomainByApplicationIdErrors,
 	DomainByApplicationIdResponses,
@@ -446,6 +539,9 @@ import type {
 	DomainOneData,
 	DomainOneErrors,
 	DomainOneResponses,
+	DomainToggleEnableData,
+	DomainToggleEnableErrors,
+	DomainToggleEnableResponses,
 	DomainUpdateData,
 	DomainUpdateErrors,
 	DomainUpdateResponses,
@@ -800,6 +896,30 @@ import type {
 	MysqlUpdateData,
 	MysqlUpdateErrors,
 	MysqlUpdateResponses,
+	NetworkAllData,
+	NetworkAllErrors,
+	NetworkAllResponses,
+	NetworkCreateData,
+	NetworkCreateErrors,
+	NetworkCreateResponses,
+	NetworkImportData,
+	NetworkImportErrors,
+	NetworkImportResponses,
+	NetworkInspectData,
+	NetworkInspectErrors,
+	NetworkInspectResponses,
+	NetworkNetworksToSyncData,
+	NetworkNetworksToSyncErrors,
+	NetworkNetworksToSyncResponses,
+	NetworkOneData,
+	NetworkOneErrors,
+	NetworkOneResponses,
+	NetworkRecreateData,
+	NetworkRecreateErrors,
+	NetworkRecreateResponses,
+	NetworkRemoveData,
+	NetworkRemoveErrors,
+	NetworkRemoveResponses,
 	NotificationAllData,
 	NotificationAllErrors,
 	NotificationAllResponses,
@@ -956,6 +1076,15 @@ import type {
 	OrganizationUpdateMemberRoleErrors,
 	OrganizationUpdateMemberRoleResponses,
 	OrganizationUpdateResponses,
+	OverviewBackupsData,
+	OverviewBackupsErrors,
+	OverviewBackupsResponses,
+	OverviewDomainsData,
+	OverviewDomainsErrors,
+	OverviewDomainsResponses,
+	OverviewServicesData,
+	OverviewServicesErrors,
+	OverviewServicesResponses,
 	PatchByEntityIdData,
 	PatchByEntityIdErrors,
 	PatchByEntityIdResponses,
@@ -1295,9 +1424,6 @@ import type {
 	SettingsCleanMonitoringData,
 	SettingsCleanMonitoringErrors,
 	SettingsCleanMonitoringResponses,
-	SettingsCleanRedisData,
-	SettingsCleanRedisErrors,
-	SettingsCleanRedisResponses,
 	SettingsCleanSshPrivateKeyData,
 	SettingsCleanSshPrivateKeyErrors,
 	SettingsCleanSshPrivateKeyResponses,
@@ -1373,9 +1499,6 @@ import type {
 	SettingsReadWebServerTraefikConfigData,
 	SettingsReadWebServerTraefikConfigErrors,
 	SettingsReadWebServerTraefikConfigResponses,
-	SettingsReloadRedisData,
-	SettingsReloadRedisErrors,
-	SettingsReloadRedisResponses,
 	SettingsReloadServerData,
 	SettingsReloadServerErrors,
 	SettingsReloadServerResponses,
@@ -1598,12 +1721,21 @@ import type {
 	UserHaveRootAccessData,
 	UserHaveRootAccessErrors,
 	UserHaveRootAccessResponses,
+	UserListPasskeysData,
+	UserListPasskeysErrors,
+	UserListPasskeysResponses,
+	UserListSessionsData,
+	UserListSessionsErrors,
+	UserListSessionsResponses,
 	UserOneData,
 	UserOneErrors,
 	UserOneResponses,
 	UserRemoveData,
 	UserRemoveErrors,
 	UserRemoveResponses,
+	UserRevokeSessionData,
+	UserRevokeSessionErrors,
+	UserRevokeSessionResponses,
 	UserSendInvitationData,
 	UserSendInvitationErrors,
 	UserSendInvitationResponses,
@@ -1616,6 +1748,27 @@ import type {
 	UserUpdateData,
 	UserUpdateErrors,
 	UserUpdateResponses,
+	VaultProviderAllData,
+	VaultProviderAllErrors,
+	VaultProviderAllResponses,
+	VaultProviderCreateData,
+	VaultProviderCreateErrors,
+	VaultProviderCreateResponses,
+	VaultProviderListSecretNamesData,
+	VaultProviderListSecretNamesErrors,
+	VaultProviderListSecretNamesResponses,
+	VaultProviderOneData,
+	VaultProviderOneErrors,
+	VaultProviderOneResponses,
+	VaultProviderRemoveData,
+	VaultProviderRemoveErrors,
+	VaultProviderRemoveResponses,
+	VaultProviderTestConnectionData,
+	VaultProviderTestConnectionErrors,
+	VaultProviderTestConnectionResponses,
+	VaultProviderUpdateData,
+	VaultProviderUpdateErrors,
+	VaultProviderUpdateResponses,
 	VolumeBackupsCreateData,
 	VolumeBackupsCreateErrors,
 	VolumeBackupsCreateResponses,
@@ -1674,7 +1827,6 @@ export const adminSetupMonitoring = <ThrowOnError extends boolean = false>(
 		AdminSetupMonitoringErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/admin.setupMonitoring",
 		...options,
 		headers: {
@@ -1691,7 +1843,6 @@ export const applicationCreate = <ThrowOnError extends boolean = false>(
 		ApplicationCreateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/application.create",
 		...options,
 		headers: {
@@ -1707,11 +1858,7 @@ export const applicationOne = <ThrowOnError extends boolean = false>(
 		ApplicationOneResponses,
 		ApplicationOneErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/application.one",
-		...options,
-	});
+	>({ url: "/application.one", ...options });
 
 export const applicationReload = <ThrowOnError extends boolean = false>(
 	options: Options<ApplicationReloadData, ThrowOnError>,
@@ -1721,7 +1868,6 @@ export const applicationReload = <ThrowOnError extends boolean = false>(
 		ApplicationReloadErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/application.reload",
 		...options,
 		headers: {
@@ -1738,7 +1884,6 @@ export const applicationDelete = <ThrowOnError extends boolean = false>(
 		ApplicationDeleteErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/application.delete",
 		...options,
 		headers: {
@@ -1755,7 +1900,6 @@ export const applicationStop = <ThrowOnError extends boolean = false>(
 		ApplicationStopErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/application.stop",
 		...options,
 		headers: {
@@ -1772,7 +1916,6 @@ export const applicationStart = <ThrowOnError extends boolean = false>(
 		ApplicationStartErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/application.start",
 		...options,
 		headers: {
@@ -1789,7 +1932,6 @@ export const applicationRedeploy = <ThrowOnError extends boolean = false>(
 		ApplicationRedeployErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/application.redeploy",
 		...options,
 		headers: {
@@ -1808,7 +1950,6 @@ export const applicationSaveEnvironment = <
 		ApplicationSaveEnvironmentErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/application.saveEnvironment",
 		...options,
 		headers: {
@@ -1825,7 +1966,6 @@ export const applicationSaveBuildType = <ThrowOnError extends boolean = false>(
 		ApplicationSaveBuildTypeErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/application.saveBuildType",
 		...options,
 		headers: {
@@ -1844,7 +1984,6 @@ export const applicationSaveGithubProvider = <
 		ApplicationSaveGithubProviderErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/application.saveGithubProvider",
 		...options,
 		headers: {
@@ -1863,7 +2002,6 @@ export const applicationSaveGitlabProvider = <
 		ApplicationSaveGitlabProviderErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/application.saveGitlabProvider",
 		...options,
 		headers: {
@@ -1882,7 +2020,6 @@ export const applicationSaveBitbucketProvider = <
 		ApplicationSaveBitbucketProviderErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/application.saveBitbucketProvider",
 		...options,
 		headers: {
@@ -1901,7 +2038,6 @@ export const applicationSaveGiteaProvider = <
 		ApplicationSaveGiteaProviderErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/application.saveGiteaProvider",
 		...options,
 		headers: {
@@ -1920,7 +2056,6 @@ export const applicationSaveDockerProvider = <
 		ApplicationSaveDockerProviderErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/application.saveDockerProvider",
 		...options,
 		headers: {
@@ -1939,7 +2074,6 @@ export const applicationSaveGitProvider = <
 		ApplicationSaveGitProviderErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/application.saveGitProvider",
 		...options,
 		headers: {
@@ -1958,7 +2092,6 @@ export const applicationDisconnectGitProvider = <
 		ApplicationDisconnectGitProviderErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/application.disconnectGitProvider",
 		...options,
 		headers: {
@@ -1975,7 +2108,6 @@ export const applicationMarkRunning = <ThrowOnError extends boolean = false>(
 		ApplicationMarkRunningErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/application.markRunning",
 		...options,
 		headers: {
@@ -1992,7 +2124,6 @@ export const applicationUpdate = <ThrowOnError extends boolean = false>(
 		ApplicationUpdateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/application.update",
 		...options,
 		headers: {
@@ -2009,7 +2140,6 @@ export const applicationRefreshToken = <ThrowOnError extends boolean = false>(
 		ApplicationRefreshTokenErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/application.refreshToken",
 		...options,
 		headers: {
@@ -2026,7 +2156,6 @@ export const applicationDeploy = <ThrowOnError extends boolean = false>(
 		ApplicationDeployErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/application.deploy",
 		...options,
 		headers: {
@@ -2043,7 +2172,6 @@ export const applicationCleanQueues = <ThrowOnError extends boolean = false>(
 		ApplicationCleanQueuesErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/application.cleanQueues",
 		...options,
 		headers: {
@@ -2062,7 +2190,6 @@ export const applicationClearDeployments = <
 		ApplicationClearDeploymentsErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/application.clearDeployments",
 		...options,
 		headers: {
@@ -2079,7 +2206,6 @@ export const applicationKillBuild = <ThrowOnError extends boolean = false>(
 		ApplicationKillBuildErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/application.killBuild",
 		...options,
 		headers: {
@@ -2097,11 +2223,7 @@ export const applicationReadTraefikConfig = <
 		ApplicationReadTraefikConfigResponses,
 		ApplicationReadTraefikConfigErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/application.readTraefikConfig",
-		...options,
-	});
+	>({ url: "/application.readTraefikConfig", ...options });
 
 export const applicationDropDeployment = <ThrowOnError extends boolean = false>(
 	options: Options<ApplicationDropDeploymentData, ThrowOnError>,
@@ -2112,7 +2234,6 @@ export const applicationDropDeployment = <ThrowOnError extends boolean = false>(
 		ThrowOnError
 	>({
 		...formDataBodySerializer,
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/application.dropDeployment",
 		...options,
 		headers: {
@@ -2131,7 +2252,6 @@ export const applicationUpdateTraefikConfig = <
 		ApplicationUpdateTraefikConfigErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/application.updateTraefikConfig",
 		...options,
 		headers: {
@@ -2149,11 +2269,7 @@ export const applicationReadAppMonitoring = <
 		ApplicationReadAppMonitoringResponses,
 		ApplicationReadAppMonitoringErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/application.readAppMonitoring",
-		...options,
-	});
+	>({ url: "/application.readAppMonitoring", ...options });
 
 export const applicationMove = <ThrowOnError extends boolean = false>(
 	options: Options<ApplicationMoveData, ThrowOnError>,
@@ -2163,7 +2279,6 @@ export const applicationMove = <ThrowOnError extends boolean = false>(
 		ApplicationMoveErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/application.move",
 		...options,
 		headers: {
@@ -2182,7 +2297,6 @@ export const applicationCancelDeployment = <
 		ApplicationCancelDeploymentErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/application.cancelDeployment",
 		...options,
 		headers: {
@@ -2198,11 +2312,7 @@ export const applicationSearch = <ThrowOnError extends boolean = false>(
 		ApplicationSearchResponses,
 		ApplicationSearchErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/application.search",
-		...options,
-	});
+	>({ url: "/application.search", ...options });
 
 export const applicationReadLogs = <ThrowOnError extends boolean = false>(
 	options: Options<ApplicationReadLogsData, ThrowOnError>,
@@ -2211,11 +2321,7 @@ export const applicationReadLogs = <ThrowOnError extends boolean = false>(
 		ApplicationReadLogsResponses,
 		ApplicationReadLogsErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/application.readLogs",
-		...options,
-	});
+	>({ url: "/application.readLogs", ...options });
 
 export const backupCreate = <ThrowOnError extends boolean = false>(
 	options: Options<BackupCreateData, ThrowOnError>,
@@ -2225,7 +2331,6 @@ export const backupCreate = <ThrowOnError extends boolean = false>(
 		BackupCreateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/backup.create",
 		...options,
 		headers: {
@@ -2241,11 +2346,7 @@ export const backupOne = <ThrowOnError extends boolean = false>(
 		BackupOneResponses,
 		BackupOneErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/backup.one",
-		...options,
-	});
+	>({ url: "/backup.one", ...options });
 
 export const backupUpdate = <ThrowOnError extends boolean = false>(
 	options: Options<BackupUpdateData, ThrowOnError>,
@@ -2255,7 +2356,6 @@ export const backupUpdate = <ThrowOnError extends boolean = false>(
 		BackupUpdateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/backup.update",
 		...options,
 		headers: {
@@ -2272,7 +2372,6 @@ export const backupRemove = <ThrowOnError extends boolean = false>(
 		BackupRemoveErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/backup.remove",
 		...options,
 		headers: {
@@ -2291,7 +2390,6 @@ export const backupManualBackupPostgres = <
 		BackupManualBackupPostgresErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/backup.manualBackupPostgres",
 		...options,
 		headers: {
@@ -2308,7 +2406,6 @@ export const backupManualBackupMySql = <ThrowOnError extends boolean = false>(
 		BackupManualBackupMySqlErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/backup.manualBackupMySql",
 		...options,
 		headers: {
@@ -2325,7 +2422,6 @@ export const backupManualBackupMariadb = <ThrowOnError extends boolean = false>(
 		BackupManualBackupMariadbErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/backup.manualBackupMariadb",
 		...options,
 		headers: {
@@ -2342,7 +2438,6 @@ export const backupManualBackupCompose = <ThrowOnError extends boolean = false>(
 		BackupManualBackupComposeErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/backup.manualBackupCompose",
 		...options,
 		headers: {
@@ -2359,7 +2454,6 @@ export const backupManualBackupMongo = <ThrowOnError extends boolean = false>(
 		BackupManualBackupMongoErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/backup.manualBackupMongo",
 		...options,
 		headers: {
@@ -2376,7 +2470,6 @@ export const backupManualBackupLibsql = <ThrowOnError extends boolean = false>(
 		BackupManualBackupLibsqlErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/backup.manualBackupLibsql",
 		...options,
 		headers: {
@@ -2395,7 +2488,6 @@ export const backupManualBackupWebServer = <
 		BackupManualBackupWebServerErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/backup.manualBackupWebServer",
 		...options,
 		headers: {
@@ -2411,11 +2503,7 @@ export const backupListBackupFiles = <ThrowOnError extends boolean = false>(
 		BackupListBackupFilesResponses,
 		BackupListBackupFilesErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/backup.listBackupFiles",
-		...options,
-	});
+	>({ url: "/backup.listBackupFiles", ...options });
 
 export const bitbucketCreate = <ThrowOnError extends boolean = false>(
 	options: Options<BitbucketCreateData, ThrowOnError>,
@@ -2425,7 +2513,6 @@ export const bitbucketCreate = <ThrowOnError extends boolean = false>(
 		BitbucketCreateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/bitbucket.create",
 		...options,
 		headers: {
@@ -2441,11 +2528,7 @@ export const bitbucketOne = <ThrowOnError extends boolean = false>(
 		BitbucketOneResponses,
 		BitbucketOneErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/bitbucket.one",
-		...options,
-	});
+	>({ url: "/bitbucket.one", ...options });
 
 export const bitbucketBitbucketProviders = <
 	ThrowOnError extends boolean = false,
@@ -2456,11 +2539,7 @@ export const bitbucketBitbucketProviders = <
 		BitbucketBitbucketProvidersResponses,
 		BitbucketBitbucketProvidersErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/bitbucket.bitbucketProviders",
-		...options,
-	});
+	>({ url: "/bitbucket.bitbucketProviders", ...options });
 
 export const bitbucketGetBitbucketRepositories = <
 	ThrowOnError extends boolean = false,
@@ -2471,11 +2550,7 @@ export const bitbucketGetBitbucketRepositories = <
 		BitbucketGetBitbucketRepositoriesResponses,
 		BitbucketGetBitbucketRepositoriesErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/bitbucket.getBitbucketRepositories",
-		...options,
-	});
+	>({ url: "/bitbucket.getBitbucketRepositories", ...options });
 
 export const bitbucketGetBitbucketBranches = <
 	ThrowOnError extends boolean = false,
@@ -2486,11 +2561,7 @@ export const bitbucketGetBitbucketBranches = <
 		BitbucketGetBitbucketBranchesResponses,
 		BitbucketGetBitbucketBranchesErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/bitbucket.getBitbucketBranches",
-		...options,
-	});
+	>({ url: "/bitbucket.getBitbucketBranches", ...options });
 
 export const bitbucketTestConnection = <ThrowOnError extends boolean = false>(
 	options: Options<BitbucketTestConnectionData, ThrowOnError>,
@@ -2500,7 +2571,6 @@ export const bitbucketTestConnection = <ThrowOnError extends boolean = false>(
 		BitbucketTestConnectionErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/bitbucket.testConnection",
 		...options,
 		headers: {
@@ -2517,8 +2587,107 @@ export const bitbucketUpdate = <ThrowOnError extends boolean = false>(
 		BitbucketUpdateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/bitbucket.update",
+		...options,
+		headers: {
+			"Content-Type": "application/json",
+			...options.headers,
+		},
+	});
+
+export const networkAll = <ThrowOnError extends boolean = false>(
+	options?: Options<NetworkAllData, ThrowOnError>,
+) =>
+	(options?.client ?? client).get<
+		NetworkAllResponses,
+		NetworkAllErrors,
+		ThrowOnError
+	>({ url: "/network.all", ...options });
+
+export const networkOne = <ThrowOnError extends boolean = false>(
+	options: Options<NetworkOneData, ThrowOnError>,
+) =>
+	(options.client ?? client).get<
+		NetworkOneResponses,
+		NetworkOneErrors,
+		ThrowOnError
+	>({ url: "/network.one", ...options });
+
+export const networkCreate = <ThrowOnError extends boolean = false>(
+	options: Options<NetworkCreateData, ThrowOnError>,
+) =>
+	(options.client ?? client).post<
+		NetworkCreateResponses,
+		NetworkCreateErrors,
+		ThrowOnError
+	>({
+		url: "/network.create",
+		...options,
+		headers: {
+			"Content-Type": "application/json",
+			...options.headers,
+		},
+	});
+
+export const networkNetworksToSync = <ThrowOnError extends boolean = false>(
+	options?: Options<NetworkNetworksToSyncData, ThrowOnError>,
+) =>
+	(options?.client ?? client).get<
+		NetworkNetworksToSyncResponses,
+		NetworkNetworksToSyncErrors,
+		ThrowOnError
+	>({ url: "/network.networksToSync", ...options });
+
+export const networkImport = <ThrowOnError extends boolean = false>(
+	options: Options<NetworkImportData, ThrowOnError>,
+) =>
+	(options.client ?? client).post<
+		NetworkImportResponses,
+		NetworkImportErrors,
+		ThrowOnError
+	>({
+		url: "/network.import",
+		...options,
+		headers: {
+			"Content-Type": "application/json",
+			...options.headers,
+		},
+	});
+
+export const networkInspect = <ThrowOnError extends boolean = false>(
+	options: Options<NetworkInspectData, ThrowOnError>,
+) =>
+	(options.client ?? client).get<
+		NetworkInspectResponses,
+		NetworkInspectErrors,
+		ThrowOnError
+	>({ url: "/network.inspect", ...options });
+
+export const networkRecreate = <ThrowOnError extends boolean = false>(
+	options: Options<NetworkRecreateData, ThrowOnError>,
+) =>
+	(options.client ?? client).post<
+		NetworkRecreateResponses,
+		NetworkRecreateErrors,
+		ThrowOnError
+	>({
+		url: "/network.recreate",
+		...options,
+		headers: {
+			"Content-Type": "application/json",
+			...options.headers,
+		},
+	});
+
+export const networkRemove = <ThrowOnError extends boolean = false>(
+	options: Options<NetworkRemoveData, ThrowOnError>,
+) =>
+	(options.client ?? client).post<
+		NetworkRemoveResponses,
+		NetworkRemoveErrors,
+		ThrowOnError
+	>({
+		url: "/network.remove",
 		...options,
 		headers: {
 			"Content-Type": "application/json",
@@ -2534,7 +2703,6 @@ export const certificatesCreate = <ThrowOnError extends boolean = false>(
 		CertificatesCreateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/certificates.create",
 		...options,
 		headers: {
@@ -2550,11 +2718,7 @@ export const certificatesOne = <ThrowOnError extends boolean = false>(
 		CertificatesOneResponses,
 		CertificatesOneErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/certificates.one",
-		...options,
-	});
+	>({ url: "/certificates.one", ...options });
 
 export const certificatesRemove = <ThrowOnError extends boolean = false>(
 	options: Options<CertificatesRemoveData, ThrowOnError>,
@@ -2564,7 +2728,6 @@ export const certificatesRemove = <ThrowOnError extends boolean = false>(
 		CertificatesRemoveErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/certificates.remove",
 		...options,
 		headers: {
@@ -2580,11 +2743,7 @@ export const certificatesAll = <ThrowOnError extends boolean = false>(
 		CertificatesAllResponses,
 		CertificatesAllErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/certificates.all",
-		...options,
-	});
+	>({ url: "/certificates.all", ...options });
 
 export const certificatesUpdate = <ThrowOnError extends boolean = false>(
 	options: Options<CertificatesUpdateData, ThrowOnError>,
@@ -2594,7 +2753,6 @@ export const certificatesUpdate = <ThrowOnError extends boolean = false>(
 		CertificatesUpdateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/certificates.update",
 		...options,
 		headers: {
@@ -2610,11 +2768,7 @@ export const clusterGetNodes = <ThrowOnError extends boolean = false>(
 		ClusterGetNodesResponses,
 		ClusterGetNodesErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/cluster.getNodes",
-		...options,
-	});
+	>({ url: "/cluster.getNodes", ...options });
 
 export const clusterRemoveWorker = <ThrowOnError extends boolean = false>(
 	options: Options<ClusterRemoveWorkerData, ThrowOnError>,
@@ -2624,7 +2778,6 @@ export const clusterRemoveWorker = <ThrowOnError extends boolean = false>(
 		ClusterRemoveWorkerErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/cluster.removeWorker",
 		...options,
 		headers: {
@@ -2640,11 +2793,7 @@ export const clusterAddWorker = <ThrowOnError extends boolean = false>(
 		ClusterAddWorkerResponses,
 		ClusterAddWorkerErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/cluster.addWorker",
-		...options,
-	});
+	>({ url: "/cluster.addWorker", ...options });
 
 export const clusterAddManager = <ThrowOnError extends boolean = false>(
 	options?: Options<ClusterAddManagerData, ThrowOnError>,
@@ -2653,11 +2802,7 @@ export const clusterAddManager = <ThrowOnError extends boolean = false>(
 		ClusterAddManagerResponses,
 		ClusterAddManagerErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/cluster.addManager",
-		...options,
-	});
+	>({ url: "/cluster.addManager", ...options });
 
 export const composeCreate = <ThrowOnError extends boolean = false>(
 	options: Options<ComposeCreateData, ThrowOnError>,
@@ -2667,7 +2812,6 @@ export const composeCreate = <ThrowOnError extends boolean = false>(
 		ComposeCreateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/compose.create",
 		...options,
 		headers: {
@@ -2683,11 +2827,7 @@ export const composeOne = <ThrowOnError extends boolean = false>(
 		ComposeOneResponses,
 		ComposeOneErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/compose.one",
-		...options,
-	});
+	>({ url: "/compose.one", ...options });
 
 export const composeUpdate = <ThrowOnError extends boolean = false>(
 	options: Options<ComposeUpdateData, ThrowOnError>,
@@ -2697,7 +2837,6 @@ export const composeUpdate = <ThrowOnError extends boolean = false>(
 		ComposeUpdateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/compose.update",
 		...options,
 		headers: {
@@ -2714,7 +2853,6 @@ export const composeSaveEnvironment = <ThrowOnError extends boolean = false>(
 		ComposeSaveEnvironmentErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/compose.saveEnvironment",
 		...options,
 		headers: {
@@ -2731,7 +2869,6 @@ export const composeDelete = <ThrowOnError extends boolean = false>(
 		ComposeDeleteErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/compose.delete",
 		...options,
 		headers: {
@@ -2748,7 +2885,6 @@ export const composeCleanQueues = <ThrowOnError extends boolean = false>(
 		ComposeCleanQueuesErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/compose.cleanQueues",
 		...options,
 		headers: {
@@ -2765,7 +2901,6 @@ export const composeClearDeployments = <ThrowOnError extends boolean = false>(
 		ComposeClearDeploymentsErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/compose.clearDeployments",
 		...options,
 		headers: {
@@ -2782,7 +2917,6 @@ export const composeKillBuild = <ThrowOnError extends boolean = false>(
 		ComposeKillBuildErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/compose.killBuild",
 		...options,
 		headers: {
@@ -2798,11 +2932,7 @@ export const composeLoadServices = <ThrowOnError extends boolean = false>(
 		ComposeLoadServicesResponses,
 		ComposeLoadServicesErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/compose.loadServices",
-		...options,
-	});
+	>({ url: "/compose.loadServices", ...options });
 
 export const composeLoadMountsByService = <
 	ThrowOnError extends boolean = false,
@@ -2813,11 +2943,7 @@ export const composeLoadMountsByService = <
 		ComposeLoadMountsByServiceResponses,
 		ComposeLoadMountsByServiceErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/compose.loadMountsByService",
-		...options,
-	});
+	>({ url: "/compose.loadMountsByService", ...options });
 
 export const composeFetchSourceType = <ThrowOnError extends boolean = false>(
 	options: Options<ComposeFetchSourceTypeData, ThrowOnError>,
@@ -2827,7 +2953,6 @@ export const composeFetchSourceType = <ThrowOnError extends boolean = false>(
 		ComposeFetchSourceTypeErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/compose.fetchSourceType",
 		...options,
 		headers: {
@@ -2844,7 +2969,6 @@ export const composeRandomizeCompose = <ThrowOnError extends boolean = false>(
 		ComposeRandomizeComposeErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/compose.randomizeCompose",
 		...options,
 		headers: {
@@ -2861,7 +2985,6 @@ export const composeIsolatedDeployment = <ThrowOnError extends boolean = false>(
 		ComposeIsolatedDeploymentErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/compose.isolatedDeployment",
 		...options,
 		headers: {
@@ -2879,11 +3002,7 @@ export const composeGetConvertedCompose = <
 		ComposeGetConvertedComposeResponses,
 		ComposeGetConvertedComposeErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/compose.getConvertedCompose",
-		...options,
-	});
+	>({ url: "/compose.getConvertedCompose", ...options });
 
 export const composeDeploy = <ThrowOnError extends boolean = false>(
 	options: Options<ComposeDeployData, ThrowOnError>,
@@ -2893,7 +3012,6 @@ export const composeDeploy = <ThrowOnError extends boolean = false>(
 		ComposeDeployErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/compose.deploy",
 		...options,
 		headers: {
@@ -2910,7 +3028,6 @@ export const composeRedeploy = <ThrowOnError extends boolean = false>(
 		ComposeRedeployErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/compose.redeploy",
 		...options,
 		headers: {
@@ -2927,7 +3044,6 @@ export const composeStop = <ThrowOnError extends boolean = false>(
 		ComposeStopErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/compose.stop",
 		...options,
 		headers: {
@@ -2944,7 +3060,6 @@ export const composeStart = <ThrowOnError extends boolean = false>(
 		ComposeStartErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/compose.start",
 		...options,
 		headers: {
@@ -2960,11 +3075,7 @@ export const composeGetDefaultCommand = <ThrowOnError extends boolean = false>(
 		ComposeGetDefaultCommandResponses,
 		ComposeGetDefaultCommandErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/compose.getDefaultCommand",
-		...options,
-	});
+	>({ url: "/compose.getDefaultCommand", ...options });
 
 export const composeRefreshToken = <ThrowOnError extends boolean = false>(
 	options: Options<ComposeRefreshTokenData, ThrowOnError>,
@@ -2974,7 +3085,6 @@ export const composeRefreshToken = <ThrowOnError extends boolean = false>(
 		ComposeRefreshTokenErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/compose.refreshToken",
 		...options,
 		headers: {
@@ -2991,7 +3101,6 @@ export const composeDeployTemplate = <ThrowOnError extends boolean = false>(
 		ComposeDeployTemplateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/compose.deployTemplate",
 		...options,
 		headers: {
@@ -3007,11 +3116,7 @@ export const composeTemplates = <ThrowOnError extends boolean = false>(
 		ComposeTemplatesResponses,
 		ComposeTemplatesErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/compose.templates",
-		...options,
-	});
+	>({ url: "/compose.templates", ...options });
 
 export const composeGetTags = <ThrowOnError extends boolean = false>(
 	options?: Options<ComposeGetTagsData, ThrowOnError>,
@@ -3020,11 +3125,7 @@ export const composeGetTags = <ThrowOnError extends boolean = false>(
 		ComposeGetTagsResponses,
 		ComposeGetTagsErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/compose.getTags",
-		...options,
-	});
+	>({ url: "/compose.getTags", ...options });
 
 export const composeDisconnectGitProvider = <
 	ThrowOnError extends boolean = false,
@@ -3036,7 +3137,6 @@ export const composeDisconnectGitProvider = <
 		ComposeDisconnectGitProviderErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/compose.disconnectGitProvider",
 		...options,
 		headers: {
@@ -3053,7 +3153,6 @@ export const composeMove = <ThrowOnError extends boolean = false>(
 		ComposeMoveErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/compose.move",
 		...options,
 		headers: {
@@ -3070,7 +3169,6 @@ export const composeProcessTemplate = <ThrowOnError extends boolean = false>(
 		ComposeProcessTemplateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/compose.processTemplate",
 		...options,
 		headers: {
@@ -3087,7 +3185,6 @@ export const composePreviewTemplate = <ThrowOnError extends boolean = false>(
 		ComposePreviewTemplateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/compose.previewTemplate",
 		...options,
 		headers: {
@@ -3104,7 +3201,6 @@ export const composeImport = <ThrowOnError extends boolean = false>(
 		ComposeImportErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/compose.import",
 		...options,
 		headers: {
@@ -3121,7 +3217,6 @@ export const composeCancelDeployment = <ThrowOnError extends boolean = false>(
 		ComposeCancelDeploymentErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/compose.cancelDeployment",
 		...options,
 		headers: {
@@ -3137,11 +3232,7 @@ export const composeSearch = <ThrowOnError extends boolean = false>(
 		ComposeSearchResponses,
 		ComposeSearchErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/compose.search",
-		...options,
-	});
+	>({ url: "/compose.search", ...options });
 
 export const composeReadLogs = <ThrowOnError extends boolean = false>(
 	options: Options<ComposeReadLogsData, ThrowOnError>,
@@ -3150,11 +3241,7 @@ export const composeReadLogs = <ThrowOnError extends boolean = false>(
 		ComposeReadLogsResponses,
 		ComposeReadLogsErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/compose.readLogs",
-		...options,
-	});
+	>({ url: "/compose.readLogs", ...options });
 
 export const deploymentAll = <ThrowOnError extends boolean = false>(
 	options: Options<DeploymentAllData, ThrowOnError>,
@@ -3163,11 +3250,7 @@ export const deploymentAll = <ThrowOnError extends boolean = false>(
 		DeploymentAllResponses,
 		DeploymentAllErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/deployment.all",
-		...options,
-	});
+	>({ url: "/deployment.all", ...options });
 
 export const deploymentAllByCompose = <ThrowOnError extends boolean = false>(
 	options: Options<DeploymentAllByComposeData, ThrowOnError>,
@@ -3176,11 +3259,7 @@ export const deploymentAllByCompose = <ThrowOnError extends boolean = false>(
 		DeploymentAllByComposeResponses,
 		DeploymentAllByComposeErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/deployment.allByCompose",
-		...options,
-	});
+	>({ url: "/deployment.allByCompose", ...options });
 
 export const deploymentAllByServer = <ThrowOnError extends boolean = false>(
 	options: Options<DeploymentAllByServerData, ThrowOnError>,
@@ -3189,11 +3268,7 @@ export const deploymentAllByServer = <ThrowOnError extends boolean = false>(
 		DeploymentAllByServerResponses,
 		DeploymentAllByServerErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/deployment.allByServer",
-		...options,
-	});
+	>({ url: "/deployment.allByServer", ...options });
 
 export const deploymentAllCentralized = <ThrowOnError extends boolean = false>(
 	options?: Options<DeploymentAllCentralizedData, ThrowOnError>,
@@ -3202,11 +3277,7 @@ export const deploymentAllCentralized = <ThrowOnError extends boolean = false>(
 		DeploymentAllCentralizedResponses,
 		DeploymentAllCentralizedErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/deployment.allCentralized",
-		...options,
-	});
+	>({ url: "/deployment.allCentralized", ...options });
 
 export const deploymentQueueList = <ThrowOnError extends boolean = false>(
 	options?: Options<DeploymentQueueListData, ThrowOnError>,
@@ -3215,11 +3286,7 @@ export const deploymentQueueList = <ThrowOnError extends boolean = false>(
 		DeploymentQueueListResponses,
 		DeploymentQueueListErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/deployment.queueList",
-		...options,
-	});
+	>({ url: "/deployment.queueList", ...options });
 
 export const deploymentAllByType = <ThrowOnError extends boolean = false>(
 	options: Options<DeploymentAllByTypeData, ThrowOnError>,
@@ -3228,11 +3295,7 @@ export const deploymentAllByType = <ThrowOnError extends boolean = false>(
 		DeploymentAllByTypeResponses,
 		DeploymentAllByTypeErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/deployment.allByType",
-		...options,
-	});
+	>({ url: "/deployment.allByType", ...options });
 
 export const deploymentKillProcess = <ThrowOnError extends boolean = false>(
 	options: Options<DeploymentKillProcessData, ThrowOnError>,
@@ -3242,7 +3305,6 @@ export const deploymentKillProcess = <ThrowOnError extends boolean = false>(
 		DeploymentKillProcessErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/deployment.killProcess",
 		...options,
 		headers: {
@@ -3261,7 +3323,6 @@ export const deploymentRemoveDeployment = <
 		DeploymentRemoveDeploymentErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/deployment.removeDeployment",
 		...options,
 		headers: {
@@ -3277,11 +3338,7 @@ export const deploymentReadLogs = <ThrowOnError extends boolean = false>(
 		DeploymentReadLogsResponses,
 		DeploymentReadLogsErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/deployment.readLogs",
-		...options,
-	});
+	>({ url: "/deployment.readLogs", ...options });
 
 export const destinationCreate = <ThrowOnError extends boolean = false>(
 	options: Options<DestinationCreateData, ThrowOnError>,
@@ -3291,7 +3348,6 @@ export const destinationCreate = <ThrowOnError extends boolean = false>(
 		DestinationCreateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/destination.create",
 		...options,
 		headers: {
@@ -3308,7 +3364,6 @@ export const destinationTestConnection = <ThrowOnError extends boolean = false>(
 		DestinationTestConnectionErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/destination.testConnection",
 		...options,
 		headers: {
@@ -3324,11 +3379,7 @@ export const destinationOne = <ThrowOnError extends boolean = false>(
 		DestinationOneResponses,
 		DestinationOneErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/destination.one",
-		...options,
-	});
+	>({ url: "/destination.one", ...options });
 
 export const destinationAll = <ThrowOnError extends boolean = false>(
 	options?: Options<DestinationAllData, ThrowOnError>,
@@ -3337,11 +3388,7 @@ export const destinationAll = <ThrowOnError extends boolean = false>(
 		DestinationAllResponses,
 		DestinationAllErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/destination.all",
-		...options,
-	});
+	>({ url: "/destination.all", ...options });
 
 export const destinationRemove = <ThrowOnError extends boolean = false>(
 	options: Options<DestinationRemoveData, ThrowOnError>,
@@ -3351,7 +3398,6 @@ export const destinationRemove = <ThrowOnError extends boolean = false>(
 		DestinationRemoveErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/destination.remove",
 		...options,
 		headers: {
@@ -3368,8 +3414,155 @@ export const destinationUpdate = <ThrowOnError extends boolean = false>(
 		DestinationUpdateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/destination.update",
+		...options,
+		headers: {
+			"Content-Type": "application/json",
+			...options.headers,
+		},
+	});
+
+export const dnsProviderCreate = <ThrowOnError extends boolean = false>(
+	options: Options<DnsProviderCreateData, ThrowOnError>,
+) =>
+	(options.client ?? client).post<
+		DnsProviderCreateResponses,
+		DnsProviderCreateErrors,
+		ThrowOnError
+	>({
+		url: "/dnsProvider.create",
+		...options,
+		headers: {
+			"Content-Type": "application/json",
+			...options.headers,
+		},
+	});
+
+export const dnsProviderUpdate = <ThrowOnError extends boolean = false>(
+	options: Options<DnsProviderUpdateData, ThrowOnError>,
+) =>
+	(options.client ?? client).post<
+		DnsProviderUpdateResponses,
+		DnsProviderUpdateErrors,
+		ThrowOnError
+	>({
+		url: "/dnsProvider.update",
+		...options,
+		headers: {
+			"Content-Type": "application/json",
+			...options.headers,
+		},
+	});
+
+export const dnsProviderRemove = <ThrowOnError extends boolean = false>(
+	options: Options<DnsProviderRemoveData, ThrowOnError>,
+) =>
+	(options.client ?? client).post<
+		DnsProviderRemoveResponses,
+		DnsProviderRemoveErrors,
+		ThrowOnError
+	>({
+		url: "/dnsProvider.remove",
+		...options,
+		headers: {
+			"Content-Type": "application/json",
+			...options.headers,
+		},
+	});
+
+export const dnsProviderAll = <ThrowOnError extends boolean = false>(
+	options?: Options<DnsProviderAllData, ThrowOnError>,
+) =>
+	(options?.client ?? client).get<
+		DnsProviderAllResponses,
+		DnsProviderAllErrors,
+		ThrowOnError
+	>({ url: "/dnsProvider.all", ...options });
+
+export const dnsProviderOne = <ThrowOnError extends boolean = false>(
+	options: Options<DnsProviderOneData, ThrowOnError>,
+) =>
+	(options.client ?? client).get<
+		DnsProviderOneResponses,
+		DnsProviderOneErrors,
+		ThrowOnError
+	>({ url: "/dnsProvider.one", ...options });
+
+export const dnsProviderTestConnection = <ThrowOnError extends boolean = false>(
+	options: Options<DnsProviderTestConnectionData, ThrowOnError>,
+) =>
+	(options.client ?? client).post<
+		DnsProviderTestConnectionResponses,
+		DnsProviderTestConnectionErrors,
+		ThrowOnError
+	>({
+		url: "/dnsProvider.testConnection",
+		...options,
+		headers: {
+			"Content-Type": "application/json",
+			...options.headers,
+		},
+	});
+
+export const dnsProviderListZones = <ThrowOnError extends boolean = false>(
+	options: Options<DnsProviderListZonesData, ThrowOnError>,
+) =>
+	(options.client ?? client).get<
+		DnsProviderListZonesResponses,
+		DnsProviderListZonesErrors,
+		ThrowOnError
+	>({ url: "/dnsProvider.listZones", ...options });
+
+export const dnsProviderListRecords = <ThrowOnError extends boolean = false>(
+	options: Options<DnsProviderListRecordsData, ThrowOnError>,
+) =>
+	(options.client ?? client).get<
+		DnsProviderListRecordsResponses,
+		DnsProviderListRecordsErrors,
+		ThrowOnError
+	>({ url: "/dnsProvider.listRecords", ...options });
+
+export const dnsProviderCreateRecord = <ThrowOnError extends boolean = false>(
+	options: Options<DnsProviderCreateRecordData, ThrowOnError>,
+) =>
+	(options.client ?? client).post<
+		DnsProviderCreateRecordResponses,
+		DnsProviderCreateRecordErrors,
+		ThrowOnError
+	>({
+		url: "/dnsProvider.createRecord",
+		...options,
+		headers: {
+			"Content-Type": "application/json",
+			...options.headers,
+		},
+	});
+
+export const dnsProviderUpdateRecord = <ThrowOnError extends boolean = false>(
+	options: Options<DnsProviderUpdateRecordData, ThrowOnError>,
+) =>
+	(options.client ?? client).post<
+		DnsProviderUpdateRecordResponses,
+		DnsProviderUpdateRecordErrors,
+		ThrowOnError
+	>({
+		url: "/dnsProvider.updateRecord",
+		...options,
+		headers: {
+			"Content-Type": "application/json",
+			...options.headers,
+		},
+	});
+
+export const dnsProviderDeleteRecord = <ThrowOnError extends boolean = false>(
+	options: Options<DnsProviderDeleteRecordData, ThrowOnError>,
+) =>
+	(options.client ?? client).post<
+		DnsProviderDeleteRecordResponses,
+		DnsProviderDeleteRecordErrors,
+		ThrowOnError
+	>({
+		url: "/dnsProvider.deleteRecord",
 		...options,
 		headers: {
 			"Content-Type": "application/json",
@@ -3384,11 +3577,16 @@ export const dockerGetContainers = <ThrowOnError extends boolean = false>(
 		DockerGetContainersResponses,
 		DockerGetContainersErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/docker.getContainers",
-		...options,
-	});
+	>({ url: "/docker.getContainers", ...options });
+
+export const dockerGetServerHealth = <ThrowOnError extends boolean = false>(
+	options?: Options<DockerGetServerHealthData, ThrowOnError>,
+) =>
+	(options?.client ?? client).get<
+		DockerGetServerHealthResponses,
+		DockerGetServerHealthErrors,
+		ThrowOnError
+	>({ url: "/docker.getServerHealth", ...options });
 
 export const dockerRestartContainer = <ThrowOnError extends boolean = false>(
 	options: Options<DockerRestartContainerData, ThrowOnError>,
@@ -3398,7 +3596,6 @@ export const dockerRestartContainer = <ThrowOnError extends boolean = false>(
 		DockerRestartContainerErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/docker.restartContainer",
 		...options,
 		headers: {
@@ -3415,7 +3612,6 @@ export const dockerStartContainer = <ThrowOnError extends boolean = false>(
 		DockerStartContainerErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/docker.startContainer",
 		...options,
 		headers: {
@@ -3432,7 +3628,6 @@ export const dockerStopContainer = <ThrowOnError extends boolean = false>(
 		DockerStopContainerErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/docker.stopContainer",
 		...options,
 		headers: {
@@ -3449,7 +3644,6 @@ export const dockerKillContainer = <ThrowOnError extends boolean = false>(
 		DockerKillContainerErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/docker.killContainer",
 		...options,
 		headers: {
@@ -3466,7 +3660,6 @@ export const dockerRemoveContainer = <ThrowOnError extends boolean = false>(
 		DockerRemoveContainerErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/docker.removeContainer",
 		...options,
 		headers: {
@@ -3482,11 +3675,7 @@ export const dockerGetConfig = <ThrowOnError extends boolean = false>(
 		DockerGetConfigResponses,
 		DockerGetConfigErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/docker.getConfig",
-		...options,
-	});
+	>({ url: "/docker.getConfig", ...options });
 
 export const dockerGetContainersByAppNameMatch = <
 	ThrowOnError extends boolean = false,
@@ -3497,11 +3686,7 @@ export const dockerGetContainersByAppNameMatch = <
 		DockerGetContainersByAppNameMatchResponses,
 		DockerGetContainersByAppNameMatchErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/docker.getContainersByAppNameMatch",
-		...options,
-	});
+	>({ url: "/docker.getContainersByAppNameMatch", ...options });
 
 export const dockerGetContainersByAppLabel = <
 	ThrowOnError extends boolean = false,
@@ -3512,11 +3697,7 @@ export const dockerGetContainersByAppLabel = <
 		DockerGetContainersByAppLabelResponses,
 		DockerGetContainersByAppLabelErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/docker.getContainersByAppLabel",
-		...options,
-	});
+	>({ url: "/docker.getContainersByAppLabel", ...options });
 
 export const dockerGetStackContainersByAppName = <
 	ThrowOnError extends boolean = false,
@@ -3527,11 +3708,7 @@ export const dockerGetStackContainersByAppName = <
 		DockerGetStackContainersByAppNameResponses,
 		DockerGetStackContainersByAppNameErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/docker.getStackContainersByAppName",
-		...options,
-	});
+	>({ url: "/docker.getStackContainersByAppName", ...options });
 
 export const dockerGetServiceContainersByAppName = <
 	ThrowOnError extends boolean = false,
@@ -3542,11 +3719,7 @@ export const dockerGetServiceContainersByAppName = <
 		DockerGetServiceContainersByAppNameResponses,
 		DockerGetServiceContainersByAppNameErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/docker.getServiceContainersByAppName",
-		...options,
-	});
+	>({ url: "/docker.getServiceContainersByAppName", ...options });
 
 export const dockerUploadFileToContainer = <
 	ThrowOnError extends boolean = false,
@@ -3559,11 +3732,248 @@ export const dockerUploadFileToContainer = <
 		ThrowOnError
 	>({
 		...formDataBodySerializer,
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/docker.uploadFileToContainer",
 		...options,
 		headers: {
 			"Content-Type": null,
+			...options.headers,
+		},
+	});
+
+export const dockerListContainerFiles = <ThrowOnError extends boolean = false>(
+	options: Options<DockerListContainerFilesData, ThrowOnError>,
+) =>
+	(options.client ?? client).get<
+		DockerListContainerFilesResponses,
+		DockerListContainerFilesErrors,
+		ThrowOnError
+	>({ url: "/docker.listContainerFiles", ...options });
+
+export const dockerReadContainerFile = <ThrowOnError extends boolean = false>(
+	options: Options<DockerReadContainerFileData, ThrowOnError>,
+) =>
+	(options.client ?? client).get<
+		DockerReadContainerFileResponses,
+		DockerReadContainerFileErrors,
+		ThrowOnError
+	>({ url: "/docker.readContainerFile", ...options });
+
+export const dockerWriteContainerFile = <ThrowOnError extends boolean = false>(
+	options: Options<DockerWriteContainerFileData, ThrowOnError>,
+) =>
+	(options.client ?? client).post<
+		DockerWriteContainerFileResponses,
+		DockerWriteContainerFileErrors,
+		ThrowOnError
+	>({
+		url: "/docker.writeContainerFile",
+		...options,
+		headers: {
+			"Content-Type": "application/json",
+			...options.headers,
+		},
+	});
+
+export const dockerDeleteContainerFile = <ThrowOnError extends boolean = false>(
+	options: Options<DockerDeleteContainerFileData, ThrowOnError>,
+) =>
+	(options.client ?? client).post<
+		DockerDeleteContainerFileResponses,
+		DockerDeleteContainerFileErrors,
+		ThrowOnError
+	>({
+		url: "/docker.deleteContainerFile",
+		...options,
+		headers: {
+			"Content-Type": "application/json",
+			...options.headers,
+		},
+	});
+
+export const dockerGetEvents = <ThrowOnError extends boolean = false>(
+	options?: Options<DockerGetEventsData, ThrowOnError>,
+) =>
+	(options?.client ?? client).get<
+		DockerGetEventsResponses,
+		DockerGetEventsErrors,
+		ThrowOnError
+	>({ url: "/docker.getEvents", ...options });
+
+export const dockerDiskUsageGetDiskUsage = <
+	ThrowOnError extends boolean = false,
+>(
+	options?: Options<DockerDiskUsageGetDiskUsageData, ThrowOnError>,
+) =>
+	(options?.client ?? client).get<
+		DockerDiskUsageGetDiskUsageResponses,
+		DockerDiskUsageGetDiskUsageErrors,
+		ThrowOnError
+	>({ url: "/dockerDiskUsage.getDiskUsage", ...options });
+
+export const dockerDiskUsageGetBuildCache = <
+	ThrowOnError extends boolean = false,
+>(
+	options?: Options<DockerDiskUsageGetBuildCacheData, ThrowOnError>,
+) =>
+	(options?.client ?? client).get<
+		DockerDiskUsageGetBuildCacheResponses,
+		DockerDiskUsageGetBuildCacheErrors,
+		ThrowOnError
+	>({ url: "/dockerDiskUsage.getBuildCache", ...options });
+
+export const dockerDiskUsagePruneBuildCache = <
+	ThrowOnError extends boolean = false,
+>(
+	options: Options<DockerDiskUsagePruneBuildCacheData, ThrowOnError>,
+) =>
+	(options.client ?? client).post<
+		DockerDiskUsagePruneBuildCacheResponses,
+		DockerDiskUsagePruneBuildCacheErrors,
+		ThrowOnError
+	>({
+		url: "/dockerDiskUsage.pruneBuildCache",
+		...options,
+		headers: {
+			"Content-Type": "application/json",
+			...options.headers,
+		},
+	});
+
+export const dockerImageGetImages = <ThrowOnError extends boolean = false>(
+	options?: Options<DockerImageGetImagesData, ThrowOnError>,
+) =>
+	(options?.client ?? client).get<
+		DockerImageGetImagesResponses,
+		DockerImageGetImagesErrors,
+		ThrowOnError
+	>({ url: "/dockerImage.getImages", ...options });
+
+export const dockerImageGetImageConfig = <ThrowOnError extends boolean = false>(
+	options: Options<DockerImageGetImageConfigData, ThrowOnError>,
+) =>
+	(options.client ?? client).get<
+		DockerImageGetImageConfigResponses,
+		DockerImageGetImageConfigErrors,
+		ThrowOnError
+	>({ url: "/dockerImage.getImageConfig", ...options });
+
+export const dockerImageRemoveImage = <ThrowOnError extends boolean = false>(
+	options: Options<DockerImageRemoveImageData, ThrowOnError>,
+) =>
+	(options.client ?? client).post<
+		DockerImageRemoveImageResponses,
+		DockerImageRemoveImageErrors,
+		ThrowOnError
+	>({
+		url: "/dockerImage.removeImage",
+		...options,
+		headers: {
+			"Content-Type": "application/json",
+			...options.headers,
+		},
+	});
+
+export const dockerVolumeGetVolumes = <ThrowOnError extends boolean = false>(
+	options?: Options<DockerVolumeGetVolumesData, ThrowOnError>,
+) =>
+	(options?.client ?? client).get<
+		DockerVolumeGetVolumesResponses,
+		DockerVolumeGetVolumesErrors,
+		ThrowOnError
+	>({ url: "/dockerVolume.getVolumes", ...options });
+
+export const dockerVolumeGetVolumesSize = <
+	ThrowOnError extends boolean = false,
+>(
+	options?: Options<DockerVolumeGetVolumesSizeData, ThrowOnError>,
+) =>
+	(options?.client ?? client).get<
+		DockerVolumeGetVolumesSizeResponses,
+		DockerVolumeGetVolumesSizeErrors,
+		ThrowOnError
+	>({ url: "/dockerVolume.getVolumesSize", ...options });
+
+export const dockerVolumeListVolumeFiles = <
+	ThrowOnError extends boolean = false,
+>(
+	options: Options<DockerVolumeListVolumeFilesData, ThrowOnError>,
+) =>
+	(options.client ?? client).get<
+		DockerVolumeListVolumeFilesResponses,
+		DockerVolumeListVolumeFilesErrors,
+		ThrowOnError
+	>({ url: "/dockerVolume.listVolumeFiles", ...options });
+
+export const dockerVolumeReadVolumeFile = <
+	ThrowOnError extends boolean = false,
+>(
+	options: Options<DockerVolumeReadVolumeFileData, ThrowOnError>,
+) =>
+	(options.client ?? client).get<
+		DockerVolumeReadVolumeFileResponses,
+		DockerVolumeReadVolumeFileErrors,
+		ThrowOnError
+	>({ url: "/dockerVolume.readVolumeFile", ...options });
+
+export const dockerVolumeWriteVolumeFile = <
+	ThrowOnError extends boolean = false,
+>(
+	options: Options<DockerVolumeWriteVolumeFileData, ThrowOnError>,
+) =>
+	(options.client ?? client).post<
+		DockerVolumeWriteVolumeFileResponses,
+		DockerVolumeWriteVolumeFileErrors,
+		ThrowOnError
+	>({
+		url: "/dockerVolume.writeVolumeFile",
+		...options,
+		headers: {
+			"Content-Type": "application/json",
+			...options.headers,
+		},
+	});
+
+export const dockerVolumeDeleteVolumeFile = <
+	ThrowOnError extends boolean = false,
+>(
+	options: Options<DockerVolumeDeleteVolumeFileData, ThrowOnError>,
+) =>
+	(options.client ?? client).post<
+		DockerVolumeDeleteVolumeFileResponses,
+		DockerVolumeDeleteVolumeFileErrors,
+		ThrowOnError
+	>({
+		url: "/dockerVolume.deleteVolumeFile",
+		...options,
+		headers: {
+			"Content-Type": "application/json",
+			...options.headers,
+		},
+	});
+
+export const dockerVolumeGetVolumeConfig = <
+	ThrowOnError extends boolean = false,
+>(
+	options: Options<DockerVolumeGetVolumeConfigData, ThrowOnError>,
+) =>
+	(options.client ?? client).get<
+		DockerVolumeGetVolumeConfigResponses,
+		DockerVolumeGetVolumeConfigErrors,
+		ThrowOnError
+	>({ url: "/dockerVolume.getVolumeConfig", ...options });
+
+export const dockerVolumeRemoveVolume = <ThrowOnError extends boolean = false>(
+	options: Options<DockerVolumeRemoveVolumeData, ThrowOnError>,
+) =>
+	(options.client ?? client).post<
+		DockerVolumeRemoveVolumeResponses,
+		DockerVolumeRemoveVolumeErrors,
+		ThrowOnError
+	>({
+		url: "/dockerVolume.removeVolume",
+		...options,
+		headers: {
+			"Content-Type": "application/json",
 			...options.headers,
 		},
 	});
@@ -3576,7 +3986,6 @@ export const domainCreate = <ThrowOnError extends boolean = false>(
 		DomainCreateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/domain.create",
 		...options,
 		headers: {
@@ -3592,11 +4001,7 @@ export const domainByApplicationId = <ThrowOnError extends boolean = false>(
 		DomainByApplicationIdResponses,
 		DomainByApplicationIdErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/domain.byApplicationId",
-		...options,
-	});
+	>({ url: "/domain.byApplicationId", ...options });
 
 export const domainByComposeId = <ThrowOnError extends boolean = false>(
 	options: Options<DomainByComposeIdData, ThrowOnError>,
@@ -3605,11 +4010,7 @@ export const domainByComposeId = <ThrowOnError extends boolean = false>(
 		DomainByComposeIdResponses,
 		DomainByComposeIdErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/domain.byComposeId",
-		...options,
-	});
+	>({ url: "/domain.byComposeId", ...options });
 
 export const domainGenerateDomain = <ThrowOnError extends boolean = false>(
 	options: Options<DomainGenerateDomainData, ThrowOnError>,
@@ -3619,7 +4020,6 @@ export const domainGenerateDomain = <ThrowOnError extends boolean = false>(
 		DomainGenerateDomainErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/domain.generateDomain",
 		...options,
 		headers: {
@@ -3637,11 +4037,7 @@ export const domainCanGenerateTraefikMeDomains = <
 		DomainCanGenerateTraefikMeDomainsResponses,
 		DomainCanGenerateTraefikMeDomainsErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/domain.canGenerateTraefikMeDomains",
-		...options,
-	});
+	>({ url: "/domain.canGenerateTraefikMeDomains", ...options });
 
 export const domainUpdate = <ThrowOnError extends boolean = false>(
 	options: Options<DomainUpdateData, ThrowOnError>,
@@ -3651,8 +4047,23 @@ export const domainUpdate = <ThrowOnError extends boolean = false>(
 		DomainUpdateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/domain.update",
+		...options,
+		headers: {
+			"Content-Type": "application/json",
+			...options.headers,
+		},
+	});
+
+export const domainToggleEnable = <ThrowOnError extends boolean = false>(
+	options: Options<DomainToggleEnableData, ThrowOnError>,
+) =>
+	(options.client ?? client).post<
+		DomainToggleEnableResponses,
+		DomainToggleEnableErrors,
+		ThrowOnError
+	>({
+		url: "/domain.toggleEnable",
 		...options,
 		headers: {
 			"Content-Type": "application/json",
@@ -3667,11 +4078,7 @@ export const domainOne = <ThrowOnError extends boolean = false>(
 		DomainOneResponses,
 		DomainOneErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/domain.one",
-		...options,
-	});
+	>({ url: "/domain.one", ...options });
 
 export const domainDelete = <ThrowOnError extends boolean = false>(
 	options: Options<DomainDeleteData, ThrowOnError>,
@@ -3681,7 +4088,6 @@ export const domainDelete = <ThrowOnError extends boolean = false>(
 		DomainDeleteErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/domain.delete",
 		...options,
 		headers: {
@@ -3698,7 +4104,6 @@ export const domainValidateDomain = <ThrowOnError extends boolean = false>(
 		DomainValidateDomainErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/domain.validateDomain",
 		...options,
 		headers: {
@@ -3715,7 +4120,6 @@ export const giteaCreate = <ThrowOnError extends boolean = false>(
 		GiteaCreateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/gitea.create",
 		...options,
 		headers: {
@@ -3731,11 +4135,7 @@ export const giteaOne = <ThrowOnError extends boolean = false>(
 		GiteaOneResponses,
 		GiteaOneErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/gitea.one",
-		...options,
-	});
+	>({ url: "/gitea.one", ...options });
 
 export const giteaGiteaProviders = <ThrowOnError extends boolean = false>(
 	options?: Options<GiteaGiteaProvidersData, ThrowOnError>,
@@ -3744,11 +4144,7 @@ export const giteaGiteaProviders = <ThrowOnError extends boolean = false>(
 		GiteaGiteaProvidersResponses,
 		GiteaGiteaProvidersErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/gitea.giteaProviders",
-		...options,
-	});
+	>({ url: "/gitea.giteaProviders", ...options });
 
 export const giteaGetGiteaRepositories = <ThrowOnError extends boolean = false>(
 	options: Options<GiteaGetGiteaRepositoriesData, ThrowOnError>,
@@ -3757,11 +4153,7 @@ export const giteaGetGiteaRepositories = <ThrowOnError extends boolean = false>(
 		GiteaGetGiteaRepositoriesResponses,
 		GiteaGetGiteaRepositoriesErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/gitea.getGiteaRepositories",
-		...options,
-	});
+	>({ url: "/gitea.getGiteaRepositories", ...options });
 
 export const giteaGetGiteaBranches = <ThrowOnError extends boolean = false>(
 	options: Options<GiteaGetGiteaBranchesData, ThrowOnError>,
@@ -3770,11 +4162,7 @@ export const giteaGetGiteaBranches = <ThrowOnError extends boolean = false>(
 		GiteaGetGiteaBranchesResponses,
 		GiteaGetGiteaBranchesErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/gitea.getGiteaBranches",
-		...options,
-	});
+	>({ url: "/gitea.getGiteaBranches", ...options });
 
 export const giteaTestConnection = <ThrowOnError extends boolean = false>(
 	options: Options<GiteaTestConnectionData, ThrowOnError>,
@@ -3784,7 +4172,6 @@ export const giteaTestConnection = <ThrowOnError extends boolean = false>(
 		GiteaTestConnectionErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/gitea.testConnection",
 		...options,
 		headers: {
@@ -3801,7 +4188,6 @@ export const giteaUpdate = <ThrowOnError extends boolean = false>(
 		GiteaUpdateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/gitea.update",
 		...options,
 		headers: {
@@ -3817,11 +4203,7 @@ export const giteaGetGiteaUrl = <ThrowOnError extends boolean = false>(
 		GiteaGetGiteaUrlResponses,
 		GiteaGetGiteaUrlErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/gitea.getGiteaUrl",
-		...options,
-	});
+	>({ url: "/gitea.getGiteaUrl", ...options });
 
 export const gitProviderGetAll = <ThrowOnError extends boolean = false>(
 	options?: Options<GitProviderGetAllData, ThrowOnError>,
@@ -3830,11 +4212,7 @@ export const gitProviderGetAll = <ThrowOnError extends boolean = false>(
 		GitProviderGetAllResponses,
 		GitProviderGetAllErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/gitProvider.getAll",
-		...options,
-	});
+	>({ url: "/gitProvider.getAll", ...options });
 
 export const gitProviderToggleShare = <ThrowOnError extends boolean = false>(
 	options: Options<GitProviderToggleShareData, ThrowOnError>,
@@ -3844,7 +4222,6 @@ export const gitProviderToggleShare = <ThrowOnError extends boolean = false>(
 		GitProviderToggleShareErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/gitProvider.toggleShare",
 		...options,
 		headers: {
@@ -3862,11 +4239,7 @@ export const gitProviderAllForPermissions = <
 		GitProviderAllForPermissionsResponses,
 		GitProviderAllForPermissionsErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/gitProvider.allForPermissions",
-		...options,
-	});
+	>({ url: "/gitProvider.allForPermissions", ...options });
 
 export const gitProviderRemove = <ThrowOnError extends boolean = false>(
 	options: Options<GitProviderRemoveData, ThrowOnError>,
@@ -3876,7 +4249,6 @@ export const gitProviderRemove = <ThrowOnError extends boolean = false>(
 		GitProviderRemoveErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/gitProvider.remove",
 		...options,
 		headers: {
@@ -3892,11 +4264,7 @@ export const githubOne = <ThrowOnError extends boolean = false>(
 		GithubOneResponses,
 		GithubOneErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/github.one",
-		...options,
-	});
+	>({ url: "/github.one", ...options });
 
 export const githubGetGithubRepositories = <
 	ThrowOnError extends boolean = false,
@@ -3907,11 +4275,7 @@ export const githubGetGithubRepositories = <
 		GithubGetGithubRepositoriesResponses,
 		GithubGetGithubRepositoriesErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/github.getGithubRepositories",
-		...options,
-	});
+	>({ url: "/github.getGithubRepositories", ...options });
 
 export const githubGetGithubBranches = <ThrowOnError extends boolean = false>(
 	options: Options<GithubGetGithubBranchesData, ThrowOnError>,
@@ -3920,11 +4284,7 @@ export const githubGetGithubBranches = <ThrowOnError extends boolean = false>(
 		GithubGetGithubBranchesResponses,
 		GithubGetGithubBranchesErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/github.getGithubBranches",
-		...options,
-	});
+	>({ url: "/github.getGithubBranches", ...options });
 
 export const githubGithubProviders = <ThrowOnError extends boolean = false>(
 	options?: Options<GithubGithubProvidersData, ThrowOnError>,
@@ -3933,11 +4293,7 @@ export const githubGithubProviders = <ThrowOnError extends boolean = false>(
 		GithubGithubProvidersResponses,
 		GithubGithubProvidersErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/github.githubProviders",
-		...options,
-	});
+	>({ url: "/github.githubProviders", ...options });
 
 export const githubTestConnection = <ThrowOnError extends boolean = false>(
 	options: Options<GithubTestConnectionData, ThrowOnError>,
@@ -3947,7 +4303,6 @@ export const githubTestConnection = <ThrowOnError extends boolean = false>(
 		GithubTestConnectionErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/github.testConnection",
 		...options,
 		headers: {
@@ -3964,7 +4319,6 @@ export const githubUpdate = <ThrowOnError extends boolean = false>(
 		GithubUpdateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/github.update",
 		...options,
 		headers: {
@@ -3981,7 +4335,6 @@ export const gitlabCreate = <ThrowOnError extends boolean = false>(
 		GitlabCreateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/gitlab.create",
 		...options,
 		headers: {
@@ -3997,11 +4350,7 @@ export const gitlabOne = <ThrowOnError extends boolean = false>(
 		GitlabOneResponses,
 		GitlabOneErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/gitlab.one",
-		...options,
-	});
+	>({ url: "/gitlab.one", ...options });
 
 export const gitlabGitlabProviders = <ThrowOnError extends boolean = false>(
 	options?: Options<GitlabGitlabProvidersData, ThrowOnError>,
@@ -4010,11 +4359,7 @@ export const gitlabGitlabProviders = <ThrowOnError extends boolean = false>(
 		GitlabGitlabProvidersResponses,
 		GitlabGitlabProvidersErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/gitlab.gitlabProviders",
-		...options,
-	});
+	>({ url: "/gitlab.gitlabProviders", ...options });
 
 export const gitlabGetGitlabRepositories = <
 	ThrowOnError extends boolean = false,
@@ -4025,11 +4370,7 @@ export const gitlabGetGitlabRepositories = <
 		GitlabGetGitlabRepositoriesResponses,
 		GitlabGetGitlabRepositoriesErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/gitlab.getGitlabRepositories",
-		...options,
-	});
+	>({ url: "/gitlab.getGitlabRepositories", ...options });
 
 export const gitlabGetGitlabBranches = <ThrowOnError extends boolean = false>(
 	options: Options<GitlabGetGitlabBranchesData, ThrowOnError>,
@@ -4038,11 +4379,7 @@ export const gitlabGetGitlabBranches = <ThrowOnError extends boolean = false>(
 		GitlabGetGitlabBranchesResponses,
 		GitlabGetGitlabBranchesErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/gitlab.getGitlabBranches",
-		...options,
-	});
+	>({ url: "/gitlab.getGitlabBranches", ...options });
 
 export const gitlabTestConnection = <ThrowOnError extends boolean = false>(
 	options: Options<GitlabTestConnectionData, ThrowOnError>,
@@ -4052,7 +4389,6 @@ export const gitlabTestConnection = <ThrowOnError extends boolean = false>(
 		GitlabTestConnectionErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/gitlab.testConnection",
 		...options,
 		headers: {
@@ -4069,7 +4405,6 @@ export const gitlabUpdate = <ThrowOnError extends boolean = false>(
 		GitlabUpdateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/gitlab.update",
 		...options,
 		headers: {
@@ -4086,7 +4421,6 @@ export const libsqlCreate = <ThrowOnError extends boolean = false>(
 		LibsqlCreateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/libsql.create",
 		...options,
 		headers: {
@@ -4102,11 +4436,7 @@ export const libsqlOne = <ThrowOnError extends boolean = false>(
 		LibsqlOneResponses,
 		LibsqlOneErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/libsql.one",
-		...options,
-	});
+	>({ url: "/libsql.one", ...options });
 
 export const libsqlStart = <ThrowOnError extends boolean = false>(
 	options: Options<LibsqlStartData, ThrowOnError>,
@@ -4116,7 +4446,6 @@ export const libsqlStart = <ThrowOnError extends boolean = false>(
 		LibsqlStartErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/libsql.start",
 		...options,
 		headers: {
@@ -4133,7 +4462,6 @@ export const libsqlStop = <ThrowOnError extends boolean = false>(
 		LibsqlStopErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/libsql.stop",
 		...options,
 		headers: {
@@ -4150,7 +4478,6 @@ export const libsqlSaveExternalPorts = <ThrowOnError extends boolean = false>(
 		LibsqlSaveExternalPortsErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/libsql.saveExternalPorts",
 		...options,
 		headers: {
@@ -4167,7 +4494,6 @@ export const libsqlDeploy = <ThrowOnError extends boolean = false>(
 		LibsqlDeployErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/libsql.deploy",
 		...options,
 		headers: {
@@ -4184,7 +4510,6 @@ export const libsqlChangeStatus = <ThrowOnError extends boolean = false>(
 		LibsqlChangeStatusErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/libsql.changeStatus",
 		...options,
 		headers: {
@@ -4201,7 +4526,6 @@ export const libsqlRemove = <ThrowOnError extends boolean = false>(
 		LibsqlRemoveErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/libsql.remove",
 		...options,
 		headers: {
@@ -4218,7 +4542,6 @@ export const libsqlSaveEnvironment = <ThrowOnError extends boolean = false>(
 		LibsqlSaveEnvironmentErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/libsql.saveEnvironment",
 		...options,
 		headers: {
@@ -4235,7 +4558,6 @@ export const libsqlReload = <ThrowOnError extends boolean = false>(
 		LibsqlReloadErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/libsql.reload",
 		...options,
 		headers: {
@@ -4252,7 +4574,6 @@ export const libsqlUpdate = <ThrowOnError extends boolean = false>(
 		LibsqlUpdateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/libsql.update",
 		...options,
 		headers: {
@@ -4269,7 +4590,6 @@ export const libsqlMove = <ThrowOnError extends boolean = false>(
 		LibsqlMoveErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/libsql.move",
 		...options,
 		headers: {
@@ -4286,7 +4606,6 @@ export const libsqlRebuild = <ThrowOnError extends boolean = false>(
 		LibsqlRebuildErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/libsql.rebuild",
 		...options,
 		headers: {
@@ -4302,11 +4621,7 @@ export const libsqlReadLogs = <ThrowOnError extends boolean = false>(
 		LibsqlReadLogsResponses,
 		LibsqlReadLogsErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/libsql.readLogs",
-		...options,
-	});
+	>({ url: "/libsql.readLogs", ...options });
 
 export const mariadbCreate = <ThrowOnError extends boolean = false>(
 	options: Options<MariadbCreateData, ThrowOnError>,
@@ -4316,7 +4631,6 @@ export const mariadbCreate = <ThrowOnError extends boolean = false>(
 		MariadbCreateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/mariadb.create",
 		...options,
 		headers: {
@@ -4332,11 +4646,7 @@ export const mariadbOne = <ThrowOnError extends boolean = false>(
 		MariadbOneResponses,
 		MariadbOneErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/mariadb.one",
-		...options,
-	});
+	>({ url: "/mariadb.one", ...options });
 
 export const mariadbStart = <ThrowOnError extends boolean = false>(
 	options: Options<MariadbStartData, ThrowOnError>,
@@ -4346,7 +4656,6 @@ export const mariadbStart = <ThrowOnError extends boolean = false>(
 		MariadbStartErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/mariadb.start",
 		...options,
 		headers: {
@@ -4363,7 +4672,6 @@ export const mariadbStop = <ThrowOnError extends boolean = false>(
 		MariadbStopErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/mariadb.stop",
 		...options,
 		headers: {
@@ -4380,7 +4688,6 @@ export const mariadbSaveExternalPort = <ThrowOnError extends boolean = false>(
 		MariadbSaveExternalPortErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/mariadb.saveExternalPort",
 		...options,
 		headers: {
@@ -4397,7 +4704,6 @@ export const mariadbDeploy = <ThrowOnError extends boolean = false>(
 		MariadbDeployErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/mariadb.deploy",
 		...options,
 		headers: {
@@ -4414,7 +4720,6 @@ export const mariadbChangeStatus = <ThrowOnError extends boolean = false>(
 		MariadbChangeStatusErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/mariadb.changeStatus",
 		...options,
 		headers: {
@@ -4431,7 +4736,6 @@ export const mariadbRemove = <ThrowOnError extends boolean = false>(
 		MariadbRemoveErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/mariadb.remove",
 		...options,
 		headers: {
@@ -4448,7 +4752,6 @@ export const mariadbSaveEnvironment = <ThrowOnError extends boolean = false>(
 		MariadbSaveEnvironmentErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/mariadb.saveEnvironment",
 		...options,
 		headers: {
@@ -4465,7 +4768,6 @@ export const mariadbReload = <ThrowOnError extends boolean = false>(
 		MariadbReloadErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/mariadb.reload",
 		...options,
 		headers: {
@@ -4482,7 +4784,6 @@ export const mariadbUpdate = <ThrowOnError extends boolean = false>(
 		MariadbUpdateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/mariadb.update",
 		...options,
 		headers: {
@@ -4499,7 +4800,6 @@ export const mariadbChangePassword = <ThrowOnError extends boolean = false>(
 		MariadbChangePasswordErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/mariadb.changePassword",
 		...options,
 		headers: {
@@ -4516,7 +4816,6 @@ export const mariadbMove = <ThrowOnError extends boolean = false>(
 		MariadbMoveErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/mariadb.move",
 		...options,
 		headers: {
@@ -4533,7 +4832,6 @@ export const mariadbRebuild = <ThrowOnError extends boolean = false>(
 		MariadbRebuildErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/mariadb.rebuild",
 		...options,
 		headers: {
@@ -4549,11 +4847,7 @@ export const mariadbSearch = <ThrowOnError extends boolean = false>(
 		MariadbSearchResponses,
 		MariadbSearchErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/mariadb.search",
-		...options,
-	});
+	>({ url: "/mariadb.search", ...options });
 
 export const mariadbReadLogs = <ThrowOnError extends boolean = false>(
 	options: Options<MariadbReadLogsData, ThrowOnError>,
@@ -4562,11 +4856,7 @@ export const mariadbReadLogs = <ThrowOnError extends boolean = false>(
 		MariadbReadLogsResponses,
 		MariadbReadLogsErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/mariadb.readLogs",
-		...options,
-	});
+	>({ url: "/mariadb.readLogs", ...options });
 
 export const mongoCreate = <ThrowOnError extends boolean = false>(
 	options: Options<MongoCreateData, ThrowOnError>,
@@ -4576,7 +4866,6 @@ export const mongoCreate = <ThrowOnError extends boolean = false>(
 		MongoCreateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/mongo.create",
 		...options,
 		headers: {
@@ -4592,11 +4881,7 @@ export const mongoOne = <ThrowOnError extends boolean = false>(
 		MongoOneResponses,
 		MongoOneErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/mongo.one",
-		...options,
-	});
+	>({ url: "/mongo.one", ...options });
 
 export const mongoStart = <ThrowOnError extends boolean = false>(
 	options: Options<MongoStartData, ThrowOnError>,
@@ -4606,7 +4891,6 @@ export const mongoStart = <ThrowOnError extends boolean = false>(
 		MongoStartErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/mongo.start",
 		...options,
 		headers: {
@@ -4623,7 +4907,6 @@ export const mongoStop = <ThrowOnError extends boolean = false>(
 		MongoStopErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/mongo.stop",
 		...options,
 		headers: {
@@ -4640,7 +4923,6 @@ export const mongoSaveExternalPort = <ThrowOnError extends boolean = false>(
 		MongoSaveExternalPortErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/mongo.saveExternalPort",
 		...options,
 		headers: {
@@ -4657,7 +4939,6 @@ export const mongoDeploy = <ThrowOnError extends boolean = false>(
 		MongoDeployErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/mongo.deploy",
 		...options,
 		headers: {
@@ -4674,7 +4955,6 @@ export const mongoChangeStatus = <ThrowOnError extends boolean = false>(
 		MongoChangeStatusErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/mongo.changeStatus",
 		...options,
 		headers: {
@@ -4691,7 +4971,6 @@ export const mongoReload = <ThrowOnError extends boolean = false>(
 		MongoReloadErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/mongo.reload",
 		...options,
 		headers: {
@@ -4708,7 +4987,6 @@ export const mongoRemove = <ThrowOnError extends boolean = false>(
 		MongoRemoveErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/mongo.remove",
 		...options,
 		headers: {
@@ -4725,7 +5003,6 @@ export const mongoSaveEnvironment = <ThrowOnError extends boolean = false>(
 		MongoSaveEnvironmentErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/mongo.saveEnvironment",
 		...options,
 		headers: {
@@ -4742,7 +5019,6 @@ export const mongoUpdate = <ThrowOnError extends boolean = false>(
 		MongoUpdateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/mongo.update",
 		...options,
 		headers: {
@@ -4759,7 +5035,6 @@ export const mongoChangePassword = <ThrowOnError extends boolean = false>(
 		MongoChangePasswordErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/mongo.changePassword",
 		...options,
 		headers: {
@@ -4776,7 +5051,6 @@ export const mongoMove = <ThrowOnError extends boolean = false>(
 		MongoMoveErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/mongo.move",
 		...options,
 		headers: {
@@ -4793,7 +5067,6 @@ export const mongoRebuild = <ThrowOnError extends boolean = false>(
 		MongoRebuildErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/mongo.rebuild",
 		...options,
 		headers: {
@@ -4809,11 +5082,7 @@ export const mongoSearch = <ThrowOnError extends boolean = false>(
 		MongoSearchResponses,
 		MongoSearchErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/mongo.search",
-		...options,
-	});
+	>({ url: "/mongo.search", ...options });
 
 export const mongoReadLogs = <ThrowOnError extends boolean = false>(
 	options: Options<MongoReadLogsData, ThrowOnError>,
@@ -4822,11 +5091,7 @@ export const mongoReadLogs = <ThrowOnError extends boolean = false>(
 		MongoReadLogsResponses,
 		MongoReadLogsErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/mongo.readLogs",
-		...options,
-	});
+	>({ url: "/mongo.readLogs", ...options });
 
 export const mountsCreate = <ThrowOnError extends boolean = false>(
 	options: Options<MountsCreateData, ThrowOnError>,
@@ -4836,7 +5101,6 @@ export const mountsCreate = <ThrowOnError extends boolean = false>(
 		MountsCreateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/mounts.create",
 		...options,
 		headers: {
@@ -4853,7 +5117,6 @@ export const mountsRemove = <ThrowOnError extends boolean = false>(
 		MountsRemoveErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/mounts.remove",
 		...options,
 		headers: {
@@ -4869,11 +5132,7 @@ export const mountsOne = <ThrowOnError extends boolean = false>(
 		MountsOneResponses,
 		MountsOneErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/mounts.one",
-		...options,
-	});
+	>({ url: "/mounts.one", ...options });
 
 export const mountsUpdate = <ThrowOnError extends boolean = false>(
 	options: Options<MountsUpdateData, ThrowOnError>,
@@ -4883,7 +5142,6 @@ export const mountsUpdate = <ThrowOnError extends boolean = false>(
 		MountsUpdateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/mounts.update",
 		...options,
 		headers: {
@@ -4901,11 +5159,7 @@ export const mountsAllNamedByApplicationId = <
 		MountsAllNamedByApplicationIdResponses,
 		MountsAllNamedByApplicationIdErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/mounts.allNamedByApplicationId",
-		...options,
-	});
+	>({ url: "/mounts.allNamedByApplicationId", ...options });
 
 export const mountsListByServiceId = <ThrowOnError extends boolean = false>(
 	options: Options<MountsListByServiceIdData, ThrowOnError>,
@@ -4914,11 +5168,7 @@ export const mountsListByServiceId = <ThrowOnError extends boolean = false>(
 		MountsListByServiceIdResponses,
 		MountsListByServiceIdErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/mounts.listByServiceId",
-		...options,
-	});
+	>({ url: "/mounts.listByServiceId", ...options });
 
 export const mysqlCreate = <ThrowOnError extends boolean = false>(
 	options: Options<MysqlCreateData, ThrowOnError>,
@@ -4928,7 +5178,6 @@ export const mysqlCreate = <ThrowOnError extends boolean = false>(
 		MysqlCreateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/mysql.create",
 		...options,
 		headers: {
@@ -4944,11 +5193,7 @@ export const mysqlOne = <ThrowOnError extends boolean = false>(
 		MysqlOneResponses,
 		MysqlOneErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/mysql.one",
-		...options,
-	});
+	>({ url: "/mysql.one", ...options });
 
 export const mysqlStart = <ThrowOnError extends boolean = false>(
 	options: Options<MysqlStartData, ThrowOnError>,
@@ -4958,7 +5203,6 @@ export const mysqlStart = <ThrowOnError extends boolean = false>(
 		MysqlStartErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/mysql.start",
 		...options,
 		headers: {
@@ -4975,7 +5219,6 @@ export const mysqlStop = <ThrowOnError extends boolean = false>(
 		MysqlStopErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/mysql.stop",
 		...options,
 		headers: {
@@ -4992,7 +5235,6 @@ export const mysqlSaveExternalPort = <ThrowOnError extends boolean = false>(
 		MysqlSaveExternalPortErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/mysql.saveExternalPort",
 		...options,
 		headers: {
@@ -5009,7 +5251,6 @@ export const mysqlDeploy = <ThrowOnError extends boolean = false>(
 		MysqlDeployErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/mysql.deploy",
 		...options,
 		headers: {
@@ -5026,7 +5267,6 @@ export const mysqlChangeStatus = <ThrowOnError extends boolean = false>(
 		MysqlChangeStatusErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/mysql.changeStatus",
 		...options,
 		headers: {
@@ -5043,7 +5283,6 @@ export const mysqlReload = <ThrowOnError extends boolean = false>(
 		MysqlReloadErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/mysql.reload",
 		...options,
 		headers: {
@@ -5060,7 +5299,6 @@ export const mysqlRemove = <ThrowOnError extends boolean = false>(
 		MysqlRemoveErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/mysql.remove",
 		...options,
 		headers: {
@@ -5077,7 +5315,6 @@ export const mysqlSaveEnvironment = <ThrowOnError extends boolean = false>(
 		MysqlSaveEnvironmentErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/mysql.saveEnvironment",
 		...options,
 		headers: {
@@ -5094,7 +5331,6 @@ export const mysqlUpdate = <ThrowOnError extends boolean = false>(
 		MysqlUpdateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/mysql.update",
 		...options,
 		headers: {
@@ -5111,7 +5347,6 @@ export const mysqlChangePassword = <ThrowOnError extends boolean = false>(
 		MysqlChangePasswordErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/mysql.changePassword",
 		...options,
 		headers: {
@@ -5128,7 +5363,6 @@ export const mysqlMove = <ThrowOnError extends boolean = false>(
 		MysqlMoveErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/mysql.move",
 		...options,
 		headers: {
@@ -5145,7 +5379,6 @@ export const mysqlRebuild = <ThrowOnError extends boolean = false>(
 		MysqlRebuildErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/mysql.rebuild",
 		...options,
 		headers: {
@@ -5161,11 +5394,7 @@ export const mysqlSearch = <ThrowOnError extends boolean = false>(
 		MysqlSearchResponses,
 		MysqlSearchErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/mysql.search",
-		...options,
-	});
+	>({ url: "/mysql.search", ...options });
 
 export const mysqlReadLogs = <ThrowOnError extends boolean = false>(
 	options: Options<MysqlReadLogsData, ThrowOnError>,
@@ -5174,11 +5403,7 @@ export const mysqlReadLogs = <ThrowOnError extends boolean = false>(
 		MysqlReadLogsResponses,
 		MysqlReadLogsErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/mysql.readLogs",
-		...options,
-	});
+	>({ url: "/mysql.readLogs", ...options });
 
 export const notificationCreateSlack = <ThrowOnError extends boolean = false>(
 	options: Options<NotificationCreateSlackData, ThrowOnError>,
@@ -5188,7 +5413,6 @@ export const notificationCreateSlack = <ThrowOnError extends boolean = false>(
 		NotificationCreateSlackErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/notification.createSlack",
 		...options,
 		headers: {
@@ -5205,7 +5429,6 @@ export const notificationUpdateSlack = <ThrowOnError extends boolean = false>(
 		NotificationUpdateSlackErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/notification.updateSlack",
 		...options,
 		headers: {
@@ -5224,7 +5447,6 @@ export const notificationTestSlackConnection = <
 		NotificationTestSlackConnectionErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/notification.testSlackConnection",
 		...options,
 		headers: {
@@ -5243,7 +5465,6 @@ export const notificationCreateTelegram = <
 		NotificationCreateTelegramErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/notification.createTelegram",
 		...options,
 		headers: {
@@ -5262,7 +5483,6 @@ export const notificationUpdateTelegram = <
 		NotificationUpdateTelegramErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/notification.updateTelegram",
 		...options,
 		headers: {
@@ -5281,7 +5501,6 @@ export const notificationTestTelegramConnection = <
 		NotificationTestTelegramConnectionErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/notification.testTelegramConnection",
 		...options,
 		headers: {
@@ -5298,7 +5517,6 @@ export const notificationCreateDiscord = <ThrowOnError extends boolean = false>(
 		NotificationCreateDiscordErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/notification.createDiscord",
 		...options,
 		headers: {
@@ -5315,7 +5533,6 @@ export const notificationUpdateDiscord = <ThrowOnError extends boolean = false>(
 		NotificationUpdateDiscordErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/notification.updateDiscord",
 		...options,
 		headers: {
@@ -5334,7 +5551,6 @@ export const notificationTestDiscordConnection = <
 		NotificationTestDiscordConnectionErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/notification.testDiscordConnection",
 		...options,
 		headers: {
@@ -5351,7 +5567,6 @@ export const notificationCreateEmail = <ThrowOnError extends boolean = false>(
 		NotificationCreateEmailErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/notification.createEmail",
 		...options,
 		headers: {
@@ -5368,7 +5583,6 @@ export const notificationUpdateEmail = <ThrowOnError extends boolean = false>(
 		NotificationUpdateEmailErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/notification.updateEmail",
 		...options,
 		headers: {
@@ -5387,7 +5601,6 @@ export const notificationTestEmailConnection = <
 		NotificationTestEmailConnectionErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/notification.testEmailConnection",
 		...options,
 		headers: {
@@ -5404,7 +5617,6 @@ export const notificationCreateResend = <ThrowOnError extends boolean = false>(
 		NotificationCreateResendErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/notification.createResend",
 		...options,
 		headers: {
@@ -5421,7 +5633,6 @@ export const notificationUpdateResend = <ThrowOnError extends boolean = false>(
 		NotificationUpdateResendErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/notification.updateResend",
 		...options,
 		headers: {
@@ -5440,7 +5651,6 @@ export const notificationTestResendConnection = <
 		NotificationTestResendConnectionErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/notification.testResendConnection",
 		...options,
 		headers: {
@@ -5457,7 +5667,6 @@ export const notificationRemove = <ThrowOnError extends boolean = false>(
 		NotificationRemoveErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/notification.remove",
 		...options,
 		headers: {
@@ -5473,11 +5682,7 @@ export const notificationOne = <ThrowOnError extends boolean = false>(
 		NotificationOneResponses,
 		NotificationOneErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/notification.one",
-		...options,
-	});
+	>({ url: "/notification.one", ...options });
 
 export const notificationAll = <ThrowOnError extends boolean = false>(
 	options?: Options<NotificationAllData, ThrowOnError>,
@@ -5486,11 +5691,7 @@ export const notificationAll = <ThrowOnError extends boolean = false>(
 		NotificationAllResponses,
 		NotificationAllErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/notification.all",
-		...options,
-	});
+	>({ url: "/notification.all", ...options });
 
 export const notificationReceiveNotification = <
 	ThrowOnError extends boolean = false,
@@ -5502,7 +5703,6 @@ export const notificationReceiveNotification = <
 		NotificationReceiveNotificationErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/notification.receiveNotification",
 		...options,
 		headers: {
@@ -5519,7 +5719,6 @@ export const notificationCreateGotify = <ThrowOnError extends boolean = false>(
 		NotificationCreateGotifyErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/notification.createGotify",
 		...options,
 		headers: {
@@ -5536,7 +5735,6 @@ export const notificationUpdateGotify = <ThrowOnError extends boolean = false>(
 		NotificationUpdateGotifyErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/notification.updateGotify",
 		...options,
 		headers: {
@@ -5555,7 +5753,6 @@ export const notificationTestGotifyConnection = <
 		NotificationTestGotifyConnectionErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/notification.testGotifyConnection",
 		...options,
 		headers: {
@@ -5572,7 +5769,6 @@ export const notificationCreateNtfy = <ThrowOnError extends boolean = false>(
 		NotificationCreateNtfyErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/notification.createNtfy",
 		...options,
 		headers: {
@@ -5589,7 +5785,6 @@ export const notificationUpdateNtfy = <ThrowOnError extends boolean = false>(
 		NotificationUpdateNtfyErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/notification.updateNtfy",
 		...options,
 		headers: {
@@ -5608,7 +5803,6 @@ export const notificationTestNtfyConnection = <
 		NotificationTestNtfyConnectionErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/notification.testNtfyConnection",
 		...options,
 		headers: {
@@ -5627,7 +5821,6 @@ export const notificationCreateMattermost = <
 		NotificationCreateMattermostErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/notification.createMattermost",
 		...options,
 		headers: {
@@ -5646,7 +5839,6 @@ export const notificationUpdateMattermost = <
 		NotificationUpdateMattermostErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/notification.updateMattermost",
 		...options,
 		headers: {
@@ -5665,7 +5857,6 @@ export const notificationTestMattermostConnection = <
 		NotificationTestMattermostConnectionErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/notification.testMattermostConnection",
 		...options,
 		headers: {
@@ -5682,7 +5873,6 @@ export const notificationCreateCustom = <ThrowOnError extends boolean = false>(
 		NotificationCreateCustomErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/notification.createCustom",
 		...options,
 		headers: {
@@ -5699,7 +5889,6 @@ export const notificationUpdateCustom = <ThrowOnError extends boolean = false>(
 		NotificationUpdateCustomErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/notification.updateCustom",
 		...options,
 		headers: {
@@ -5718,7 +5907,6 @@ export const notificationTestCustomConnection = <
 		NotificationTestCustomConnectionErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/notification.testCustomConnection",
 		...options,
 		headers: {
@@ -5735,7 +5923,6 @@ export const notificationCreateLark = <ThrowOnError extends boolean = false>(
 		NotificationCreateLarkErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/notification.createLark",
 		...options,
 		headers: {
@@ -5752,7 +5939,6 @@ export const notificationUpdateLark = <ThrowOnError extends boolean = false>(
 		NotificationUpdateLarkErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/notification.updateLark",
 		...options,
 		headers: {
@@ -5771,7 +5957,6 @@ export const notificationTestLarkConnection = <
 		NotificationTestLarkConnectionErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/notification.testLarkConnection",
 		...options,
 		headers: {
@@ -5788,7 +5973,6 @@ export const notificationCreateTeams = <ThrowOnError extends boolean = false>(
 		NotificationCreateTeamsErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/notification.createTeams",
 		...options,
 		headers: {
@@ -5805,7 +5989,6 @@ export const notificationUpdateTeams = <ThrowOnError extends boolean = false>(
 		NotificationUpdateTeamsErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/notification.updateTeams",
 		...options,
 		headers: {
@@ -5824,7 +6007,6 @@ export const notificationTestTeamsConnection = <
 		NotificationTestTeamsConnectionErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/notification.testTeamsConnection",
 		...options,
 		headers: {
@@ -5843,7 +6025,6 @@ export const notificationCreatePushover = <
 		NotificationCreatePushoverErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/notification.createPushover",
 		...options,
 		headers: {
@@ -5862,7 +6043,6 @@ export const notificationUpdatePushover = <
 		NotificationUpdatePushoverErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/notification.updatePushover",
 		...options,
 		headers: {
@@ -5881,7 +6061,6 @@ export const notificationTestPushoverConnection = <
 		NotificationTestPushoverConnectionErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/notification.testPushoverConnection",
 		...options,
 		headers: {
@@ -5899,11 +6078,7 @@ export const notificationGetEmailProviders = <
 		NotificationGetEmailProvidersResponses,
 		NotificationGetEmailProvidersErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/notification.getEmailProviders",
-		...options,
-	});
+	>({ url: "/notification.getEmailProviders", ...options });
 
 export const portCreate = <ThrowOnError extends boolean = false>(
 	options: Options<PortCreateData, ThrowOnError>,
@@ -5913,7 +6088,6 @@ export const portCreate = <ThrowOnError extends boolean = false>(
 		PortCreateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/port.create",
 		...options,
 		headers: {
@@ -5926,11 +6100,7 @@ export const portOne = <ThrowOnError extends boolean = false>(
 	options: Options<PortOneData, ThrowOnError>,
 ) =>
 	(options.client ?? client).get<PortOneResponses, PortOneErrors, ThrowOnError>(
-		{
-			security: [{ name: "x-api-key", type: "apiKey" }],
-			url: "/port.one",
-			...options,
-		},
+		{ url: "/port.one", ...options },
 	);
 
 export const portDelete = <ThrowOnError extends boolean = false>(
@@ -5941,7 +6111,6 @@ export const portDelete = <ThrowOnError extends boolean = false>(
 		PortDeleteErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/port.delete",
 		...options,
 		headers: {
@@ -5958,7 +6127,6 @@ export const portUpdate = <ThrowOnError extends boolean = false>(
 		PortUpdateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/port.update",
 		...options,
 		headers: {
@@ -5975,7 +6143,6 @@ export const postgresCreate = <ThrowOnError extends boolean = false>(
 		PostgresCreateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/postgres.create",
 		...options,
 		headers: {
@@ -5991,11 +6158,7 @@ export const postgresOne = <ThrowOnError extends boolean = false>(
 		PostgresOneResponses,
 		PostgresOneErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/postgres.one",
-		...options,
-	});
+	>({ url: "/postgres.one", ...options });
 
 export const postgresStart = <ThrowOnError extends boolean = false>(
 	options: Options<PostgresStartData, ThrowOnError>,
@@ -6005,7 +6168,6 @@ export const postgresStart = <ThrowOnError extends boolean = false>(
 		PostgresStartErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/postgres.start",
 		...options,
 		headers: {
@@ -6022,7 +6184,6 @@ export const postgresStop = <ThrowOnError extends boolean = false>(
 		PostgresStopErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/postgres.stop",
 		...options,
 		headers: {
@@ -6039,7 +6200,6 @@ export const postgresSaveExternalPort = <ThrowOnError extends boolean = false>(
 		PostgresSaveExternalPortErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/postgres.saveExternalPort",
 		...options,
 		headers: {
@@ -6056,7 +6216,6 @@ export const postgresDeploy = <ThrowOnError extends boolean = false>(
 		PostgresDeployErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/postgres.deploy",
 		...options,
 		headers: {
@@ -6073,7 +6232,6 @@ export const postgresChangeStatus = <ThrowOnError extends boolean = false>(
 		PostgresChangeStatusErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/postgres.changeStatus",
 		...options,
 		headers: {
@@ -6090,7 +6248,6 @@ export const postgresRemove = <ThrowOnError extends boolean = false>(
 		PostgresRemoveErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/postgres.remove",
 		...options,
 		headers: {
@@ -6107,7 +6264,6 @@ export const postgresSaveEnvironment = <ThrowOnError extends boolean = false>(
 		PostgresSaveEnvironmentErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/postgres.saveEnvironment",
 		...options,
 		headers: {
@@ -6124,7 +6280,6 @@ export const postgresReload = <ThrowOnError extends boolean = false>(
 		PostgresReloadErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/postgres.reload",
 		...options,
 		headers: {
@@ -6141,7 +6296,6 @@ export const postgresUpdate = <ThrowOnError extends boolean = false>(
 		PostgresUpdateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/postgres.update",
 		...options,
 		headers: {
@@ -6158,7 +6312,6 @@ export const postgresChangePassword = <ThrowOnError extends boolean = false>(
 		PostgresChangePasswordErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/postgres.changePassword",
 		...options,
 		headers: {
@@ -6175,7 +6328,6 @@ export const postgresMove = <ThrowOnError extends boolean = false>(
 		PostgresMoveErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/postgres.move",
 		...options,
 		headers: {
@@ -6192,7 +6344,6 @@ export const postgresRebuild = <ThrowOnError extends boolean = false>(
 		PostgresRebuildErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/postgres.rebuild",
 		...options,
 		headers: {
@@ -6208,11 +6359,7 @@ export const postgresSearch = <ThrowOnError extends boolean = false>(
 		PostgresSearchResponses,
 		PostgresSearchErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/postgres.search",
-		...options,
-	});
+	>({ url: "/postgres.search", ...options });
 
 export const postgresReadLogs = <ThrowOnError extends boolean = false>(
 	options: Options<PostgresReadLogsData, ThrowOnError>,
@@ -6221,11 +6368,7 @@ export const postgresReadLogs = <ThrowOnError extends boolean = false>(
 		PostgresReadLogsResponses,
 		PostgresReadLogsErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/postgres.readLogs",
-		...options,
-	});
+	>({ url: "/postgres.readLogs", ...options });
 
 export const previewDeploymentAll = <ThrowOnError extends boolean = false>(
 	options: Options<PreviewDeploymentAllData, ThrowOnError>,
@@ -6234,11 +6377,7 @@ export const previewDeploymentAll = <ThrowOnError extends boolean = false>(
 		PreviewDeploymentAllResponses,
 		PreviewDeploymentAllErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/previewDeployment.all",
-		...options,
-	});
+	>({ url: "/previewDeployment.all", ...options });
 
 export const previewDeploymentOne = <ThrowOnError extends boolean = false>(
 	options: Options<PreviewDeploymentOneData, ThrowOnError>,
@@ -6247,11 +6386,7 @@ export const previewDeploymentOne = <ThrowOnError extends boolean = false>(
 		PreviewDeploymentOneResponses,
 		PreviewDeploymentOneErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/previewDeployment.one",
-		...options,
-	});
+	>({ url: "/previewDeployment.one", ...options });
 
 export const previewDeploymentDelete = <ThrowOnError extends boolean = false>(
 	options: Options<PreviewDeploymentDeleteData, ThrowOnError>,
@@ -6261,7 +6396,6 @@ export const previewDeploymentDelete = <ThrowOnError extends boolean = false>(
 		PreviewDeploymentDeleteErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/previewDeployment.delete",
 		...options,
 		headers: {
@@ -6278,7 +6412,6 @@ export const previewDeploymentRedeploy = <ThrowOnError extends boolean = false>(
 		PreviewDeploymentRedeployErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/previewDeployment.redeploy",
 		...options,
 		headers: {
@@ -6295,7 +6428,6 @@ export const projectCreate = <ThrowOnError extends boolean = false>(
 		ProjectCreateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/project.create",
 		...options,
 		headers: {
@@ -6311,11 +6443,7 @@ export const projectOne = <ThrowOnError extends boolean = false>(
 		ProjectOneResponses,
 		ProjectOneErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/project.one",
-		...options,
-	});
+	>({ url: "/project.one", ...options });
 
 export const projectAll = <ThrowOnError extends boolean = false>(
 	options?: Options<ProjectAllData, ThrowOnError>,
@@ -6324,11 +6452,7 @@ export const projectAll = <ThrowOnError extends boolean = false>(
 		ProjectAllResponses,
 		ProjectAllErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/project.all",
-		...options,
-	});
+	>({ url: "/project.all", ...options });
 
 export const projectAllForPermissions = <ThrowOnError extends boolean = false>(
 	options?: Options<ProjectAllForPermissionsData, ThrowOnError>,
@@ -6337,11 +6461,7 @@ export const projectAllForPermissions = <ThrowOnError extends boolean = false>(
 		ProjectAllForPermissionsResponses,
 		ProjectAllForPermissionsErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/project.allForPermissions",
-		...options,
-	});
+	>({ url: "/project.allForPermissions", ...options });
 
 export const projectHomeStats = <ThrowOnError extends boolean = false>(
 	options?: Options<ProjectHomeStatsData, ThrowOnError>,
@@ -6350,11 +6470,7 @@ export const projectHomeStats = <ThrowOnError extends boolean = false>(
 		ProjectHomeStatsResponses,
 		ProjectHomeStatsErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/project.homeStats",
-		...options,
-	});
+	>({ url: "/project.homeStats", ...options });
 
 export const projectSearch = <ThrowOnError extends boolean = false>(
 	options?: Options<ProjectSearchData, ThrowOnError>,
@@ -6363,11 +6479,7 @@ export const projectSearch = <ThrowOnError extends boolean = false>(
 		ProjectSearchResponses,
 		ProjectSearchErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/project.search",
-		...options,
-	});
+	>({ url: "/project.search", ...options });
 
 export const projectRemove = <ThrowOnError extends boolean = false>(
 	options: Options<ProjectRemoveData, ThrowOnError>,
@@ -6377,7 +6489,6 @@ export const projectRemove = <ThrowOnError extends boolean = false>(
 		ProjectRemoveErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/project.remove",
 		...options,
 		headers: {
@@ -6394,7 +6505,6 @@ export const projectUpdate = <ThrowOnError extends boolean = false>(
 		ProjectUpdateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/project.update",
 		...options,
 		headers: {
@@ -6411,7 +6521,6 @@ export const projectDuplicate = <ThrowOnError extends boolean = false>(
 		ProjectDuplicateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/project.duplicate",
 		...options,
 		headers: {
@@ -6428,7 +6537,6 @@ export const redirectsCreate = <ThrowOnError extends boolean = false>(
 		RedirectsCreateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/redirects.create",
 		...options,
 		headers: {
@@ -6444,11 +6552,7 @@ export const redirectsOne = <ThrowOnError extends boolean = false>(
 		RedirectsOneResponses,
 		RedirectsOneErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/redirects.one",
-		...options,
-	});
+	>({ url: "/redirects.one", ...options });
 
 export const redirectsDelete = <ThrowOnError extends boolean = false>(
 	options: Options<RedirectsDeleteData, ThrowOnError>,
@@ -6458,7 +6562,6 @@ export const redirectsDelete = <ThrowOnError extends boolean = false>(
 		RedirectsDeleteErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/redirects.delete",
 		...options,
 		headers: {
@@ -6475,7 +6578,6 @@ export const redirectsUpdate = <ThrowOnError extends boolean = false>(
 		RedirectsUpdateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/redirects.update",
 		...options,
 		headers: {
@@ -6492,7 +6594,6 @@ export const redisCreate = <ThrowOnError extends boolean = false>(
 		RedisCreateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/redis.create",
 		...options,
 		headers: {
@@ -6508,11 +6609,7 @@ export const redisOne = <ThrowOnError extends boolean = false>(
 		RedisOneResponses,
 		RedisOneErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/redis.one",
-		...options,
-	});
+	>({ url: "/redis.one", ...options });
 
 export const redisStart = <ThrowOnError extends boolean = false>(
 	options: Options<RedisStartData, ThrowOnError>,
@@ -6522,7 +6619,6 @@ export const redisStart = <ThrowOnError extends boolean = false>(
 		RedisStartErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/redis.start",
 		...options,
 		headers: {
@@ -6539,7 +6635,6 @@ export const redisReload = <ThrowOnError extends boolean = false>(
 		RedisReloadErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/redis.reload",
 		...options,
 		headers: {
@@ -6556,7 +6651,6 @@ export const redisStop = <ThrowOnError extends boolean = false>(
 		RedisStopErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/redis.stop",
 		...options,
 		headers: {
@@ -6573,7 +6667,6 @@ export const redisSaveExternalPort = <ThrowOnError extends boolean = false>(
 		RedisSaveExternalPortErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/redis.saveExternalPort",
 		...options,
 		headers: {
@@ -6590,7 +6683,6 @@ export const redisDeploy = <ThrowOnError extends boolean = false>(
 		RedisDeployErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/redis.deploy",
 		...options,
 		headers: {
@@ -6607,7 +6699,6 @@ export const redisChangeStatus = <ThrowOnError extends boolean = false>(
 		RedisChangeStatusErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/redis.changeStatus",
 		...options,
 		headers: {
@@ -6624,7 +6715,6 @@ export const redisRemove = <ThrowOnError extends boolean = false>(
 		RedisRemoveErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/redis.remove",
 		...options,
 		headers: {
@@ -6641,7 +6731,6 @@ export const redisSaveEnvironment = <ThrowOnError extends boolean = false>(
 		RedisSaveEnvironmentErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/redis.saveEnvironment",
 		...options,
 		headers: {
@@ -6658,7 +6747,6 @@ export const redisUpdate = <ThrowOnError extends boolean = false>(
 		RedisUpdateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/redis.update",
 		...options,
 		headers: {
@@ -6675,7 +6763,6 @@ export const redisChangePassword = <ThrowOnError extends boolean = false>(
 		RedisChangePasswordErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/redis.changePassword",
 		...options,
 		headers: {
@@ -6692,7 +6779,6 @@ export const redisMove = <ThrowOnError extends boolean = false>(
 		RedisMoveErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/redis.move",
 		...options,
 		headers: {
@@ -6709,7 +6795,6 @@ export const redisRebuild = <ThrowOnError extends boolean = false>(
 		RedisRebuildErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/redis.rebuild",
 		...options,
 		headers: {
@@ -6725,11 +6810,7 @@ export const redisSearch = <ThrowOnError extends boolean = false>(
 		RedisSearchResponses,
 		RedisSearchErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/redis.search",
-		...options,
-	});
+	>({ url: "/redis.search", ...options });
 
 export const redisReadLogs = <ThrowOnError extends boolean = false>(
 	options: Options<RedisReadLogsData, ThrowOnError>,
@@ -6738,11 +6819,7 @@ export const redisReadLogs = <ThrowOnError extends boolean = false>(
 		RedisReadLogsResponses,
 		RedisReadLogsErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/redis.readLogs",
-		...options,
-	});
+	>({ url: "/redis.readLogs", ...options });
 
 export const registryCreate = <ThrowOnError extends boolean = false>(
 	options: Options<RegistryCreateData, ThrowOnError>,
@@ -6752,7 +6829,6 @@ export const registryCreate = <ThrowOnError extends boolean = false>(
 		RegistryCreateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/registry.create",
 		...options,
 		headers: {
@@ -6769,7 +6845,6 @@ export const registryRemove = <ThrowOnError extends boolean = false>(
 		RegistryRemoveErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/registry.remove",
 		...options,
 		headers: {
@@ -6786,7 +6861,6 @@ export const registryUpdate = <ThrowOnError extends boolean = false>(
 		RegistryUpdateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/registry.update",
 		...options,
 		headers: {
@@ -6802,11 +6876,7 @@ export const registryAll = <ThrowOnError extends boolean = false>(
 		RegistryAllResponses,
 		RegistryAllErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/registry.all",
-		...options,
-	});
+	>({ url: "/registry.all", ...options });
 
 export const registryOne = <ThrowOnError extends boolean = false>(
 	options: Options<RegistryOneData, ThrowOnError>,
@@ -6815,11 +6885,7 @@ export const registryOne = <ThrowOnError extends boolean = false>(
 		RegistryOneResponses,
 		RegistryOneErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/registry.one",
-		...options,
-	});
+	>({ url: "/registry.one", ...options });
 
 export const registryTestRegistry = <ThrowOnError extends boolean = false>(
 	options: Options<RegistryTestRegistryData, ThrowOnError>,
@@ -6829,7 +6895,6 @@ export const registryTestRegistry = <ThrowOnError extends boolean = false>(
 		RegistryTestRegistryErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/registry.testRegistry",
 		...options,
 		headers: {
@@ -6846,7 +6911,6 @@ export const registryTestRegistryById = <ThrowOnError extends boolean = false>(
 		RegistryTestRegistryByIdErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/registry.testRegistryById",
 		...options,
 		headers: {
@@ -6863,7 +6927,6 @@ export const securityCreate = <ThrowOnError extends boolean = false>(
 		SecurityCreateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/security.create",
 		...options,
 		headers: {
@@ -6879,11 +6942,7 @@ export const securityOne = <ThrowOnError extends boolean = false>(
 		SecurityOneResponses,
 		SecurityOneErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/security.one",
-		...options,
-	});
+	>({ url: "/security.one", ...options });
 
 export const securityDelete = <ThrowOnError extends boolean = false>(
 	options: Options<SecurityDeleteData, ThrowOnError>,
@@ -6893,7 +6952,6 @@ export const securityDelete = <ThrowOnError extends boolean = false>(
 		SecurityDeleteErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/security.delete",
 		...options,
 		headers: {
@@ -6910,7 +6968,6 @@ export const securityUpdate = <ThrowOnError extends boolean = false>(
 		SecurityUpdateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/security.update",
 		...options,
 		headers: {
@@ -6927,7 +6984,6 @@ export const serverCreate = <ThrowOnError extends boolean = false>(
 		ServerCreateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/server.create",
 		...options,
 		headers: {
@@ -6943,11 +6999,7 @@ export const serverOne = <ThrowOnError extends boolean = false>(
 		ServerOneResponses,
 		ServerOneErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/server.one",
-		...options,
-	});
+	>({ url: "/server.one", ...options });
 
 export const serverGetDefaultCommand = <ThrowOnError extends boolean = false>(
 	options: Options<ServerGetDefaultCommandData, ThrowOnError>,
@@ -6956,11 +7008,7 @@ export const serverGetDefaultCommand = <ThrowOnError extends boolean = false>(
 		ServerGetDefaultCommandResponses,
 		ServerGetDefaultCommandErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/server.getDefaultCommand",
-		...options,
-	});
+	>({ url: "/server.getDefaultCommand", ...options });
 
 export const serverAll = <ThrowOnError extends boolean = false>(
 	options?: Options<ServerAllData, ThrowOnError>,
@@ -6969,11 +7017,7 @@ export const serverAll = <ThrowOnError extends boolean = false>(
 		ServerAllResponses,
 		ServerAllErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/server.all",
-		...options,
-	});
+	>({ url: "/server.all", ...options });
 
 export const serverAllForPermissions = <ThrowOnError extends boolean = false>(
 	options?: Options<ServerAllForPermissionsData, ThrowOnError>,
@@ -6982,11 +7026,7 @@ export const serverAllForPermissions = <ThrowOnError extends boolean = false>(
 		ServerAllForPermissionsResponses,
 		ServerAllForPermissionsErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/server.allForPermissions",
-		...options,
-	});
+	>({ url: "/server.allForPermissions", ...options });
 
 export const serverCount = <ThrowOnError extends boolean = false>(
 	options?: Options<ServerCountData, ThrowOnError>,
@@ -6995,11 +7035,7 @@ export const serverCount = <ThrowOnError extends boolean = false>(
 		ServerCountResponses,
 		ServerCountErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/server.count",
-		...options,
-	});
+	>({ url: "/server.count", ...options });
 
 export const serverWithSshKey = <ThrowOnError extends boolean = false>(
 	options?: Options<ServerWithSshKeyData, ThrowOnError>,
@@ -7008,11 +7044,7 @@ export const serverWithSshKey = <ThrowOnError extends boolean = false>(
 		ServerWithSshKeyResponses,
 		ServerWithSshKeyErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/server.withSSHKey",
-		...options,
-	});
+	>({ url: "/server.withSSHKey", ...options });
 
 export const serverBuildServers = <ThrowOnError extends boolean = false>(
 	options?: Options<ServerBuildServersData, ThrowOnError>,
@@ -7021,11 +7053,7 @@ export const serverBuildServers = <ThrowOnError extends boolean = false>(
 		ServerBuildServersResponses,
 		ServerBuildServersErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/server.buildServers",
-		...options,
-	});
+	>({ url: "/server.buildServers", ...options });
 
 export const serverSetup = <ThrowOnError extends boolean = false>(
 	options: Options<ServerSetupData, ThrowOnError>,
@@ -7035,7 +7063,6 @@ export const serverSetup = <ThrowOnError extends boolean = false>(
 		ServerSetupErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/server.setup",
 		...options,
 		headers: {
@@ -7051,11 +7078,7 @@ export const serverValidate = <ThrowOnError extends boolean = false>(
 		ServerValidateResponses,
 		ServerValidateErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/server.validate",
-		...options,
-	});
+	>({ url: "/server.validate", ...options });
 
 export const serverSecurity = <ThrowOnError extends boolean = false>(
 	options: Options<ServerSecurityData, ThrowOnError>,
@@ -7064,11 +7087,7 @@ export const serverSecurity = <ThrowOnError extends boolean = false>(
 		ServerSecurityResponses,
 		ServerSecurityErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/server.security",
-		...options,
-	});
+	>({ url: "/server.security", ...options });
 
 export const serverSetupMonitoring = <ThrowOnError extends boolean = false>(
 	options: Options<ServerSetupMonitoringData, ThrowOnError>,
@@ -7078,7 +7097,6 @@ export const serverSetupMonitoring = <ThrowOnError extends boolean = false>(
 		ServerSetupMonitoringErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/server.setupMonitoring",
 		...options,
 		headers: {
@@ -7095,7 +7113,6 @@ export const serverRemove = <ThrowOnError extends boolean = false>(
 		ServerRemoveErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/server.remove",
 		...options,
 		headers: {
@@ -7112,7 +7129,6 @@ export const serverUpdate = <ThrowOnError extends boolean = false>(
 		ServerUpdateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/server.update",
 		...options,
 		headers: {
@@ -7131,7 +7147,6 @@ export const serverUpdateBuildsConcurrency = <
 		ServerUpdateBuildsConcurrencyErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/server.updateBuildsConcurrency",
 		...options,
 		headers: {
@@ -7147,11 +7162,7 @@ export const serverPublicIp = <ThrowOnError extends boolean = false>(
 		ServerPublicIpResponses,
 		ServerPublicIpErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/server.publicIp",
-		...options,
-	});
+	>({ url: "/server.publicIp", ...options });
 
 export const serverGetServerTime = <ThrowOnError extends boolean = false>(
 	options?: Options<ServerGetServerTimeData, ThrowOnError>,
@@ -7160,11 +7171,7 @@ export const serverGetServerTime = <ThrowOnError extends boolean = false>(
 		ServerGetServerTimeResponses,
 		ServerGetServerTimeErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/server.getServerTime",
-		...options,
-	});
+	>({ url: "/server.getServerTime", ...options });
 
 export const serverGetServerMetrics = <ThrowOnError extends boolean = false>(
 	options: Options<ServerGetServerMetricsData, ThrowOnError>,
@@ -7173,11 +7180,7 @@ export const serverGetServerMetrics = <ThrowOnError extends boolean = false>(
 		ServerGetServerMetricsResponses,
 		ServerGetServerMetricsErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/server.getServerMetrics",
-		...options,
-	});
+	>({ url: "/server.getServerMetrics", ...options });
 
 export const settingsGetWebServerSettings = <
 	ThrowOnError extends boolean = false,
@@ -7188,11 +7191,7 @@ export const settingsGetWebServerSettings = <
 		SettingsGetWebServerSettingsResponses,
 		SettingsGetWebServerSettingsErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/settings.getWebServerSettings",
-		...options,
-	});
+	>({ url: "/settings.getWebServerSettings", ...options });
 
 export const settingsReloadServer = <ThrowOnError extends boolean = false>(
 	options?: Options<SettingsReloadServerData, ThrowOnError>,
@@ -7201,37 +7200,7 @@ export const settingsReloadServer = <ThrowOnError extends boolean = false>(
 		SettingsReloadServerResponses,
 		SettingsReloadServerErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/settings.reloadServer",
-		...options,
-	});
-
-export const settingsCleanRedis = <ThrowOnError extends boolean = false>(
-	options?: Options<SettingsCleanRedisData, ThrowOnError>,
-) =>
-	(options?.client ?? client).post<
-		SettingsCleanRedisResponses,
-		SettingsCleanRedisErrors,
-		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/settings.cleanRedis",
-		...options,
-	});
-
-export const settingsReloadRedis = <ThrowOnError extends boolean = false>(
-	options?: Options<SettingsReloadRedisData, ThrowOnError>,
-) =>
-	(options?.client ?? client).post<
-		SettingsReloadRedisResponses,
-		SettingsReloadRedisErrors,
-		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/settings.reloadRedis",
-		...options,
-	});
+	>({ url: "/settings.reloadServer", ...options });
 
 export const settingsCleanAllDeploymentQueue = <
 	ThrowOnError extends boolean = false,
@@ -7242,11 +7211,7 @@ export const settingsCleanAllDeploymentQueue = <
 		SettingsCleanAllDeploymentQueueResponses,
 		SettingsCleanAllDeploymentQueueErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/settings.cleanAllDeploymentQueue",
-		...options,
-	});
+	>({ url: "/settings.cleanAllDeploymentQueue", ...options });
 
 export const settingsReloadTraefik = <ThrowOnError extends boolean = false>(
 	options?: Options<SettingsReloadTraefikData, ThrowOnError>,
@@ -7256,7 +7221,6 @@ export const settingsReloadTraefik = <ThrowOnError extends boolean = false>(
 		SettingsReloadTraefikErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/settings.reloadTraefik",
 		...options,
 		headers: {
@@ -7273,7 +7237,6 @@ export const settingsToggleDashboard = <ThrowOnError extends boolean = false>(
 		SettingsToggleDashboardErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/settings.toggleDashboard",
 		...options,
 		headers: {
@@ -7290,7 +7253,6 @@ export const settingsCleanUnusedImages = <ThrowOnError extends boolean = false>(
 		SettingsCleanUnusedImagesErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/settings.cleanUnusedImages",
 		...options,
 		headers: {
@@ -7309,7 +7271,6 @@ export const settingsCleanUnusedVolumes = <
 		SettingsCleanUnusedVolumesErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/settings.cleanUnusedVolumes",
 		...options,
 		headers: {
@@ -7328,7 +7289,6 @@ export const settingsCleanStoppedContainers = <
 		SettingsCleanStoppedContainersErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/settings.cleanStoppedContainers",
 		...options,
 		headers: {
@@ -7347,7 +7307,6 @@ export const settingsCleanDockerBuilder = <
 		SettingsCleanDockerBuilderErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/settings.cleanDockerBuilder",
 		...options,
 		headers: {
@@ -7364,7 +7323,6 @@ export const settingsCleanDockerPrune = <ThrowOnError extends boolean = false>(
 		SettingsCleanDockerPruneErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/settings.cleanDockerPrune",
 		...options,
 		headers: {
@@ -7381,7 +7339,6 @@ export const settingsCleanAll = <ThrowOnError extends boolean = false>(
 		SettingsCleanAllErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/settings.cleanAll",
 		...options,
 		headers: {
@@ -7397,11 +7354,7 @@ export const settingsCleanMonitoring = <ThrowOnError extends boolean = false>(
 		SettingsCleanMonitoringResponses,
 		SettingsCleanMonitoringErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/settings.cleanMonitoring",
-		...options,
-	});
+	>({ url: "/settings.cleanMonitoring", ...options });
 
 export const settingsGetDockerDiskUsage = <
 	ThrowOnError extends boolean = false,
@@ -7412,11 +7365,7 @@ export const settingsGetDockerDiskUsage = <
 		SettingsGetDockerDiskUsageResponses,
 		SettingsGetDockerDiskUsageErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/settings.getDockerDiskUsage",
-		...options,
-	});
+	>({ url: "/settings.getDockerDiskUsage", ...options });
 
 export const settingsSaveSshPrivateKey = <ThrowOnError extends boolean = false>(
 	options: Options<SettingsSaveSshPrivateKeyData, ThrowOnError>,
@@ -7426,7 +7375,6 @@ export const settingsSaveSshPrivateKey = <ThrowOnError extends boolean = false>(
 		SettingsSaveSshPrivateKeyErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/settings.saveSSHPrivateKey",
 		...options,
 		headers: {
@@ -7445,7 +7393,6 @@ export const settingsAssignDomainServer = <
 		SettingsAssignDomainServerErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/settings.assignDomainServer",
 		...options,
 		headers: {
@@ -7463,11 +7410,7 @@ export const settingsCleanSshPrivateKey = <
 		SettingsCleanSshPrivateKeyResponses,
 		SettingsCleanSshPrivateKeyErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/settings.cleanSSHPrivateKey",
-		...options,
-	});
+	>({ url: "/settings.cleanSSHPrivateKey", ...options });
 
 export const settingsUpdateDockerCleanup = <
 	ThrowOnError extends boolean = false,
@@ -7479,7 +7422,6 @@ export const settingsUpdateDockerCleanup = <
 		SettingsUpdateDockerCleanupErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/settings.updateDockerCleanup",
 		...options,
 		headers: {
@@ -7498,7 +7440,6 @@ export const settingsUpdateRemoteServersOnly = <
 		SettingsUpdateRemoteServersOnlyErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/settings.updateRemoteServersOnly",
 		...options,
 		headers: {
@@ -7517,7 +7458,6 @@ export const settingsUpdateBuildsConcurrency = <
 		SettingsUpdateBuildsConcurrencyErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/settings.updateBuildsConcurrency",
 		...options,
 		headers: {
@@ -7534,7 +7474,6 @@ export const settingsUpdateEnforceSso = <ThrowOnError extends boolean = false>(
 		SettingsUpdateEnforceSsoErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/settings.updateEnforceSSO",
 		...options,
 		headers: {
@@ -7550,11 +7489,7 @@ export const settingsReadTraefikConfig = <ThrowOnError extends boolean = false>(
 		SettingsReadTraefikConfigResponses,
 		SettingsReadTraefikConfigErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/settings.readTraefikConfig",
-		...options,
-	});
+	>({ url: "/settings.readTraefikConfig", ...options });
 
 export const settingsUpdateTraefikConfig = <
 	ThrowOnError extends boolean = false,
@@ -7566,7 +7501,6 @@ export const settingsUpdateTraefikConfig = <
 		SettingsUpdateTraefikConfigErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/settings.updateTraefikConfig",
 		...options,
 		headers: {
@@ -7584,11 +7518,7 @@ export const settingsReadWebServerTraefikConfig = <
 		SettingsReadWebServerTraefikConfigResponses,
 		SettingsReadWebServerTraefikConfigErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/settings.readWebServerTraefikConfig",
-		...options,
-	});
+	>({ url: "/settings.readWebServerTraefikConfig", ...options });
 
 export const settingsUpdateWebServerTraefikConfig = <
 	ThrowOnError extends boolean = false,
@@ -7600,7 +7530,6 @@ export const settingsUpdateWebServerTraefikConfig = <
 		SettingsUpdateWebServerTraefikConfigErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/settings.updateWebServerTraefikConfig",
 		...options,
 		headers: {
@@ -7618,11 +7547,7 @@ export const settingsReadMiddlewareTraefikConfig = <
 		SettingsReadMiddlewareTraefikConfigResponses,
 		SettingsReadMiddlewareTraefikConfigErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/settings.readMiddlewareTraefikConfig",
-		...options,
-	});
+	>({ url: "/settings.readMiddlewareTraefikConfig", ...options });
 
 export const settingsUpdateMiddlewareTraefikConfig = <
 	ThrowOnError extends boolean = false,
@@ -7634,7 +7559,6 @@ export const settingsUpdateMiddlewareTraefikConfig = <
 		SettingsUpdateMiddlewareTraefikConfigErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/settings.updateMiddlewareTraefikConfig",
 		...options,
 		headers: {
@@ -7650,11 +7574,7 @@ export const settingsGetUpdateData = <ThrowOnError extends boolean = false>(
 		SettingsGetUpdateDataResponses,
 		SettingsGetUpdateDataErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/settings.getUpdateData",
-		...options,
-	});
+	>({ url: "/settings.getUpdateData", ...options });
 
 export const settingsUpdateServer = <ThrowOnError extends boolean = false>(
 	options?: Options<SettingsUpdateServerData, ThrowOnError>,
@@ -7663,11 +7583,7 @@ export const settingsUpdateServer = <ThrowOnError extends boolean = false>(
 		SettingsUpdateServerResponses,
 		SettingsUpdateServerErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/settings.updateServer",
-		...options,
-	});
+	>({ url: "/settings.updateServer", ...options });
 
 export const settingsGetDokployVersion = <ThrowOnError extends boolean = false>(
 	options?: Options<SettingsGetDokployVersionData, ThrowOnError>,
@@ -7676,11 +7592,7 @@ export const settingsGetDokployVersion = <ThrowOnError extends boolean = false>(
 		SettingsGetDokployVersionResponses,
 		SettingsGetDokployVersionErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/settings.getDokployVersion",
-		...options,
-	});
+	>({ url: "/settings.getDokployVersion", ...options });
 
 export const settingsGetReleaseTag = <ThrowOnError extends boolean = false>(
 	options?: Options<SettingsGetReleaseTagData, ThrowOnError>,
@@ -7689,11 +7601,7 @@ export const settingsGetReleaseTag = <ThrowOnError extends boolean = false>(
 		SettingsGetReleaseTagResponses,
 		SettingsGetReleaseTagErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/settings.getReleaseTag",
-		...options,
-	});
+	>({ url: "/settings.getReleaseTag", ...options });
 
 export const settingsReadDirectories = <ThrowOnError extends boolean = false>(
 	options?: Options<SettingsReadDirectoriesData, ThrowOnError>,
@@ -7702,11 +7610,7 @@ export const settingsReadDirectories = <ThrowOnError extends boolean = false>(
 		SettingsReadDirectoriesResponses,
 		SettingsReadDirectoriesErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/settings.readDirectories",
-		...options,
-	});
+	>({ url: "/settings.readDirectories", ...options });
 
 export const settingsUpdateTraefikFile = <ThrowOnError extends boolean = false>(
 	options: Options<SettingsUpdateTraefikFileData, ThrowOnError>,
@@ -7716,7 +7620,6 @@ export const settingsUpdateTraefikFile = <ThrowOnError extends boolean = false>(
 		SettingsUpdateTraefikFileErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/settings.updateTraefikFile",
 		...options,
 		headers: {
@@ -7732,11 +7635,7 @@ export const settingsReadTraefikFile = <ThrowOnError extends boolean = false>(
 		SettingsReadTraefikFileResponses,
 		SettingsReadTraefikFileErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/settings.readTraefikFile",
-		...options,
-	});
+	>({ url: "/settings.readTraefikFile", ...options });
 
 export const settingsGetIp = <ThrowOnError extends boolean = false>(
 	options?: Options<SettingsGetIpData, ThrowOnError>,
@@ -7745,11 +7644,7 @@ export const settingsGetIp = <ThrowOnError extends boolean = false>(
 		SettingsGetIpResponses,
 		SettingsGetIpErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/settings.getIp",
-		...options,
-	});
+	>({ url: "/settings.getIp", ...options });
 
 export const settingsUpdateServerIp = <ThrowOnError extends boolean = false>(
 	options: Options<SettingsUpdateServerIpData, ThrowOnError>,
@@ -7759,7 +7654,6 @@ export const settingsUpdateServerIp = <ThrowOnError extends boolean = false>(
 		SettingsUpdateServerIpErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/settings.updateServerIp",
 		...options,
 		headers: {
@@ -7777,11 +7671,7 @@ export const settingsGetOpenApiDocument = <
 		SettingsGetOpenApiDocumentResponses,
 		SettingsGetOpenApiDocumentErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/settings.getOpenApiDocument",
-		...options,
-	});
+	>({ url: "/settings.getOpenApiDocument", ...options });
 
 export const settingsReadTraefikEnv = <ThrowOnError extends boolean = false>(
 	options?: Options<SettingsReadTraefikEnvData, ThrowOnError>,
@@ -7790,11 +7680,7 @@ export const settingsReadTraefikEnv = <ThrowOnError extends boolean = false>(
 		SettingsReadTraefikEnvResponses,
 		SettingsReadTraefikEnvErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/settings.readTraefikEnv",
-		...options,
-	});
+	>({ url: "/settings.readTraefikEnv", ...options });
 
 export const settingsWriteTraefikEnv = <ThrowOnError extends boolean = false>(
 	options: Options<SettingsWriteTraefikEnvData, ThrowOnError>,
@@ -7804,7 +7690,6 @@ export const settingsWriteTraefikEnv = <ThrowOnError extends boolean = false>(
 		SettingsWriteTraefikEnvErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/settings.writeTraefikEnv",
 		...options,
 		headers: {
@@ -7822,11 +7707,7 @@ export const settingsHaveTraefikDashboardPortEnabled = <
 		SettingsHaveTraefikDashboardPortEnabledResponses,
 		SettingsHaveTraefikDashboardPortEnabledErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/settings.haveTraefikDashboardPortEnabled",
-		...options,
-	});
+	>({ url: "/settings.haveTraefikDashboardPortEnabled", ...options });
 
 export const settingsHaveActivateRequests = <
 	ThrowOnError extends boolean = false,
@@ -7837,11 +7718,7 @@ export const settingsHaveActivateRequests = <
 		SettingsHaveActivateRequestsResponses,
 		SettingsHaveActivateRequestsErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/settings.haveActivateRequests",
-		...options,
-	});
+	>({ url: "/settings.haveActivateRequests", ...options });
 
 export const settingsToggleRequests = <ThrowOnError extends boolean = false>(
 	options: Options<SettingsToggleRequestsData, ThrowOnError>,
@@ -7851,7 +7728,6 @@ export const settingsToggleRequests = <ThrowOnError extends boolean = false>(
 		SettingsToggleRequestsErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/settings.toggleRequests",
 		...options,
 		headers: {
@@ -7867,11 +7743,7 @@ export const settingsIsCloud = <ThrowOnError extends boolean = false>(
 		SettingsIsCloudResponses,
 		SettingsIsCloudErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/settings.isCloud",
-		...options,
-	});
+	>({ url: "/settings.isCloud", ...options });
 
 export const settingsIsUserSubscribed = <ThrowOnError extends boolean = false>(
 	options?: Options<SettingsIsUserSubscribedData, ThrowOnError>,
@@ -7880,11 +7752,7 @@ export const settingsIsUserSubscribed = <ThrowOnError extends boolean = false>(
 		SettingsIsUserSubscribedResponses,
 		SettingsIsUserSubscribedErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/settings.isUserSubscribed",
-		...options,
-	});
+	>({ url: "/settings.isUserSubscribed", ...options });
 
 export const settingsHealth = <ThrowOnError extends boolean = false>(
 	options?: Options<SettingsHealthData, ThrowOnError>,
@@ -7893,11 +7761,7 @@ export const settingsHealth = <ThrowOnError extends boolean = false>(
 		SettingsHealthResponses,
 		SettingsHealthErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/settings.health",
-		...options,
-	});
+	>({ url: "/settings.health", ...options });
 
 export const settingsCheckInfrastructureHealth = <
 	ThrowOnError extends boolean = false,
@@ -7908,11 +7772,7 @@ export const settingsCheckInfrastructureHealth = <
 		SettingsCheckInfrastructureHealthResponses,
 		SettingsCheckInfrastructureHealthErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/settings.checkInfrastructureHealth",
-		...options,
-	});
+	>({ url: "/settings.checkInfrastructureHealth", ...options });
 
 export const settingsSetupGpu = <ThrowOnError extends boolean = false>(
 	options: Options<SettingsSetupGpuData, ThrowOnError>,
@@ -7922,7 +7782,6 @@ export const settingsSetupGpu = <ThrowOnError extends boolean = false>(
 		SettingsSetupGpuErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/settings.setupGPU",
 		...options,
 		headers: {
@@ -7938,11 +7797,7 @@ export const settingsCheckGpuStatus = <ThrowOnError extends boolean = false>(
 		SettingsCheckGpuStatusResponses,
 		SettingsCheckGpuStatusErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/settings.checkGPUStatus",
-		...options,
-	});
+	>({ url: "/settings.checkGPUStatus", ...options });
 
 export const settingsUpdateTraefikPorts = <
 	ThrowOnError extends boolean = false,
@@ -7954,7 +7809,6 @@ export const settingsUpdateTraefikPorts = <
 		SettingsUpdateTraefikPortsErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/settings.updateTraefikPorts",
 		...options,
 		headers: {
@@ -7970,11 +7824,7 @@ export const settingsGetTraefikPorts = <ThrowOnError extends boolean = false>(
 		SettingsGetTraefikPortsResponses,
 		SettingsGetTraefikPortsErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/settings.getTraefikPorts",
-		...options,
-	});
+	>({ url: "/settings.getTraefikPorts", ...options });
 
 export const settingsUpdateLogCleanup = <ThrowOnError extends boolean = false>(
 	options: Options<SettingsUpdateLogCleanupData, ThrowOnError>,
@@ -7984,7 +7834,6 @@ export const settingsUpdateLogCleanup = <ThrowOnError extends boolean = false>(
 		SettingsUpdateLogCleanupErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/settings.updateLogCleanup",
 		...options,
 		headers: {
@@ -8002,11 +7851,7 @@ export const settingsGetLogCleanupStatus = <
 		SettingsGetLogCleanupStatusResponses,
 		SettingsGetLogCleanupStatusErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/settings.getLogCleanupStatus",
-		...options,
-	});
+	>({ url: "/settings.getLogCleanupStatus", ...options });
 
 export const settingsGetDokployCloudIps = <
 	ThrowOnError extends boolean = false,
@@ -8017,11 +7862,7 @@ export const settingsGetDokployCloudIps = <
 		SettingsGetDokployCloudIpsResponses,
 		SettingsGetDokployCloudIpsErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/settings.getDokployCloudIps",
-		...options,
-	});
+	>({ url: "/settings.getDokployCloudIps", ...options });
 
 export const sshKeyCreate = <ThrowOnError extends boolean = false>(
 	options: Options<SshKeyCreateData, ThrowOnError>,
@@ -8031,7 +7872,6 @@ export const sshKeyCreate = <ThrowOnError extends boolean = false>(
 		SshKeyCreateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/sshKey.create",
 		...options,
 		headers: {
@@ -8048,7 +7888,6 @@ export const sshKeyRemove = <ThrowOnError extends boolean = false>(
 		SshKeyRemoveErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/sshKey.remove",
 		...options,
 		headers: {
@@ -8064,11 +7903,7 @@ export const sshKeyOne = <ThrowOnError extends boolean = false>(
 		SshKeyOneResponses,
 		SshKeyOneErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/sshKey.one",
-		...options,
-	});
+	>({ url: "/sshKey.one", ...options });
 
 export const sshKeyAll = <ThrowOnError extends boolean = false>(
 	options?: Options<SshKeyAllData, ThrowOnError>,
@@ -8077,11 +7912,7 @@ export const sshKeyAll = <ThrowOnError extends boolean = false>(
 		SshKeyAllResponses,
 		SshKeyAllErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/sshKey.all",
-		...options,
-	});
+	>({ url: "/sshKey.all", ...options });
 
 export const sshKeyAllForApps = <ThrowOnError extends boolean = false>(
 	options?: Options<SshKeyAllForAppsData, ThrowOnError>,
@@ -8090,11 +7921,7 @@ export const sshKeyAllForApps = <ThrowOnError extends boolean = false>(
 		SshKeyAllForAppsResponses,
 		SshKeyAllForAppsErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/sshKey.allForApps",
-		...options,
-	});
+	>({ url: "/sshKey.allForApps", ...options });
 
 export const sshKeyGenerate = <ThrowOnError extends boolean = false>(
 	options: Options<SshKeyGenerateData, ThrowOnError>,
@@ -8104,7 +7931,6 @@ export const sshKeyGenerate = <ThrowOnError extends boolean = false>(
 		SshKeyGenerateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/sshKey.generate",
 		...options,
 		headers: {
@@ -8121,7 +7947,6 @@ export const sshKeyUpdate = <ThrowOnError extends boolean = false>(
 		SshKeyUpdateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/sshKey.update",
 		...options,
 		headers: {
@@ -8137,11 +7962,7 @@ export const stripeGetCurrentPlan = <ThrowOnError extends boolean = false>(
 		StripeGetCurrentPlanResponses,
 		StripeGetCurrentPlanErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/stripe.getCurrentPlan",
-		...options,
-	});
+	>({ url: "/stripe.getCurrentPlan", ...options });
 
 export const stripeGetProducts = <ThrowOnError extends boolean = false>(
 	options?: Options<StripeGetProductsData, ThrowOnError>,
@@ -8150,11 +7971,7 @@ export const stripeGetProducts = <ThrowOnError extends boolean = false>(
 		StripeGetProductsResponses,
 		StripeGetProductsErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/stripe.getProducts",
-		...options,
-	});
+	>({ url: "/stripe.getProducts", ...options });
 
 export const stripeCreateCheckoutSession = <
 	ThrowOnError extends boolean = false,
@@ -8166,7 +7983,6 @@ export const stripeCreateCheckoutSession = <
 		StripeCreateCheckoutSessionErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/stripe.createCheckoutSession",
 		...options,
 		headers: {
@@ -8184,11 +8000,7 @@ export const stripeCreateCustomerPortalSession = <
 		StripeCreateCustomerPortalSessionResponses,
 		StripeCreateCustomerPortalSessionErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/stripe.createCustomerPortalSession",
-		...options,
-	});
+	>({ url: "/stripe.createCustomerPortalSession", ...options });
 
 export const stripeUpgradeSubscription = <ThrowOnError extends boolean = false>(
 	options: Options<StripeUpgradeSubscriptionData, ThrowOnError>,
@@ -8198,7 +8010,6 @@ export const stripeUpgradeSubscription = <ThrowOnError extends boolean = false>(
 		StripeUpgradeSubscriptionErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/stripe.upgradeSubscription",
 		...options,
 		headers: {
@@ -8216,11 +8027,7 @@ export const stripeCanCreateMoreServers = <
 		StripeCanCreateMoreServersResponses,
 		StripeCanCreateMoreServersErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/stripe.canCreateMoreServers",
-		...options,
-	});
+	>({ url: "/stripe.canCreateMoreServers", ...options });
 
 export const stripeUpdateInvoiceNotifications = <
 	ThrowOnError extends boolean = false,
@@ -8232,7 +8039,6 @@ export const stripeUpdateInvoiceNotifications = <
 		StripeUpdateInvoiceNotificationsErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/stripe.updateInvoiceNotifications",
 		...options,
 		headers: {
@@ -8248,11 +8054,7 @@ export const stripeGetInvoices = <ThrowOnError extends boolean = false>(
 		StripeGetInvoicesResponses,
 		StripeGetInvoicesErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/stripe.getInvoices",
-		...options,
-	});
+	>({ url: "/stripe.getInvoices", ...options });
 
 export const swarmGetNodes = <ThrowOnError extends boolean = false>(
 	options?: Options<SwarmGetNodesData, ThrowOnError>,
@@ -8261,11 +8063,7 @@ export const swarmGetNodes = <ThrowOnError extends boolean = false>(
 		SwarmGetNodesResponses,
 		SwarmGetNodesErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/swarm.getNodes",
-		...options,
-	});
+	>({ url: "/swarm.getNodes", ...options });
 
 export const swarmGetNodeInfo = <ThrowOnError extends boolean = false>(
 	options: Options<SwarmGetNodeInfoData, ThrowOnError>,
@@ -8274,11 +8072,7 @@ export const swarmGetNodeInfo = <ThrowOnError extends boolean = false>(
 		SwarmGetNodeInfoResponses,
 		SwarmGetNodeInfoErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/swarm.getNodeInfo",
-		...options,
-	});
+	>({ url: "/swarm.getNodeInfo", ...options });
 
 export const swarmGetNodeApps = <ThrowOnError extends boolean = false>(
 	options?: Options<SwarmGetNodeAppsData, ThrowOnError>,
@@ -8287,11 +8081,7 @@ export const swarmGetNodeApps = <ThrowOnError extends boolean = false>(
 		SwarmGetNodeAppsResponses,
 		SwarmGetNodeAppsErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/swarm.getNodeApps",
-		...options,
-	});
+	>({ url: "/swarm.getNodeApps", ...options });
 
 export const swarmGetContainerStats = <ThrowOnError extends boolean = false>(
 	options?: Options<SwarmGetContainerStatsData, ThrowOnError>,
@@ -8300,11 +8090,7 @@ export const swarmGetContainerStats = <ThrowOnError extends boolean = false>(
 		SwarmGetContainerStatsResponses,
 		SwarmGetContainerStatsErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/swarm.getContainerStats",
-		...options,
-	});
+	>({ url: "/swarm.getContainerStats", ...options });
 
 export const userAll = <ThrowOnError extends boolean = false>(
 	options?: Options<UserAllData, ThrowOnError>,
@@ -8313,21 +8099,13 @@ export const userAll = <ThrowOnError extends boolean = false>(
 		UserAllResponses,
 		UserAllErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/user.all",
-		...options,
-	});
+	>({ url: "/user.all", ...options });
 
 export const userOne = <ThrowOnError extends boolean = false>(
 	options: Options<UserOneData, ThrowOnError>,
 ) =>
 	(options.client ?? client).get<UserOneResponses, UserOneErrors, ThrowOnError>(
-		{
-			security: [{ name: "x-api-key", type: "apiKey" }],
-			url: "/user.one",
-			...options,
-		},
+		{ url: "/user.one", ...options },
 	);
 
 export const userSession = <ThrowOnError extends boolean = false>(
@@ -8337,11 +8115,7 @@ export const userSession = <ThrowOnError extends boolean = false>(
 		UserSessionResponses,
 		UserSessionErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/user.session",
-		...options,
-	});
+	>({ url: "/user.session", ...options });
 
 export const userGet = <ThrowOnError extends boolean = false>(
 	options?: Options<UserGetData, ThrowOnError>,
@@ -8350,11 +8124,7 @@ export const userGet = <ThrowOnError extends boolean = false>(
 		UserGetResponses,
 		UserGetErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/user.get",
-		...options,
-	});
+	>({ url: "/user.get", ...options });
 
 export const userGetPermissions = <ThrowOnError extends boolean = false>(
 	options?: Options<UserGetPermissionsData, ThrowOnError>,
@@ -8363,11 +8133,16 @@ export const userGetPermissions = <ThrowOnError extends boolean = false>(
 		UserGetPermissionsResponses,
 		UserGetPermissionsErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/user.getPermissions",
-		...options,
-	});
+	>({ url: "/user.getPermissions", ...options });
+
+export const userListPasskeys = <ThrowOnError extends boolean = false>(
+	options?: Options<UserListPasskeysData, ThrowOnError>,
+) =>
+	(options?.client ?? client).get<
+		UserListPasskeysResponses,
+		UserListPasskeysErrors,
+		ThrowOnError
+	>({ url: "/user.listPasskeys", ...options });
 
 export const userHaveRootAccess = <ThrowOnError extends boolean = false>(
 	options?: Options<UserHaveRootAccessData, ThrowOnError>,
@@ -8376,11 +8151,7 @@ export const userHaveRootAccess = <ThrowOnError extends boolean = false>(
 		UserHaveRootAccessResponses,
 		UserHaveRootAccessErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/user.haveRootAccess",
-		...options,
-	});
+	>({ url: "/user.haveRootAccess", ...options });
 
 export const userGetBackups = <ThrowOnError extends boolean = false>(
 	options?: Options<UserGetBackupsData, ThrowOnError>,
@@ -8389,11 +8160,7 @@ export const userGetBackups = <ThrowOnError extends boolean = false>(
 		UserGetBackupsResponses,
 		UserGetBackupsErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/user.getBackups",
-		...options,
-	});
+	>({ url: "/user.getBackups", ...options });
 
 export const userGetServerMetrics = <ThrowOnError extends boolean = false>(
 	options?: Options<UserGetServerMetricsData, ThrowOnError>,
@@ -8402,11 +8169,7 @@ export const userGetServerMetrics = <ThrowOnError extends boolean = false>(
 		UserGetServerMetricsResponses,
 		UserGetServerMetricsErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/user.getServerMetrics",
-		...options,
-	});
+	>({ url: "/user.getServerMetrics", ...options });
 
 export const userUpdate = <ThrowOnError extends boolean = false>(
 	options: Options<UserUpdateData, ThrowOnError>,
@@ -8416,8 +8179,32 @@ export const userUpdate = <ThrowOnError extends boolean = false>(
 		UserUpdateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/user.update",
+		...options,
+		headers: {
+			"Content-Type": "application/json",
+			...options.headers,
+		},
+	});
+
+export const userListSessions = <ThrowOnError extends boolean = false>(
+	options?: Options<UserListSessionsData, ThrowOnError>,
+) =>
+	(options?.client ?? client).get<
+		UserListSessionsResponses,
+		UserListSessionsErrors,
+		ThrowOnError
+	>({ url: "/user.listSessions", ...options });
+
+export const userRevokeSession = <ThrowOnError extends boolean = false>(
+	options: Options<UserRevokeSessionData, ThrowOnError>,
+) =>
+	(options.client ?? client).post<
+		UserRevokeSessionResponses,
+		UserRevokeSessionErrors,
+		ThrowOnError
+	>({
+		url: "/user.revokeSession",
 		...options,
 		headers: {
 			"Content-Type": "application/json",
@@ -8432,11 +8219,7 @@ export const userGetUserByToken = <ThrowOnError extends boolean = false>(
 		UserGetUserByTokenResponses,
 		UserGetUserByTokenErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/user.getUserByToken",
-		...options,
-	});
+	>({ url: "/user.getUserByToken", ...options });
 
 export const userGetMetricsToken = <ThrowOnError extends boolean = false>(
 	options?: Options<UserGetMetricsTokenData, ThrowOnError>,
@@ -8445,11 +8228,7 @@ export const userGetMetricsToken = <ThrowOnError extends boolean = false>(
 		UserGetMetricsTokenResponses,
 		UserGetMetricsTokenErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/user.getMetricsToken",
-		...options,
-	});
+	>({ url: "/user.getMetricsToken", ...options });
 
 export const userRemove = <ThrowOnError extends boolean = false>(
 	options: Options<UserRemoveData, ThrowOnError>,
@@ -8459,7 +8238,6 @@ export const userRemove = <ThrowOnError extends boolean = false>(
 		UserRemoveErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/user.remove",
 		...options,
 		headers: {
@@ -8476,7 +8254,6 @@ export const userAssignPermissions = <ThrowOnError extends boolean = false>(
 		UserAssignPermissionsErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/user.assignPermissions",
 		...options,
 		headers: {
@@ -8492,11 +8269,7 @@ export const userGetInvitations = <ThrowOnError extends boolean = false>(
 		UserGetInvitationsResponses,
 		UserGetInvitationsErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/user.getInvitations",
-		...options,
-	});
+	>({ url: "/user.getInvitations", ...options });
 
 export const userGetContainerMetrics = <ThrowOnError extends boolean = false>(
 	options: Options<UserGetContainerMetricsData, ThrowOnError>,
@@ -8505,11 +8278,7 @@ export const userGetContainerMetrics = <ThrowOnError extends boolean = false>(
 		UserGetContainerMetricsResponses,
 		UserGetContainerMetricsErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/user.getContainerMetrics",
-		...options,
-	});
+	>({ url: "/user.getContainerMetrics", ...options });
 
 export const userGenerateToken = <ThrowOnError extends boolean = false>(
 	options?: Options<UserGenerateTokenData, ThrowOnError>,
@@ -8518,11 +8287,7 @@ export const userGenerateToken = <ThrowOnError extends boolean = false>(
 		UserGenerateTokenResponses,
 		UserGenerateTokenErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/user.generateToken",
-		...options,
-	});
+	>({ url: "/user.generateToken", ...options });
 
 export const userDeleteApiKey = <ThrowOnError extends boolean = false>(
 	options: Options<UserDeleteApiKeyData, ThrowOnError>,
@@ -8532,7 +8297,6 @@ export const userDeleteApiKey = <ThrowOnError extends boolean = false>(
 		UserDeleteApiKeyErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/user.deleteApiKey",
 		...options,
 		headers: {
@@ -8549,7 +8313,6 @@ export const userCreateApiKey = <ThrowOnError extends boolean = false>(
 		UserCreateApiKeyErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/user.createApiKey",
 		...options,
 		headers: {
@@ -8567,11 +8330,7 @@ export const userCheckUserOrganizations = <
 		UserCheckUserOrganizationsResponses,
 		UserCheckUserOrganizationsErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/user.checkUserOrganizations",
-		...options,
-	});
+	>({ url: "/user.checkUserOrganizations", ...options });
 
 export const userCreateUserWithCredentials = <
 	ThrowOnError extends boolean = false,
@@ -8583,7 +8342,6 @@ export const userCreateUserWithCredentials = <
 		UserCreateUserWithCredentialsErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/user.createUserWithCredentials",
 		...options,
 		headers: {
@@ -8600,7 +8358,6 @@ export const userSendInvitation = <ThrowOnError extends boolean = false>(
 		UserSendInvitationErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/user.sendInvitation",
 		...options,
 		headers: {
@@ -8618,11 +8375,7 @@ export const userGetBookmarkedTemplates = <
 		UserGetBookmarkedTemplatesResponses,
 		UserGetBookmarkedTemplatesErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/user.getBookmarkedTemplates",
-		...options,
-	});
+	>({ url: "/user.getBookmarkedTemplates", ...options });
 
 export const userToggleTemplateBookmark = <
 	ThrowOnError extends boolean = false,
@@ -8634,7 +8387,6 @@ export const userToggleTemplateBookmark = <
 		UserToggleTemplateBookmarkErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/user.toggleTemplateBookmark",
 		...options,
 		headers: {
@@ -8643,11 +8395,105 @@ export const userToggleTemplateBookmark = <
 		},
 	});
 
+export const vaultProviderCreate = <ThrowOnError extends boolean = false>(
+	options: Options<VaultProviderCreateData, ThrowOnError>,
+) =>
+	(options.client ?? client).post<
+		VaultProviderCreateResponses,
+		VaultProviderCreateErrors,
+		ThrowOnError
+	>({
+		url: "/vaultProvider.create",
+		...options,
+		headers: {
+			"Content-Type": "application/json",
+			...options.headers,
+		},
+	});
+
+export const vaultProviderUpdate = <ThrowOnError extends boolean = false>(
+	options: Options<VaultProviderUpdateData, ThrowOnError>,
+) =>
+	(options.client ?? client).post<
+		VaultProviderUpdateResponses,
+		VaultProviderUpdateErrors,
+		ThrowOnError
+	>({
+		url: "/vaultProvider.update",
+		...options,
+		headers: {
+			"Content-Type": "application/json",
+			...options.headers,
+		},
+	});
+
+export const vaultProviderRemove = <ThrowOnError extends boolean = false>(
+	options: Options<VaultProviderRemoveData, ThrowOnError>,
+) =>
+	(options.client ?? client).post<
+		VaultProviderRemoveResponses,
+		VaultProviderRemoveErrors,
+		ThrowOnError
+	>({
+		url: "/vaultProvider.remove",
+		...options,
+		headers: {
+			"Content-Type": "application/json",
+			...options.headers,
+		},
+	});
+
+export const vaultProviderAll = <ThrowOnError extends boolean = false>(
+	options?: Options<VaultProviderAllData, ThrowOnError>,
+) =>
+	(options?.client ?? client).get<
+		VaultProviderAllResponses,
+		VaultProviderAllErrors,
+		ThrowOnError
+	>({ url: "/vaultProvider.all", ...options });
+
+export const vaultProviderOne = <ThrowOnError extends boolean = false>(
+	options: Options<VaultProviderOneData, ThrowOnError>,
+) =>
+	(options.client ?? client).get<
+		VaultProviderOneResponses,
+		VaultProviderOneErrors,
+		ThrowOnError
+	>({ url: "/vaultProvider.one", ...options });
+
+export const vaultProviderTestConnection = <
+	ThrowOnError extends boolean = false,
+>(
+	options: Options<VaultProviderTestConnectionData, ThrowOnError>,
+) =>
+	(options.client ?? client).post<
+		VaultProviderTestConnectionResponses,
+		VaultProviderTestConnectionErrors,
+		ThrowOnError
+	>({
+		url: "/vaultProvider.testConnection",
+		...options,
+		headers: {
+			"Content-Type": "application/json",
+			...options.headers,
+		},
+	});
+
+export const vaultProviderListSecretNames = <
+	ThrowOnError extends boolean = false,
+>(
+	options: Options<VaultProviderListSecretNamesData, ThrowOnError>,
+) =>
+	(options.client ?? client).get<
+		VaultProviderListSecretNamesResponses,
+		VaultProviderListSecretNamesErrors,
+		ThrowOnError
+	>({ url: "/vaultProvider.listSecretNames", ...options });
+
 export const aiOne = <ThrowOnError extends boolean = false>(
 	options: Options<AiOneData, ThrowOnError>,
 ) =>
 	(options.client ?? client).get<AiOneResponses, AiOneErrors, ThrowOnError>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/ai.one",
 		...options,
 	});
@@ -8659,11 +8505,7 @@ export const aiGetModels = <ThrowOnError extends boolean = false>(
 		AiGetModelsResponses,
 		AiGetModelsErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/ai.getModels",
-		...options,
-	});
+	>({ url: "/ai.getModels", ...options });
 
 export const aiCreate = <ThrowOnError extends boolean = false>(
 	options: Options<AiCreateData, ThrowOnError>,
@@ -8673,7 +8515,6 @@ export const aiCreate = <ThrowOnError extends boolean = false>(
 		AiCreateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/ai.create",
 		...options,
 		headers: {
@@ -8690,7 +8531,6 @@ export const aiUpdate = <ThrowOnError extends boolean = false>(
 		AiUpdateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/ai.update",
 		...options,
 		headers: {
@@ -8706,17 +8546,12 @@ export const aiGetAll = <ThrowOnError extends boolean = false>(
 		AiGetAllResponses,
 		AiGetAllErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/ai.getAll",
-		...options,
-	});
+	>({ url: "/ai.getAll", ...options });
 
 export const aiGet = <ThrowOnError extends boolean = false>(
 	options: Options<AiGetData, ThrowOnError>,
 ) =>
 	(options.client ?? client).get<AiGetResponses, AiGetErrors, ThrowOnError>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/ai.get",
 		...options,
 	});
@@ -8729,7 +8564,6 @@ export const aiDelete = <ThrowOnError extends boolean = false>(
 		AiDeleteErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/ai.delete",
 		...options,
 		headers: {
@@ -8745,11 +8579,7 @@ export const aiGetCustomProviders = <ThrowOnError extends boolean = false>(
 		AiGetCustomProvidersResponses,
 		AiGetCustomProvidersErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/ai.getCustomProviders",
-		...options,
-	});
+	>({ url: "/ai.getCustomProviders", ...options });
 
 export const aiSaveCustomProviders = <ThrowOnError extends boolean = false>(
 	options: Options<AiSaveCustomProvidersData, ThrowOnError>,
@@ -8759,7 +8589,6 @@ export const aiSaveCustomProviders = <ThrowOnError extends boolean = false>(
 		AiSaveCustomProvidersErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/ai.saveCustomProviders",
 		...options,
 		headers: {
@@ -8775,11 +8604,7 @@ export const aiGetEnabledProviders = <ThrowOnError extends boolean = false>(
 		AiGetEnabledProvidersResponses,
 		AiGetEnabledProvidersErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/ai.getEnabledProviders",
-		...options,
-	});
+	>({ url: "/ai.getEnabledProviders", ...options });
 
 export const aiAnalyzeLogs = <ThrowOnError extends boolean = false>(
 	options: Options<AiAnalyzeLogsData, ThrowOnError>,
@@ -8789,7 +8614,6 @@ export const aiAnalyzeLogs = <ThrowOnError extends boolean = false>(
 		AiAnalyzeLogsErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/ai.analyzeLogs",
 		...options,
 		headers: {
@@ -8806,7 +8630,6 @@ export const aiTestConnection = <ThrowOnError extends boolean = false>(
 		AiTestConnectionErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/ai.testConnection",
 		...options,
 		headers: {
@@ -8823,7 +8646,6 @@ export const aiSuggest = <ThrowOnError extends boolean = false>(
 		AiSuggestErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/ai.suggest",
 		...options,
 		headers: {
@@ -8840,7 +8662,6 @@ export const aiDeploy = <ThrowOnError extends boolean = false>(
 		AiDeployErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/ai.deploy",
 		...options,
 		headers: {
@@ -8857,7 +8678,6 @@ export const organizationCreate = <ThrowOnError extends boolean = false>(
 		OrganizationCreateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/organization.create",
 		...options,
 		headers: {
@@ -8873,11 +8693,7 @@ export const organizationAll = <ThrowOnError extends boolean = false>(
 		OrganizationAllResponses,
 		OrganizationAllErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/organization.all",
-		...options,
-	});
+	>({ url: "/organization.all", ...options });
 
 export const organizationOne = <ThrowOnError extends boolean = false>(
 	options: Options<OrganizationOneData, ThrowOnError>,
@@ -8886,11 +8702,7 @@ export const organizationOne = <ThrowOnError extends boolean = false>(
 		OrganizationOneResponses,
 		OrganizationOneErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/organization.one",
-		...options,
-	});
+	>({ url: "/organization.one", ...options });
 
 export const organizationUpdate = <ThrowOnError extends boolean = false>(
 	options: Options<OrganizationUpdateData, ThrowOnError>,
@@ -8900,7 +8712,6 @@ export const organizationUpdate = <ThrowOnError extends boolean = false>(
 		OrganizationUpdateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/organization.update",
 		...options,
 		headers: {
@@ -8917,7 +8728,6 @@ export const organizationDelete = <ThrowOnError extends boolean = false>(
 		OrganizationDeleteErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/organization.delete",
 		...options,
 		headers: {
@@ -8934,7 +8744,6 @@ export const organizationInviteMember = <ThrowOnError extends boolean = false>(
 		OrganizationInviteMemberErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/organization.inviteMember",
 		...options,
 		headers: {
@@ -8952,11 +8761,7 @@ export const organizationAllInvitations = <
 		OrganizationAllInvitationsResponses,
 		OrganizationAllInvitationsErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/organization.allInvitations",
-		...options,
-	});
+	>({ url: "/organization.allInvitations", ...options });
 
 export const organizationRemoveInvitation = <
 	ThrowOnError extends boolean = false,
@@ -8968,7 +8773,6 @@ export const organizationRemoveInvitation = <
 		OrganizationRemoveInvitationErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/organization.removeInvitation",
 		...options,
 		headers: {
@@ -8987,7 +8791,6 @@ export const organizationUpdateMemberRole = <
 		OrganizationUpdateMemberRoleErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/organization.updateMemberRole",
 		...options,
 		headers: {
@@ -9004,7 +8807,6 @@ export const organizationSetDefault = <ThrowOnError extends boolean = false>(
 		OrganizationSetDefaultErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/organization.setDefault",
 		...options,
 		headers: {
@@ -9020,11 +8822,7 @@ export const organizationActive = <ThrowOnError extends boolean = false>(
 		OrganizationActiveResponses,
 		OrganizationActiveErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/organization.active",
-		...options,
-	});
+	>({ url: "/organization.active", ...options });
 
 export const licenseKeyActivate = <ThrowOnError extends boolean = false>(
 	options: Options<LicenseKeyActivateData, ThrowOnError>,
@@ -9034,7 +8832,6 @@ export const licenseKeyActivate = <ThrowOnError extends boolean = false>(
 		LicenseKeyActivateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/licenseKey.activate",
 		...options,
 		headers: {
@@ -9050,11 +8847,7 @@ export const licenseKeyValidate = <ThrowOnError extends boolean = false>(
 		LicenseKeyValidateResponses,
 		LicenseKeyValidateErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/licenseKey.validate",
-		...options,
-	});
+	>({ url: "/licenseKey.validate", ...options });
 
 export const licenseKeyDeactivate = <ThrowOnError extends boolean = false>(
 	options?: Options<LicenseKeyDeactivateData, ThrowOnError>,
@@ -9063,11 +8856,7 @@ export const licenseKeyDeactivate = <ThrowOnError extends boolean = false>(
 		LicenseKeyDeactivateResponses,
 		LicenseKeyDeactivateErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/licenseKey.deactivate",
-		...options,
-	});
+	>({ url: "/licenseKey.deactivate", ...options });
 
 export const licenseKeyGetEnterpriseSettings = <
 	ThrowOnError extends boolean = false,
@@ -9078,11 +8867,7 @@ export const licenseKeyGetEnterpriseSettings = <
 		LicenseKeyGetEnterpriseSettingsResponses,
 		LicenseKeyGetEnterpriseSettingsErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/licenseKey.getEnterpriseSettings",
-		...options,
-	});
+	>({ url: "/licenseKey.getEnterpriseSettings", ...options });
 
 export const licenseKeyHaveValidLicenseKey = <
 	ThrowOnError extends boolean = false,
@@ -9093,11 +8878,7 @@ export const licenseKeyHaveValidLicenseKey = <
 		LicenseKeyHaveValidLicenseKeyResponses,
 		LicenseKeyHaveValidLicenseKeyErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/licenseKey.haveValidLicenseKey",
-		...options,
-	});
+	>({ url: "/licenseKey.haveValidLicenseKey", ...options });
 
 export const licenseKeyUpdateEnterpriseSettings = <
 	ThrowOnError extends boolean = false,
@@ -9109,7 +8890,6 @@ export const licenseKeyUpdateEnterpriseSettings = <
 		LicenseKeyUpdateEnterpriseSettingsErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/licenseKey.updateEnterpriseSettings",
 		...options,
 		headers: {
@@ -9125,11 +8905,7 @@ export const ssoShowSignInWithSso = <ThrowOnError extends boolean = false>(
 		SsoShowSignInWithSsoResponses,
 		SsoShowSignInWithSsoErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/sso.showSignInWithSSO",
-		...options,
-	});
+	>({ url: "/sso.showSignInWithSSO", ...options });
 
 export const ssoEnforceSso = <ThrowOnError extends boolean = false>(
 	options?: Options<SsoEnforceSsoData, ThrowOnError>,
@@ -9138,11 +8914,7 @@ export const ssoEnforceSso = <ThrowOnError extends boolean = false>(
 		SsoEnforceSsoResponses,
 		SsoEnforceSsoErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/sso.enforceSSO",
-		...options,
-	});
+	>({ url: "/sso.enforceSSO", ...options });
 
 export const ssoListProviders = <ThrowOnError extends boolean = false>(
 	options?: Options<SsoListProvidersData, ThrowOnError>,
@@ -9151,11 +8923,7 @@ export const ssoListProviders = <ThrowOnError extends boolean = false>(
 		SsoListProvidersResponses,
 		SsoListProvidersErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/sso.listProviders",
-		...options,
-	});
+	>({ url: "/sso.listProviders", ...options });
 
 export const ssoGetTrustedOrigins = <ThrowOnError extends boolean = false>(
 	options?: Options<SsoGetTrustedOriginsData, ThrowOnError>,
@@ -9164,17 +8932,12 @@ export const ssoGetTrustedOrigins = <ThrowOnError extends boolean = false>(
 		SsoGetTrustedOriginsResponses,
 		SsoGetTrustedOriginsErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/sso.getTrustedOrigins",
-		...options,
-	});
+	>({ url: "/sso.getTrustedOrigins", ...options });
 
 export const ssoOne = <ThrowOnError extends boolean = false>(
 	options: Options<SsoOneData, ThrowOnError>,
 ) =>
 	(options.client ?? client).get<SsoOneResponses, SsoOneErrors, ThrowOnError>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/sso.one",
 		...options,
 	});
@@ -9187,7 +8950,6 @@ export const ssoUpdate = <ThrowOnError extends boolean = false>(
 		SsoUpdateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/sso.update",
 		...options,
 		headers: {
@@ -9204,7 +8966,6 @@ export const ssoDeleteProvider = <ThrowOnError extends boolean = false>(
 		SsoDeleteProviderErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/sso.deleteProvider",
 		...options,
 		headers: {
@@ -9221,7 +8982,6 @@ export const ssoRegister = <ThrowOnError extends boolean = false>(
 		SsoRegisterErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/sso.register",
 		...options,
 		headers: {
@@ -9238,7 +8998,6 @@ export const ssoAddTrustedOrigin = <ThrowOnError extends boolean = false>(
 		SsoAddTrustedOriginErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/sso.addTrustedOrigin",
 		...options,
 		headers: {
@@ -9255,7 +9014,6 @@ export const ssoRemoveTrustedOrigin = <ThrowOnError extends boolean = false>(
 		SsoRemoveTrustedOriginErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/sso.removeTrustedOrigin",
 		...options,
 		headers: {
@@ -9272,7 +9030,6 @@ export const ssoUpdateTrustedOrigin = <ThrowOnError extends boolean = false>(
 		SsoUpdateTrustedOriginErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/sso.updateTrustedOrigin",
 		...options,
 		headers: {
@@ -9288,11 +9045,7 @@ export const scimListProviders = <ThrowOnError extends boolean = false>(
 		ScimListProvidersResponses,
 		ScimListProvidersErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/scim.listProviders",
-		...options,
-	});
+	>({ url: "/scim.listProviders", ...options });
 
 export const scimGenerateToken = <ThrowOnError extends boolean = false>(
 	options: Options<ScimGenerateTokenData, ThrowOnError>,
@@ -9302,7 +9055,6 @@ export const scimGenerateToken = <ThrowOnError extends boolean = false>(
 		ScimGenerateTokenErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/scim.generateToken",
 		...options,
 		headers: {
@@ -9319,7 +9071,6 @@ export const scimDeleteProvider = <ThrowOnError extends boolean = false>(
 		ScimDeleteProviderErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/scim.deleteProvider",
 		...options,
 		headers: {
@@ -9335,11 +9086,7 @@ export const forwardAuthGetAuthDomain = <ThrowOnError extends boolean = false>(
 		ForwardAuthGetAuthDomainResponses,
 		ForwardAuthGetAuthDomainErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/forwardAuth.getAuthDomain",
-		...options,
-	});
+	>({ url: "/forwardAuth.getAuthDomain", ...options });
 
 export const forwardAuthSetAuthDomain = <ThrowOnError extends boolean = false>(
 	options: Options<ForwardAuthSetAuthDomainData, ThrowOnError>,
@@ -9349,7 +9096,6 @@ export const forwardAuthSetAuthDomain = <ThrowOnError extends boolean = false>(
 		ForwardAuthSetAuthDomainErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/forwardAuth.setAuthDomain",
 		...options,
 		headers: {
@@ -9368,7 +9114,6 @@ export const forwardAuthRemoveAuthDomain = <
 		ForwardAuthRemoveAuthDomainErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/forwardAuth.removeAuthDomain",
 		...options,
 		headers: {
@@ -9384,11 +9129,7 @@ export const forwardAuthListProviders = <ThrowOnError extends boolean = false>(
 		ForwardAuthListProvidersResponses,
 		ForwardAuthListProvidersErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/forwardAuth.listProviders",
-		...options,
-	});
+	>({ url: "/forwardAuth.listProviders", ...options });
 
 export const forwardAuthServerStatus = <ThrowOnError extends boolean = false>(
 	options?: Options<ForwardAuthServerStatusData, ThrowOnError>,
@@ -9397,11 +9138,7 @@ export const forwardAuthServerStatus = <ThrowOnError extends boolean = false>(
 		ForwardAuthServerStatusResponses,
 		ForwardAuthServerStatusErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/forwardAuth.serverStatus",
-		...options,
-	});
+	>({ url: "/forwardAuth.serverStatus", ...options });
 
 export const forwardAuthDeployOnServer = <ThrowOnError extends boolean = false>(
 	options: Options<ForwardAuthDeployOnServerData, ThrowOnError>,
@@ -9411,7 +9148,6 @@ export const forwardAuthDeployOnServer = <ThrowOnError extends boolean = false>(
 		ForwardAuthDeployOnServerErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/forwardAuth.deployOnServer",
 		...options,
 		headers: {
@@ -9428,7 +9164,6 @@ export const forwardAuthRemoveOnServer = <ThrowOnError extends boolean = false>(
 		ForwardAuthRemoveOnServerErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/forwardAuth.removeOnServer",
 		...options,
 		headers: {
@@ -9444,11 +9179,7 @@ export const forwardAuthStatus = <ThrowOnError extends boolean = false>(
 		ForwardAuthStatusResponses,
 		ForwardAuthStatusErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/forwardAuth.status",
-		...options,
-	});
+	>({ url: "/forwardAuth.status", ...options });
 
 export const forwardAuthEnable = <ThrowOnError extends boolean = false>(
 	options: Options<ForwardAuthEnableData, ThrowOnError>,
@@ -9458,7 +9189,6 @@ export const forwardAuthEnable = <ThrowOnError extends boolean = false>(
 		ForwardAuthEnableErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/forwardAuth.enable",
 		...options,
 		headers: {
@@ -9475,7 +9205,6 @@ export const forwardAuthDisable = <ThrowOnError extends boolean = false>(
 		ForwardAuthDisableErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/forwardAuth.disable",
 		...options,
 		headers: {
@@ -9491,11 +9220,7 @@ export const whitelabelingGet = <ThrowOnError extends boolean = false>(
 		WhitelabelingGetResponses,
 		WhitelabelingGetErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/whitelabeling.get",
-		...options,
-	});
+	>({ url: "/whitelabeling.get", ...options });
 
 export const whitelabelingUpdate = <ThrowOnError extends boolean = false>(
 	options: Options<WhitelabelingUpdateData, ThrowOnError>,
@@ -9505,7 +9230,6 @@ export const whitelabelingUpdate = <ThrowOnError extends boolean = false>(
 		WhitelabelingUpdateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/whitelabeling.update",
 		...options,
 		headers: {
@@ -9521,11 +9245,7 @@ export const whitelabelingReset = <ThrowOnError extends boolean = false>(
 		WhitelabelingResetResponses,
 		WhitelabelingResetErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/whitelabeling.reset",
-		...options,
-	});
+	>({ url: "/whitelabeling.reset", ...options });
 
 export const whitelabelingGetPublic = <ThrowOnError extends boolean = false>(
 	options?: Options<WhitelabelingGetPublicData, ThrowOnError>,
@@ -9534,11 +9254,7 @@ export const whitelabelingGetPublic = <ThrowOnError extends boolean = false>(
 		WhitelabelingGetPublicResponses,
 		WhitelabelingGetPublicErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/whitelabeling.getPublic",
-		...options,
-	});
+	>({ url: "/whitelabeling.getPublic", ...options });
 
 export const customRoleAll = <ThrowOnError extends boolean = false>(
 	options?: Options<CustomRoleAllData, ThrowOnError>,
@@ -9547,11 +9263,7 @@ export const customRoleAll = <ThrowOnError extends boolean = false>(
 		CustomRoleAllResponses,
 		CustomRoleAllErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/customRole.all",
-		...options,
-	});
+	>({ url: "/customRole.all", ...options });
 
 export const customRoleCreate = <ThrowOnError extends boolean = false>(
 	options: Options<CustomRoleCreateData, ThrowOnError>,
@@ -9561,7 +9273,6 @@ export const customRoleCreate = <ThrowOnError extends boolean = false>(
 		CustomRoleCreateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/customRole.create",
 		...options,
 		headers: {
@@ -9578,7 +9289,6 @@ export const customRoleUpdate = <ThrowOnError extends boolean = false>(
 		CustomRoleUpdateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/customRole.update",
 		...options,
 		headers: {
@@ -9595,7 +9305,6 @@ export const customRoleRemove = <ThrowOnError extends boolean = false>(
 		CustomRoleRemoveErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/customRole.remove",
 		...options,
 		headers: {
@@ -9611,11 +9320,7 @@ export const customRoleMembersByRole = <ThrowOnError extends boolean = false>(
 		CustomRoleMembersByRoleResponses,
 		CustomRoleMembersByRoleErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/customRole.membersByRole",
-		...options,
-	});
+	>({ url: "/customRole.membersByRole", ...options });
 
 export const customRoleGetStatements = <ThrowOnError extends boolean = false>(
 	options?: Options<CustomRoleGetStatementsData, ThrowOnError>,
@@ -9624,11 +9329,7 @@ export const customRoleGetStatements = <ThrowOnError extends boolean = false>(
 		CustomRoleGetStatementsResponses,
 		CustomRoleGetStatementsErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/customRole.getStatements",
-		...options,
-	});
+	>({ url: "/customRole.getStatements", ...options });
 
 export const auditLogAll = <ThrowOnError extends boolean = false>(
 	options?: Options<AuditLogAllData, ThrowOnError>,
@@ -9637,11 +9338,7 @@ export const auditLogAll = <ThrowOnError extends boolean = false>(
 		AuditLogAllResponses,
 		AuditLogAllErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/auditLog.all",
-		...options,
-	});
+	>({ url: "/auditLog.all", ...options });
 
 export const scheduleCreate = <ThrowOnError extends boolean = false>(
 	options: Options<ScheduleCreateData, ThrowOnError>,
@@ -9651,7 +9348,6 @@ export const scheduleCreate = <ThrowOnError extends boolean = false>(
 		ScheduleCreateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/schedule.create",
 		...options,
 		headers: {
@@ -9668,7 +9364,6 @@ export const scheduleUpdate = <ThrowOnError extends boolean = false>(
 		ScheduleUpdateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/schedule.update",
 		...options,
 		headers: {
@@ -9685,7 +9380,6 @@ export const scheduleDelete = <ThrowOnError extends boolean = false>(
 		ScheduleDeleteErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/schedule.delete",
 		...options,
 		headers: {
@@ -9701,11 +9395,7 @@ export const scheduleList = <ThrowOnError extends boolean = false>(
 		ScheduleListResponses,
 		ScheduleListErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/schedule.list",
-		...options,
-	});
+	>({ url: "/schedule.list", ...options });
 
 export const scheduleOne = <ThrowOnError extends boolean = false>(
 	options: Options<ScheduleOneData, ThrowOnError>,
@@ -9714,11 +9404,7 @@ export const scheduleOne = <ThrowOnError extends boolean = false>(
 		ScheduleOneResponses,
 		ScheduleOneErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/schedule.one",
-		...options,
-	});
+	>({ url: "/schedule.one", ...options });
 
 export const scheduleRunManually = <ThrowOnError extends boolean = false>(
 	options: Options<ScheduleRunManuallyData, ThrowOnError>,
@@ -9728,7 +9414,6 @@ export const scheduleRunManually = <ThrowOnError extends boolean = false>(
 		ScheduleRunManuallyErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/schedule.runManually",
 		...options,
 		headers: {
@@ -9745,7 +9430,6 @@ export const rollbackDelete = <ThrowOnError extends boolean = false>(
 		RollbackDeleteErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/rollback.delete",
 		...options,
 		headers: {
@@ -9762,7 +9446,6 @@ export const rollbackRollback = <ThrowOnError extends boolean = false>(
 		RollbackRollbackErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/rollback.rollback",
 		...options,
 		headers: {
@@ -9778,11 +9461,7 @@ export const volumeBackupsList = <ThrowOnError extends boolean = false>(
 		VolumeBackupsListResponses,
 		VolumeBackupsListErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/volumeBackups.list",
-		...options,
-	});
+	>({ url: "/volumeBackups.list", ...options });
 
 export const volumeBackupsCreate = <ThrowOnError extends boolean = false>(
 	options: Options<VolumeBackupsCreateData, ThrowOnError>,
@@ -9792,7 +9471,6 @@ export const volumeBackupsCreate = <ThrowOnError extends boolean = false>(
 		VolumeBackupsCreateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/volumeBackups.create",
 		...options,
 		headers: {
@@ -9808,11 +9486,7 @@ export const volumeBackupsOne = <ThrowOnError extends boolean = false>(
 		VolumeBackupsOneResponses,
 		VolumeBackupsOneErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/volumeBackups.one",
-		...options,
-	});
+	>({ url: "/volumeBackups.one", ...options });
 
 export const volumeBackupsDelete = <ThrowOnError extends boolean = false>(
 	options: Options<VolumeBackupsDeleteData, ThrowOnError>,
@@ -9822,7 +9496,6 @@ export const volumeBackupsDelete = <ThrowOnError extends boolean = false>(
 		VolumeBackupsDeleteErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/volumeBackups.delete",
 		...options,
 		headers: {
@@ -9839,7 +9512,6 @@ export const volumeBackupsUpdate = <ThrowOnError extends boolean = false>(
 		VolumeBackupsUpdateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/volumeBackups.update",
 		...options,
 		headers: {
@@ -9856,7 +9528,6 @@ export const volumeBackupsRunManually = <ThrowOnError extends boolean = false>(
 		VolumeBackupsRunManuallyErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/volumeBackups.runManually",
 		...options,
 		headers: {
@@ -9873,7 +9544,6 @@ export const environmentCreate = <ThrowOnError extends boolean = false>(
 		EnvironmentCreateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/environment.create",
 		...options,
 		headers: {
@@ -9889,11 +9559,7 @@ export const environmentOne = <ThrowOnError extends boolean = false>(
 		EnvironmentOneResponses,
 		EnvironmentOneErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/environment.one",
-		...options,
-	});
+	>({ url: "/environment.one", ...options });
 
 export const environmentByProjectId = <ThrowOnError extends boolean = false>(
 	options: Options<EnvironmentByProjectIdData, ThrowOnError>,
@@ -9902,11 +9568,7 @@ export const environmentByProjectId = <ThrowOnError extends boolean = false>(
 		EnvironmentByProjectIdResponses,
 		EnvironmentByProjectIdErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/environment.byProjectId",
-		...options,
-	});
+	>({ url: "/environment.byProjectId", ...options });
 
 export const environmentRemove = <ThrowOnError extends boolean = false>(
 	options: Options<EnvironmentRemoveData, ThrowOnError>,
@@ -9916,7 +9578,6 @@ export const environmentRemove = <ThrowOnError extends boolean = false>(
 		EnvironmentRemoveErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/environment.remove",
 		...options,
 		headers: {
@@ -9933,7 +9594,6 @@ export const environmentUpdate = <ThrowOnError extends boolean = false>(
 		EnvironmentUpdateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/environment.update",
 		...options,
 		headers: {
@@ -9950,7 +9610,6 @@ export const environmentDuplicate = <ThrowOnError extends boolean = false>(
 		EnvironmentDuplicateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/environment.duplicate",
 		...options,
 		headers: {
@@ -9966,11 +9625,7 @@ export const environmentSearch = <ThrowOnError extends boolean = false>(
 		EnvironmentSearchResponses,
 		EnvironmentSearchErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/environment.search",
-		...options,
-	});
+	>({ url: "/environment.search", ...options });
 
 export const tagCreate = <ThrowOnError extends boolean = false>(
 	options: Options<TagCreateData, ThrowOnError>,
@@ -9980,7 +9635,6 @@ export const tagCreate = <ThrowOnError extends boolean = false>(
 		TagCreateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/tag.create",
 		...options,
 		headers: {
@@ -9993,7 +9647,6 @@ export const tagAll = <ThrowOnError extends boolean = false>(
 	options?: Options<TagAllData, ThrowOnError>,
 ) =>
 	(options?.client ?? client).get<TagAllResponses, TagAllErrors, ThrowOnError>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/tag.all",
 		...options,
 	});
@@ -10002,7 +9655,6 @@ export const tagOne = <ThrowOnError extends boolean = false>(
 	options: Options<TagOneData, ThrowOnError>,
 ) =>
 	(options.client ?? client).get<TagOneResponses, TagOneErrors, ThrowOnError>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/tag.one",
 		...options,
 	});
@@ -10015,7 +9667,6 @@ export const tagUpdate = <ThrowOnError extends boolean = false>(
 		TagUpdateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/tag.update",
 		...options,
 		headers: {
@@ -10032,7 +9683,6 @@ export const tagRemove = <ThrowOnError extends boolean = false>(
 		TagRemoveErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/tag.remove",
 		...options,
 		headers: {
@@ -10049,7 +9699,6 @@ export const tagAssignToProject = <ThrowOnError extends boolean = false>(
 		TagAssignToProjectErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/tag.assignToProject",
 		...options,
 		headers: {
@@ -10066,7 +9715,6 @@ export const tagRemoveFromProject = <ThrowOnError extends boolean = false>(
 		TagRemoveFromProjectErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/tag.removeFromProject",
 		...options,
 		headers: {
@@ -10083,7 +9731,6 @@ export const tagBulkAssign = <ThrowOnError extends boolean = false>(
 		TagBulkAssignErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/tag.bulkAssign",
 		...options,
 		headers: {
@@ -10100,7 +9747,6 @@ export const patchCreate = <ThrowOnError extends boolean = false>(
 		PatchCreateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/patch.create",
 		...options,
 		headers: {
@@ -10116,11 +9762,7 @@ export const patchOne = <ThrowOnError extends boolean = false>(
 		PatchOneResponses,
 		PatchOneErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/patch.one",
-		...options,
-	});
+	>({ url: "/patch.one", ...options });
 
 export const patchByEntityId = <ThrowOnError extends boolean = false>(
 	options: Options<PatchByEntityIdData, ThrowOnError>,
@@ -10129,11 +9771,7 @@ export const patchByEntityId = <ThrowOnError extends boolean = false>(
 		PatchByEntityIdResponses,
 		PatchByEntityIdErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/patch.byEntityId",
-		...options,
-	});
+	>({ url: "/patch.byEntityId", ...options });
 
 export const patchUpdate = <ThrowOnError extends boolean = false>(
 	options: Options<PatchUpdateData, ThrowOnError>,
@@ -10143,7 +9781,6 @@ export const patchUpdate = <ThrowOnError extends boolean = false>(
 		PatchUpdateErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/patch.update",
 		...options,
 		headers: {
@@ -10160,7 +9797,6 @@ export const patchDelete = <ThrowOnError extends boolean = false>(
 		PatchDeleteErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/patch.delete",
 		...options,
 		headers: {
@@ -10177,7 +9813,6 @@ export const patchToggleEnabled = <ThrowOnError extends boolean = false>(
 		PatchToggleEnabledErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/patch.toggleEnabled",
 		...options,
 		headers: {
@@ -10194,7 +9829,6 @@ export const patchEnsureRepo = <ThrowOnError extends boolean = false>(
 		PatchEnsureRepoErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/patch.ensureRepo",
 		...options,
 		headers: {
@@ -10210,11 +9844,7 @@ export const patchReadRepoDirectories = <ThrowOnError extends boolean = false>(
 		PatchReadRepoDirectoriesResponses,
 		PatchReadRepoDirectoriesErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/patch.readRepoDirectories",
-		...options,
-	});
+	>({ url: "/patch.readRepoDirectories", ...options });
 
 export const patchReadRepoFile = <ThrowOnError extends boolean = false>(
 	options: Options<PatchReadRepoFileData, ThrowOnError>,
@@ -10223,11 +9853,7 @@ export const patchReadRepoFile = <ThrowOnError extends boolean = false>(
 		PatchReadRepoFileResponses,
 		PatchReadRepoFileErrors,
 		ThrowOnError
-	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
-		url: "/patch.readRepoFile",
-		...options,
-	});
+	>({ url: "/patch.readRepoFile", ...options });
 
 export const patchSaveFileAsPatch = <ThrowOnError extends boolean = false>(
 	options: Options<PatchSaveFileAsPatchData, ThrowOnError>,
@@ -10237,7 +9863,6 @@ export const patchSaveFileAsPatch = <ThrowOnError extends boolean = false>(
 		PatchSaveFileAsPatchErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/patch.saveFileAsPatch",
 		...options,
 		headers: {
@@ -10254,7 +9879,6 @@ export const patchMarkFileForDeletion = <ThrowOnError extends boolean = false>(
 		PatchMarkFileForDeletionErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/patch.markFileForDeletion",
 		...options,
 		headers: {
@@ -10271,7 +9895,6 @@ export const patchCleanPatchRepos = <ThrowOnError extends boolean = false>(
 		PatchCleanPatchReposErrors,
 		ThrowOnError
 	>({
-		security: [{ name: "x-api-key", type: "apiKey" }],
 		url: "/patch.cleanPatchRepos",
 		...options,
 		headers: {
@@ -10279,3 +9902,30 @@ export const patchCleanPatchRepos = <ThrowOnError extends boolean = false>(
 			...options.headers,
 		},
 	});
+
+export const overviewServices = <ThrowOnError extends boolean = false>(
+	options?: Options<OverviewServicesData, ThrowOnError>,
+) =>
+	(options?.client ?? client).get<
+		OverviewServicesResponses,
+		OverviewServicesErrors,
+		ThrowOnError
+	>({ url: "/overview.services", ...options });
+
+export const overviewBackups = <ThrowOnError extends boolean = false>(
+	options?: Options<OverviewBackupsData, ThrowOnError>,
+) =>
+	(options?.client ?? client).get<
+		OverviewBackupsResponses,
+		OverviewBackupsErrors,
+		ThrowOnError
+	>({ url: "/overview.backups", ...options });
+
+export const overviewDomains = <ThrowOnError extends boolean = false>(
+	options?: Options<OverviewDomainsData, ThrowOnError>,
+) =>
+	(options?.client ?? client).get<
+		OverviewDomainsResponses,
+		OverviewDomainsErrors,
+		ThrowOnError
+	>({ url: "/overview.domains", ...options });

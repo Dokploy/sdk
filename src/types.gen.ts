@@ -184,6 +184,14 @@ export type ApplicationCreateData = {
 		description?: string | null;
 		environmentId: string;
 		serverId?: string | null;
+		sourceType?:
+			| "github"
+			| "docker"
+			| "git"
+			| "gitlab"
+			| "bitbucket"
+			| "gitea"
+			| "drop";
 	};
 	path?: never;
 	query?: never;
@@ -1163,6 +1171,8 @@ export type ApplicationUpdateData = {
 		bitbucketId?: string | null;
 		buildServerId?: string | null;
 		buildRegistryId?: string | null;
+		networkIds?: Array<string> | null;
+		detachDokployNetwork?: boolean;
 	};
 	path?: never;
 	query?: never;
@@ -2694,6 +2704,375 @@ export type BitbucketUpdateResponses = {
 export type BitbucketUpdateResponse =
 	BitbucketUpdateResponses[keyof BitbucketUpdateResponses];
 
+export type NetworkAllData = {
+	body?: never;
+	path?: never;
+	query?: {
+		serverId?: string;
+	};
+	url: "/network.all";
+};
+
+export type NetworkAllErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Not found
+	 */
+	404: ErrorNotFound;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type NetworkAllError = NetworkAllErrors[keyof NetworkAllErrors];
+
+export type NetworkAllResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type NetworkAllResponse = NetworkAllResponses[keyof NetworkAllResponses];
+
+export type NetworkOneData = {
+	body?: never;
+	path?: never;
+	query: {
+		networkId: string;
+	};
+	url: "/network.one";
+};
+
+export type NetworkOneErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Not found
+	 */
+	404: ErrorNotFound;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type NetworkOneError = NetworkOneErrors[keyof NetworkOneErrors];
+
+export type NetworkOneResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type NetworkOneResponse = NetworkOneResponses[keyof NetworkOneResponses];
+
+export type NetworkCreateData = {
+	body: {
+		name: string;
+		driver?: "bridge" | "overlay";
+		internal?: boolean;
+		attachable?: boolean;
+		enableIPv4?: boolean;
+		enableIPv6?: boolean;
+		mtu?: number | null | null;
+		ipam?: {
+			driver?: string;
+			config?: Array<{
+				subnet?: string;
+				gateway?: string;
+				ipRange?: string;
+			}>;
+		} | null;
+		serverId?: string | null | null;
+	};
+	path?: never;
+	query?: never;
+	url: "/network.create";
+};
+
+export type NetworkCreateErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type NetworkCreateError = NetworkCreateErrors[keyof NetworkCreateErrors];
+
+export type NetworkCreateResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type NetworkCreateResponse =
+	NetworkCreateResponses[keyof NetworkCreateResponses];
+
+export type NetworkNetworksToSyncData = {
+	body?: never;
+	path?: never;
+	query?: {
+		serverId?: string;
+	};
+	url: "/network.networksToSync";
+};
+
+export type NetworkNetworksToSyncErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Not found
+	 */
+	404: ErrorNotFound;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type NetworkNetworksToSyncError =
+	NetworkNetworksToSyncErrors[keyof NetworkNetworksToSyncErrors];
+
+export type NetworkNetworksToSyncResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type NetworkNetworksToSyncResponse =
+	NetworkNetworksToSyncResponses[keyof NetworkNetworksToSyncResponses];
+
+export type NetworkImportData = {
+	body: {
+		serverId?: string;
+		names: Array<string>;
+	};
+	path?: never;
+	query?: never;
+	url: "/network.import";
+};
+
+export type NetworkImportErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type NetworkImportError = NetworkImportErrors[keyof NetworkImportErrors];
+
+export type NetworkImportResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type NetworkImportResponse =
+	NetworkImportResponses[keyof NetworkImportResponses];
+
+export type NetworkInspectData = {
+	body?: never;
+	path?: never;
+	query: {
+		networkId: string;
+	};
+	url: "/network.inspect";
+};
+
+export type NetworkInspectErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Not found
+	 */
+	404: ErrorNotFound;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type NetworkInspectError =
+	NetworkInspectErrors[keyof NetworkInspectErrors];
+
+export type NetworkInspectResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type NetworkInspectResponse =
+	NetworkInspectResponses[keyof NetworkInspectResponses];
+
+export type NetworkRecreateData = {
+	body: {
+		networkId: string;
+	};
+	path?: never;
+	query?: never;
+	url: "/network.recreate";
+};
+
+export type NetworkRecreateErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type NetworkRecreateError =
+	NetworkRecreateErrors[keyof NetworkRecreateErrors];
+
+export type NetworkRecreateResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type NetworkRecreateResponse =
+	NetworkRecreateResponses[keyof NetworkRecreateResponses];
+
+export type NetworkRemoveData = {
+	body: {
+		networkId: string;
+	};
+	path?: never;
+	query?: never;
+	url: "/network.remove";
+};
+
+export type NetworkRemoveErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type NetworkRemoveError = NetworkRemoveErrors[keyof NetworkRemoveErrors];
+
+export type NetworkRemoveResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type NetworkRemoveResponse =
+	NetworkRemoveResponses[keyof NetworkRemoveResponses];
+
 export type CertificatesCreateData = {
 	body: {
 		certificateId?: string;
@@ -3119,6 +3498,7 @@ export type ComposeCreateData = {
 		appName?: string;
 		serverId?: string | null;
 		composeFile?: string;
+		sourceType?: "git" | "github" | "gitlab" | "bitbucket" | "gitea" | "raw";
 	};
 	path?: never;
 	query?: never;
@@ -3234,6 +3614,7 @@ export type ComposeUpdateData = {
 		customGitBranch?: string | null;
 		customGitSSHKeyId?: string | null;
 		command?: string;
+		createEnvFile?: boolean;
 		enableSubmodules?: boolean;
 		composePath?: string;
 		suffix?: string;
@@ -3242,6 +3623,7 @@ export type ComposeUpdateData = {
 		isolatedDeploymentsVolume?: boolean;
 		triggerType?: "push" | "tag" | null;
 		composeStatus?: "idle" | "running" | "done" | "error";
+		icon?: string | null | null;
 		environmentId?: string;
 		createdAt?: string;
 		watchPaths?: Array<string> | null;
@@ -3249,6 +3631,11 @@ export type ComposeUpdateData = {
 		gitlabId?: string | null;
 		bitbucketId?: string | null;
 		giteaId?: string | null;
+		serviceNetworks?: Array<{
+			serviceName: string;
+			networkIds: Array<string>;
+			detachDokployNetwork: boolean;
+		}> | null;
 	};
 	path?: never;
 	query?: never;
@@ -3292,6 +3679,7 @@ export type ComposeSaveEnvironmentData = {
 	body: {
 		composeId: string;
 		env: string | null;
+		createEnvFile?: boolean;
 	};
 	path?: never;
 	query?: never;
@@ -5254,6 +5642,538 @@ export type DestinationUpdateResponses = {
 export type DestinationUpdateResponse =
 	DestinationUpdateResponses[keyof DestinationUpdateResponses];
 
+export type DnsProviderCreateData = {
+	body: {
+		name: string;
+		config:
+			| {
+					providerType: "cloudflare";
+					apiToken: string;
+			  }
+			| {
+					providerType: "route53";
+					accessKeyId: string;
+					secretAccessKey: string;
+			  };
+	};
+	path?: never;
+	query?: never;
+	url: "/dnsProvider.create";
+};
+
+export type DnsProviderCreateErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type DnsProviderCreateError =
+	DnsProviderCreateErrors[keyof DnsProviderCreateErrors];
+
+export type DnsProviderCreateResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type DnsProviderCreateResponse =
+	DnsProviderCreateResponses[keyof DnsProviderCreateResponses];
+
+export type DnsProviderUpdateData = {
+	body: {
+		dnsProviderId: string;
+		name: string;
+		config:
+			| {
+					providerType: "cloudflare";
+					apiToken: string;
+			  }
+			| {
+					providerType: "route53";
+					accessKeyId: string;
+					secretAccessKey: string;
+			  };
+	};
+	path?: never;
+	query?: never;
+	url: "/dnsProvider.update";
+};
+
+export type DnsProviderUpdateErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type DnsProviderUpdateError =
+	DnsProviderUpdateErrors[keyof DnsProviderUpdateErrors];
+
+export type DnsProviderUpdateResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type DnsProviderUpdateResponse =
+	DnsProviderUpdateResponses[keyof DnsProviderUpdateResponses];
+
+export type DnsProviderRemoveData = {
+	body: {
+		dnsProviderId: string;
+	};
+	path?: never;
+	query?: never;
+	url: "/dnsProvider.remove";
+};
+
+export type DnsProviderRemoveErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type DnsProviderRemoveError =
+	DnsProviderRemoveErrors[keyof DnsProviderRemoveErrors];
+
+export type DnsProviderRemoveResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type DnsProviderRemoveResponse =
+	DnsProviderRemoveResponses[keyof DnsProviderRemoveResponses];
+
+export type DnsProviderAllData = {
+	body?: never;
+	path?: never;
+	query?: never;
+	url: "/dnsProvider.all";
+};
+
+export type DnsProviderAllErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Not found
+	 */
+	404: ErrorNotFound;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type DnsProviderAllError =
+	DnsProviderAllErrors[keyof DnsProviderAllErrors];
+
+export type DnsProviderAllResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type DnsProviderAllResponse =
+	DnsProviderAllResponses[keyof DnsProviderAllResponses];
+
+export type DnsProviderOneData = {
+	body?: never;
+	path?: never;
+	query: {
+		dnsProviderId: string;
+	};
+	url: "/dnsProvider.one";
+};
+
+export type DnsProviderOneErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Not found
+	 */
+	404: ErrorNotFound;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type DnsProviderOneError =
+	DnsProviderOneErrors[keyof DnsProviderOneErrors];
+
+export type DnsProviderOneResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type DnsProviderOneResponse =
+	DnsProviderOneResponses[keyof DnsProviderOneResponses];
+
+export type DnsProviderTestConnectionData = {
+	body: {
+		dnsProviderId?: string;
+		config?:
+			| {
+					providerType: "cloudflare";
+					apiToken: string;
+			  }
+			| {
+					providerType: "route53";
+					accessKeyId: string;
+					secretAccessKey: string;
+			  };
+	};
+	path?: never;
+	query?: never;
+	url: "/dnsProvider.testConnection";
+};
+
+export type DnsProviderTestConnectionErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type DnsProviderTestConnectionError =
+	DnsProviderTestConnectionErrors[keyof DnsProviderTestConnectionErrors];
+
+export type DnsProviderTestConnectionResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type DnsProviderTestConnectionResponse =
+	DnsProviderTestConnectionResponses[keyof DnsProviderTestConnectionResponses];
+
+export type DnsProviderListZonesData = {
+	body?: never;
+	path?: never;
+	query: {
+		dnsProviderId: string;
+	};
+	url: "/dnsProvider.listZones";
+};
+
+export type DnsProviderListZonesErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Not found
+	 */
+	404: ErrorNotFound;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type DnsProviderListZonesError =
+	DnsProviderListZonesErrors[keyof DnsProviderListZonesErrors];
+
+export type DnsProviderListZonesResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type DnsProviderListZonesResponse =
+	DnsProviderListZonesResponses[keyof DnsProviderListZonesResponses];
+
+export type DnsProviderListRecordsData = {
+	body?: never;
+	path?: never;
+	query: {
+		dnsProviderId: string;
+		zoneId: string;
+	};
+	url: "/dnsProvider.listRecords";
+};
+
+export type DnsProviderListRecordsErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Not found
+	 */
+	404: ErrorNotFound;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type DnsProviderListRecordsError =
+	DnsProviderListRecordsErrors[keyof DnsProviderListRecordsErrors];
+
+export type DnsProviderListRecordsResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type DnsProviderListRecordsResponse =
+	DnsProviderListRecordsResponses[keyof DnsProviderListRecordsResponses];
+
+export type DnsProviderCreateRecordData = {
+	body: {
+		type: "A" | "CNAME";
+		name: string;
+		content: string;
+		ttl?: number;
+		dnsProviderId: string;
+		zoneId: string;
+	};
+	path?: never;
+	query?: never;
+	url: "/dnsProvider.createRecord";
+};
+
+export type DnsProviderCreateRecordErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type DnsProviderCreateRecordError =
+	DnsProviderCreateRecordErrors[keyof DnsProviderCreateRecordErrors];
+
+export type DnsProviderCreateRecordResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type DnsProviderCreateRecordResponse =
+	DnsProviderCreateRecordResponses[keyof DnsProviderCreateRecordResponses];
+
+export type DnsProviderUpdateRecordData = {
+	body: {
+		type: "A" | "CNAME";
+		name: string;
+		content: string;
+		ttl?: number;
+		dnsProviderId: string;
+		zoneId: string;
+		recordId: string;
+	};
+	path?: never;
+	query?: never;
+	url: "/dnsProvider.updateRecord";
+};
+
+export type DnsProviderUpdateRecordErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type DnsProviderUpdateRecordError =
+	DnsProviderUpdateRecordErrors[keyof DnsProviderUpdateRecordErrors];
+
+export type DnsProviderUpdateRecordResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type DnsProviderUpdateRecordResponse =
+	DnsProviderUpdateRecordResponses[keyof DnsProviderUpdateRecordResponses];
+
+export type DnsProviderDeleteRecordData = {
+	body: {
+		dnsProviderId: string;
+		zoneId: string;
+		recordId: string;
+	};
+	path?: never;
+	query?: never;
+	url: "/dnsProvider.deleteRecord";
+};
+
+export type DnsProviderDeleteRecordErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type DnsProviderDeleteRecordError =
+	DnsProviderDeleteRecordErrors[keyof DnsProviderDeleteRecordErrors];
+
+export type DnsProviderDeleteRecordResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type DnsProviderDeleteRecordResponse =
+	DnsProviderDeleteRecordResponses[keyof DnsProviderDeleteRecordResponses];
+
 export type DockerGetContainersData = {
 	body?: never;
 	path?: never;
@@ -5300,6 +6220,54 @@ export type DockerGetContainersResponses = {
 
 export type DockerGetContainersResponse =
 	DockerGetContainersResponses[keyof DockerGetContainersResponses];
+
+export type DockerGetServerHealthData = {
+	body?: never;
+	path?: never;
+	query?: {
+		serverId?: string;
+		sinceHours?: number;
+	};
+	url: "/docker.getServerHealth";
+};
+
+export type DockerGetServerHealthErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Not found
+	 */
+	404: ErrorNotFound;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type DockerGetServerHealthError =
+	DockerGetServerHealthErrors[keyof DockerGetServerHealthErrors];
+
+export type DockerGetServerHealthResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type DockerGetServerHealthResponse =
+	DockerGetServerHealthResponses[keyof DockerGetServerHealthResponses];
 
 export type DockerRestartContainerData = {
 	body: {
@@ -5809,6 +6777,897 @@ export type DockerUploadFileToContainerResponses = {
 export type DockerUploadFileToContainerResponse =
 	DockerUploadFileToContainerResponses[keyof DockerUploadFileToContainerResponses];
 
+export type DockerListContainerFilesData = {
+	body?: never;
+	path?: never;
+	query: {
+		containerId: string;
+		path: string;
+		serverId?: string;
+	};
+	url: "/docker.listContainerFiles";
+};
+
+export type DockerListContainerFilesErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Not found
+	 */
+	404: ErrorNotFound;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type DockerListContainerFilesError =
+	DockerListContainerFilesErrors[keyof DockerListContainerFilesErrors];
+
+export type DockerListContainerFilesResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type DockerListContainerFilesResponse =
+	DockerListContainerFilesResponses[keyof DockerListContainerFilesResponses];
+
+export type DockerReadContainerFileData = {
+	body?: never;
+	path?: never;
+	query: {
+		containerId: string;
+		path: string;
+		serverId?: string;
+	};
+	url: "/docker.readContainerFile";
+};
+
+export type DockerReadContainerFileErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Not found
+	 */
+	404: ErrorNotFound;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type DockerReadContainerFileError =
+	DockerReadContainerFileErrors[keyof DockerReadContainerFileErrors];
+
+export type DockerReadContainerFileResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type DockerReadContainerFileResponse =
+	DockerReadContainerFileResponses[keyof DockerReadContainerFileResponses];
+
+export type DockerWriteContainerFileData = {
+	body: {
+		containerId: string;
+		path: string;
+		content: string;
+		serverId?: string;
+	};
+	path?: never;
+	query?: never;
+	url: "/docker.writeContainerFile";
+};
+
+export type DockerWriteContainerFileErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type DockerWriteContainerFileError =
+	DockerWriteContainerFileErrors[keyof DockerWriteContainerFileErrors];
+
+export type DockerWriteContainerFileResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type DockerWriteContainerFileResponse =
+	DockerWriteContainerFileResponses[keyof DockerWriteContainerFileResponses];
+
+export type DockerDeleteContainerFileData = {
+	body: {
+		containerId: string;
+		path: string;
+		serverId?: string;
+	};
+	path?: never;
+	query?: never;
+	url: "/docker.deleteContainerFile";
+};
+
+export type DockerDeleteContainerFileErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type DockerDeleteContainerFileError =
+	DockerDeleteContainerFileErrors[keyof DockerDeleteContainerFileErrors];
+
+export type DockerDeleteContainerFileResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type DockerDeleteContainerFileResponse =
+	DockerDeleteContainerFileResponses[keyof DockerDeleteContainerFileResponses];
+
+export type DockerGetEventsData = {
+	body?: never;
+	path?: never;
+	query?: {
+		serverId?: string;
+		minutes?: number;
+	};
+	url: "/docker.getEvents";
+};
+
+export type DockerGetEventsErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Not found
+	 */
+	404: ErrorNotFound;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type DockerGetEventsError =
+	DockerGetEventsErrors[keyof DockerGetEventsErrors];
+
+export type DockerGetEventsResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type DockerGetEventsResponse =
+	DockerGetEventsResponses[keyof DockerGetEventsResponses];
+
+export type DockerDiskUsageGetDiskUsageData = {
+	body?: never;
+	path?: never;
+	query?: {
+		serverId?: string;
+	};
+	url: "/dockerDiskUsage.getDiskUsage";
+};
+
+export type DockerDiskUsageGetDiskUsageErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Not found
+	 */
+	404: ErrorNotFound;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type DockerDiskUsageGetDiskUsageError =
+	DockerDiskUsageGetDiskUsageErrors[keyof DockerDiskUsageGetDiskUsageErrors];
+
+export type DockerDiskUsageGetDiskUsageResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type DockerDiskUsageGetDiskUsageResponse =
+	DockerDiskUsageGetDiskUsageResponses[keyof DockerDiskUsageGetDiskUsageResponses];
+
+export type DockerDiskUsageGetBuildCacheData = {
+	body?: never;
+	path?: never;
+	query?: {
+		serverId?: string;
+	};
+	url: "/dockerDiskUsage.getBuildCache";
+};
+
+export type DockerDiskUsageGetBuildCacheErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Not found
+	 */
+	404: ErrorNotFound;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type DockerDiskUsageGetBuildCacheError =
+	DockerDiskUsageGetBuildCacheErrors[keyof DockerDiskUsageGetBuildCacheErrors];
+
+export type DockerDiskUsageGetBuildCacheResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type DockerDiskUsageGetBuildCacheResponse =
+	DockerDiskUsageGetBuildCacheResponses[keyof DockerDiskUsageGetBuildCacheResponses];
+
+export type DockerDiskUsagePruneBuildCacheData = {
+	body: {
+		serverId?: string;
+	};
+	path?: never;
+	query?: never;
+	url: "/dockerDiskUsage.pruneBuildCache";
+};
+
+export type DockerDiskUsagePruneBuildCacheErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type DockerDiskUsagePruneBuildCacheError =
+	DockerDiskUsagePruneBuildCacheErrors[keyof DockerDiskUsagePruneBuildCacheErrors];
+
+export type DockerDiskUsagePruneBuildCacheResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type DockerDiskUsagePruneBuildCacheResponse =
+	DockerDiskUsagePruneBuildCacheResponses[keyof DockerDiskUsagePruneBuildCacheResponses];
+
+export type DockerImageGetImagesData = {
+	body?: never;
+	path?: never;
+	query?: {
+		serverId?: string;
+	};
+	url: "/dockerImage.getImages";
+};
+
+export type DockerImageGetImagesErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Not found
+	 */
+	404: ErrorNotFound;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type DockerImageGetImagesError =
+	DockerImageGetImagesErrors[keyof DockerImageGetImagesErrors];
+
+export type DockerImageGetImagesResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type DockerImageGetImagesResponse =
+	DockerImageGetImagesResponses[keyof DockerImageGetImagesResponses];
+
+export type DockerImageGetImageConfigData = {
+	body?: never;
+	path?: never;
+	query: {
+		imageRef: string;
+		serverId?: string;
+	};
+	url: "/dockerImage.getImageConfig";
+};
+
+export type DockerImageGetImageConfigErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Not found
+	 */
+	404: ErrorNotFound;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type DockerImageGetImageConfigError =
+	DockerImageGetImageConfigErrors[keyof DockerImageGetImageConfigErrors];
+
+export type DockerImageGetImageConfigResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type DockerImageGetImageConfigResponse =
+	DockerImageGetImageConfigResponses[keyof DockerImageGetImageConfigResponses];
+
+export type DockerImageRemoveImageData = {
+	body: {
+		repository: string;
+		tag: string;
+		id: string;
+		force?: boolean;
+		serverId?: string;
+	};
+	path?: never;
+	query?: never;
+	url: "/dockerImage.removeImage";
+};
+
+export type DockerImageRemoveImageErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type DockerImageRemoveImageError =
+	DockerImageRemoveImageErrors[keyof DockerImageRemoveImageErrors];
+
+export type DockerImageRemoveImageResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type DockerImageRemoveImageResponse =
+	DockerImageRemoveImageResponses[keyof DockerImageRemoveImageResponses];
+
+export type DockerVolumeGetVolumesData = {
+	body?: never;
+	path?: never;
+	query?: {
+		serverId?: string;
+	};
+	url: "/dockerVolume.getVolumes";
+};
+
+export type DockerVolumeGetVolumesErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Not found
+	 */
+	404: ErrorNotFound;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type DockerVolumeGetVolumesError =
+	DockerVolumeGetVolumesErrors[keyof DockerVolumeGetVolumesErrors];
+
+export type DockerVolumeGetVolumesResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type DockerVolumeGetVolumesResponse =
+	DockerVolumeGetVolumesResponses[keyof DockerVolumeGetVolumesResponses];
+
+export type DockerVolumeGetVolumesSizeData = {
+	body?: never;
+	path?: never;
+	query?: {
+		serverId?: string;
+	};
+	url: "/dockerVolume.getVolumesSize";
+};
+
+export type DockerVolumeGetVolumesSizeErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Not found
+	 */
+	404: ErrorNotFound;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type DockerVolumeGetVolumesSizeError =
+	DockerVolumeGetVolumesSizeErrors[keyof DockerVolumeGetVolumesSizeErrors];
+
+export type DockerVolumeGetVolumesSizeResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type DockerVolumeGetVolumesSizeResponse =
+	DockerVolumeGetVolumesSizeResponses[keyof DockerVolumeGetVolumesSizeResponses];
+
+export type DockerVolumeListVolumeFilesData = {
+	body?: never;
+	path?: never;
+	query: {
+		volumeName: string;
+		path: string;
+		serverId?: string;
+	};
+	url: "/dockerVolume.listVolumeFiles";
+};
+
+export type DockerVolumeListVolumeFilesErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Not found
+	 */
+	404: ErrorNotFound;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type DockerVolumeListVolumeFilesError =
+	DockerVolumeListVolumeFilesErrors[keyof DockerVolumeListVolumeFilesErrors];
+
+export type DockerVolumeListVolumeFilesResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type DockerVolumeListVolumeFilesResponse =
+	DockerVolumeListVolumeFilesResponses[keyof DockerVolumeListVolumeFilesResponses];
+
+export type DockerVolumeReadVolumeFileData = {
+	body?: never;
+	path?: never;
+	query: {
+		volumeName: string;
+		path: string;
+		serverId?: string;
+	};
+	url: "/dockerVolume.readVolumeFile";
+};
+
+export type DockerVolumeReadVolumeFileErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Not found
+	 */
+	404: ErrorNotFound;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type DockerVolumeReadVolumeFileError =
+	DockerVolumeReadVolumeFileErrors[keyof DockerVolumeReadVolumeFileErrors];
+
+export type DockerVolumeReadVolumeFileResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type DockerVolumeReadVolumeFileResponse =
+	DockerVolumeReadVolumeFileResponses[keyof DockerVolumeReadVolumeFileResponses];
+
+export type DockerVolumeWriteVolumeFileData = {
+	body: {
+		volumeName: string;
+		path: string;
+		content: string;
+		serverId?: string;
+	};
+	path?: never;
+	query?: never;
+	url: "/dockerVolume.writeVolumeFile";
+};
+
+export type DockerVolumeWriteVolumeFileErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type DockerVolumeWriteVolumeFileError =
+	DockerVolumeWriteVolumeFileErrors[keyof DockerVolumeWriteVolumeFileErrors];
+
+export type DockerVolumeWriteVolumeFileResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type DockerVolumeWriteVolumeFileResponse =
+	DockerVolumeWriteVolumeFileResponses[keyof DockerVolumeWriteVolumeFileResponses];
+
+export type DockerVolumeDeleteVolumeFileData = {
+	body: {
+		volumeName: string;
+		path: string;
+		serverId?: string;
+	};
+	path?: never;
+	query?: never;
+	url: "/dockerVolume.deleteVolumeFile";
+};
+
+export type DockerVolumeDeleteVolumeFileErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type DockerVolumeDeleteVolumeFileError =
+	DockerVolumeDeleteVolumeFileErrors[keyof DockerVolumeDeleteVolumeFileErrors];
+
+export type DockerVolumeDeleteVolumeFileResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type DockerVolumeDeleteVolumeFileResponse =
+	DockerVolumeDeleteVolumeFileResponses[keyof DockerVolumeDeleteVolumeFileResponses];
+
+export type DockerVolumeGetVolumeConfigData = {
+	body?: never;
+	path?: never;
+	query: {
+		volumeName: string;
+		serverId?: string;
+	};
+	url: "/dockerVolume.getVolumeConfig";
+};
+
+export type DockerVolumeGetVolumeConfigErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Not found
+	 */
+	404: ErrorNotFound;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type DockerVolumeGetVolumeConfigError =
+	DockerVolumeGetVolumeConfigErrors[keyof DockerVolumeGetVolumeConfigErrors];
+
+export type DockerVolumeGetVolumeConfigResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type DockerVolumeGetVolumeConfigResponse =
+	DockerVolumeGetVolumeConfigResponses[keyof DockerVolumeGetVolumeConfigResponses];
+
+export type DockerVolumeRemoveVolumeData = {
+	body: {
+		volumeName: string;
+		serverId?: string;
+	};
+	path?: never;
+	query?: never;
+	url: "/dockerVolume.removeVolume";
+};
+
+export type DockerVolumeRemoveVolumeErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type DockerVolumeRemoveVolumeError =
+	DockerVolumeRemoveVolumeErrors[keyof DockerVolumeRemoveVolumeErrors];
+
+export type DockerVolumeRemoveVolumeResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type DockerVolumeRemoveVolumeResponse =
+	DockerVolumeRemoveVolumeResponses[keyof DockerVolumeRemoveVolumeResponses];
+
 export type DomainCreateData = {
 	body: {
 		host: string;
@@ -6066,6 +7925,7 @@ export type DomainUpdateData = {
 		stripPath?: boolean;
 		middlewares?: Array<string> | null;
 		forwardAuthEnabled?: boolean;
+		enabled?: boolean;
 		domainId: string;
 	};
 	path?: never;
@@ -6105,6 +7965,49 @@ export type DomainUpdateResponses = {
 
 export type DomainUpdateResponse =
 	DomainUpdateResponses[keyof DomainUpdateResponses];
+
+export type DomainToggleEnableData = {
+	body: {
+		domainId: string;
+	};
+	path?: never;
+	query?: never;
+	url: "/domain.toggleEnable";
+};
+
+export type DomainToggleEnableErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type DomainToggleEnableError =
+	DomainToggleEnableErrors[keyof DomainToggleEnableErrors];
+
+export type DomainToggleEnableResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type DomainToggleEnableResponse =
+	DomainToggleEnableResponses[keyof DomainToggleEnableResponses];
 
 export type DomainOneData = {
 	body?: never;
@@ -7949,6 +9852,8 @@ export type LibsqlUpdateData = {
 			}>;
 		} | null | null;
 		replicas?: number;
+		networkIds?: Array<string> | null;
+		detachDokployNetwork?: boolean;
 		createdAt?: string;
 		environmentId?: string;
 	};
@@ -8668,6 +10573,8 @@ export type MariadbUpdateData = {
 		replicas?: number;
 		createdAt?: string;
 		environmentId?: string;
+		networkIds?: Array<string> | null;
+		detachDokployNetwork?: boolean;
 	};
 	path?: never;
 	query?: never;
@@ -9480,7 +11387,9 @@ export type MongoUpdateData = {
 		replicas?: number;
 		createdAt?: string;
 		environmentId?: string;
-		replicaSets?: boolean | null;
+		replicaSets?: boolean;
+		networkIds?: Array<string> | null;
+		detachDokployNetwork?: boolean;
 	};
 	path?: never;
 	query?: never;
@@ -10596,6 +12505,8 @@ export type MysqlUpdateData = {
 		replicas?: number;
 		createdAt?: string;
 		environmentId?: string;
+		networkIds?: Array<string> | null;
+		detachDokployNetwork?: boolean;
 	};
 	path?: never;
 	query?: never;
@@ -13692,6 +15603,8 @@ export type PostgresUpdateData = {
 		replicas?: number;
 		createdAt?: string;
 		environmentId?: string;
+		networkIds?: Array<string> | null;
+		detachDokployNetwork?: boolean;
 	};
 	path?: never;
 	query?: never;
@@ -15285,6 +17198,8 @@ export type RedisUpdateData = {
 		}> | null | null;
 		replicas?: number;
 		environmentId?: string;
+		networkIds?: Array<string> | null;
+		detachDokployNetwork?: boolean;
 	};
 	path?: never;
 	query?: never;
@@ -16984,88 +18899,6 @@ export type SettingsReloadServerResponses = {
 
 export type SettingsReloadServerResponse =
 	SettingsReloadServerResponses[keyof SettingsReloadServerResponses];
-
-export type SettingsCleanRedisData = {
-	body?: never;
-	path?: never;
-	query?: never;
-	url: "/settings.cleanRedis";
-};
-
-export type SettingsCleanRedisErrors = {
-	/**
-	 * Invalid input data
-	 */
-	400: ErrorBadRequest;
-	/**
-	 * Authorization not provided
-	 */
-	401: ErrorUnauthorized;
-	/**
-	 * Insufficient access
-	 */
-	403: ErrorForbidden;
-	/**
-	 * Internal server error
-	 */
-	500: ErrorInternalServerError;
-};
-
-export type SettingsCleanRedisError =
-	SettingsCleanRedisErrors[keyof SettingsCleanRedisErrors];
-
-export type SettingsCleanRedisResponses = {
-	/**
-	 * Successful response
-	 */
-	200: {
-		[key: string]: never;
-	};
-};
-
-export type SettingsCleanRedisResponse =
-	SettingsCleanRedisResponses[keyof SettingsCleanRedisResponses];
-
-export type SettingsReloadRedisData = {
-	body?: never;
-	path?: never;
-	query?: never;
-	url: "/settings.reloadRedis";
-};
-
-export type SettingsReloadRedisErrors = {
-	/**
-	 * Invalid input data
-	 */
-	400: ErrorBadRequest;
-	/**
-	 * Authorization not provided
-	 */
-	401: ErrorUnauthorized;
-	/**
-	 * Insufficient access
-	 */
-	403: ErrorForbidden;
-	/**
-	 * Internal server error
-	 */
-	500: ErrorInternalServerError;
-};
-
-export type SettingsReloadRedisError =
-	SettingsReloadRedisErrors[keyof SettingsReloadRedisErrors];
-
-export type SettingsReloadRedisResponses = {
-	/**
-	 * Successful response
-	 */
-	200: {
-		[key: string]: never;
-	};
-};
-
-export type SettingsReloadRedisResponse =
-	SettingsReloadRedisResponses[keyof SettingsReloadRedisResponses];
 
 export type SettingsCleanAllDeploymentQueueData = {
 	body?: never;
@@ -20346,6 +22179,51 @@ export type UserGetPermissionsResponses = {
 export type UserGetPermissionsResponse =
 	UserGetPermissionsResponses[keyof UserGetPermissionsResponses];
 
+export type UserListPasskeysData = {
+	body?: never;
+	path?: never;
+	query?: never;
+	url: "/user.listPasskeys";
+};
+
+export type UserListPasskeysErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Not found
+	 */
+	404: ErrorNotFound;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type UserListPasskeysError =
+	UserListPasskeysErrors[keyof UserListPasskeysErrors];
+
+export type UserListPasskeysResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type UserListPasskeysResponse =
+	UserListPasskeysResponses[keyof UserListPasskeysResponses];
+
 export type UserHaveRootAccessData = {
 	body?: never;
 	path?: never;
@@ -20545,6 +22423,94 @@ export type UserUpdateResponses = {
 };
 
 export type UserUpdateResponse = UserUpdateResponses[keyof UserUpdateResponses];
+
+export type UserListSessionsData = {
+	body?: never;
+	path?: never;
+	query?: never;
+	url: "/user.listSessions";
+};
+
+export type UserListSessionsErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Not found
+	 */
+	404: ErrorNotFound;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type UserListSessionsError =
+	UserListSessionsErrors[keyof UserListSessionsErrors];
+
+export type UserListSessionsResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type UserListSessionsResponse =
+	UserListSessionsResponses[keyof UserListSessionsResponses];
+
+export type UserRevokeSessionData = {
+	body: {
+		sessionId: string;
+	};
+	path?: never;
+	query?: never;
+	url: "/user.revokeSession";
+};
+
+export type UserRevokeSessionErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type UserRevokeSessionError =
+	UserRevokeSessionErrors[keyof UserRevokeSessionErrors];
+
+export type UserRevokeSessionResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type UserRevokeSessionResponse =
+	UserRevokeSessionResponses[keyof UserRevokeSessionResponses];
 
 export type UserGetUserByTokenData = {
 	body?: never;
@@ -21194,6 +23160,460 @@ export type UserToggleTemplateBookmarkResponses = {
 
 export type UserToggleTemplateBookmarkResponse =
 	UserToggleTemplateBookmarkResponses[keyof UserToggleTemplateBookmarkResponses];
+
+export type VaultProviderCreateData = {
+	body: {
+		name: string;
+		config:
+			| {
+					providerType: "hashicorp";
+					url: string;
+					token: string;
+					namespace?: string;
+					mount?: string;
+			  }
+			| {
+					providerType: "infisical";
+					siteUrl?: string;
+					clientId: string;
+					clientSecret: string;
+					projectId: string;
+					environmentSlug: string;
+					secretPath?: string;
+			  }
+			| {
+					providerType: "aws";
+					region: string;
+					accessKeyId: string;
+					secretAccessKey: string;
+					endpoint?: string;
+			  }
+			| {
+					providerType: "doppler";
+					serviceToken: string;
+					project?: string;
+					config?: string;
+			  }
+			| {
+					providerType: "azure";
+					vaultUri: string;
+					tenantId: string;
+					clientId: string;
+					clientSecret: string;
+			  }
+			| {
+					providerType: "scaleway";
+					region?: string;
+					projectId: string;
+					secretKey: string;
+					apiUrl?: string;
+			  };
+		assignments: Array<{
+			projectId: string;
+			environmentIds?: Array<string>;
+		}>;
+	};
+	path?: never;
+	query?: never;
+	url: "/vaultProvider.create";
+};
+
+export type VaultProviderCreateErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type VaultProviderCreateError =
+	VaultProviderCreateErrors[keyof VaultProviderCreateErrors];
+
+export type VaultProviderCreateResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type VaultProviderCreateResponse =
+	VaultProviderCreateResponses[keyof VaultProviderCreateResponses];
+
+export type VaultProviderUpdateData = {
+	body: {
+		vaultProviderId: string;
+		name: string;
+		config:
+			| {
+					providerType: "hashicorp";
+					url: string;
+					token: string;
+					namespace?: string;
+					mount?: string;
+			  }
+			| {
+					providerType: "infisical";
+					siteUrl?: string;
+					clientId: string;
+					clientSecret: string;
+					projectId: string;
+					environmentSlug: string;
+					secretPath?: string;
+			  }
+			| {
+					providerType: "aws";
+					region: string;
+					accessKeyId: string;
+					secretAccessKey: string;
+					endpoint?: string;
+			  }
+			| {
+					providerType: "doppler";
+					serviceToken: string;
+					project?: string;
+					config?: string;
+			  }
+			| {
+					providerType: "azure";
+					vaultUri: string;
+					tenantId: string;
+					clientId: string;
+					clientSecret: string;
+			  }
+			| {
+					providerType: "scaleway";
+					region?: string;
+					projectId: string;
+					secretKey: string;
+					apiUrl?: string;
+			  };
+		assignments: Array<{
+			projectId: string;
+			environmentIds?: Array<string>;
+		}>;
+	};
+	path?: never;
+	query?: never;
+	url: "/vaultProvider.update";
+};
+
+export type VaultProviderUpdateErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type VaultProviderUpdateError =
+	VaultProviderUpdateErrors[keyof VaultProviderUpdateErrors];
+
+export type VaultProviderUpdateResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type VaultProviderUpdateResponse =
+	VaultProviderUpdateResponses[keyof VaultProviderUpdateResponses];
+
+export type VaultProviderRemoveData = {
+	body: {
+		vaultProviderId: string;
+	};
+	path?: never;
+	query?: never;
+	url: "/vaultProvider.remove";
+};
+
+export type VaultProviderRemoveErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type VaultProviderRemoveError =
+	VaultProviderRemoveErrors[keyof VaultProviderRemoveErrors];
+
+export type VaultProviderRemoveResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type VaultProviderRemoveResponse =
+	VaultProviderRemoveResponses[keyof VaultProviderRemoveResponses];
+
+export type VaultProviderAllData = {
+	body?: never;
+	path?: never;
+	query?: never;
+	url: "/vaultProvider.all";
+};
+
+export type VaultProviderAllErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Not found
+	 */
+	404: ErrorNotFound;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type VaultProviderAllError =
+	VaultProviderAllErrors[keyof VaultProviderAllErrors];
+
+export type VaultProviderAllResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type VaultProviderAllResponse =
+	VaultProviderAllResponses[keyof VaultProviderAllResponses];
+
+export type VaultProviderOneData = {
+	body?: never;
+	path?: never;
+	query: {
+		vaultProviderId: string;
+	};
+	url: "/vaultProvider.one";
+};
+
+export type VaultProviderOneErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Not found
+	 */
+	404: ErrorNotFound;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type VaultProviderOneError =
+	VaultProviderOneErrors[keyof VaultProviderOneErrors];
+
+export type VaultProviderOneResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type VaultProviderOneResponse =
+	VaultProviderOneResponses[keyof VaultProviderOneResponses];
+
+export type VaultProviderTestConnectionData = {
+	body: {
+		vaultProviderId?: string;
+		config?:
+			| {
+					providerType: "hashicorp";
+					url: string;
+					token: string;
+					namespace?: string;
+					mount?: string;
+			  }
+			| {
+					providerType: "infisical";
+					siteUrl?: string;
+					clientId: string;
+					clientSecret: string;
+					projectId: string;
+					environmentSlug: string;
+					secretPath?: string;
+			  }
+			| {
+					providerType: "aws";
+					region: string;
+					accessKeyId: string;
+					secretAccessKey: string;
+					endpoint?: string;
+			  }
+			| {
+					providerType: "doppler";
+					serviceToken: string;
+					project?: string;
+					config?: string;
+			  }
+			| {
+					providerType: "azure";
+					vaultUri: string;
+					tenantId: string;
+					clientId: string;
+					clientSecret: string;
+			  }
+			| {
+					providerType: "scaleway";
+					region?: string;
+					projectId: string;
+					secretKey: string;
+					apiUrl?: string;
+			  };
+	};
+	path?: never;
+	query?: never;
+	url: "/vaultProvider.testConnection";
+};
+
+export type VaultProviderTestConnectionErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type VaultProviderTestConnectionError =
+	VaultProviderTestConnectionErrors[keyof VaultProviderTestConnectionErrors];
+
+export type VaultProviderTestConnectionResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type VaultProviderTestConnectionResponse =
+	VaultProviderTestConnectionResponses[keyof VaultProviderTestConnectionResponses];
+
+export type VaultProviderListSecretNamesData = {
+	body?: never;
+	path?: never;
+	query: {
+		vaultProviderId: string;
+		projectId: string;
+		environmentId?: string;
+	};
+	url: "/vaultProvider.listSecretNames";
+};
+
+export type VaultProviderListSecretNamesErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Not found
+	 */
+	404: ErrorNotFound;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type VaultProviderListSecretNamesError =
+	VaultProviderListSecretNamesErrors[keyof VaultProviderListSecretNamesErrors];
+
+export type VaultProviderListSecretNamesResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type VaultProviderListSecretNamesResponse =
+	VaultProviderListSecretNamesResponses[keyof VaultProviderListSecretNamesResponses];
 
 export type AiOneData = {
 	body?: never;
@@ -21973,6 +24393,7 @@ export type OrganizationUpdateData = {
 		organizationId: string;
 		name: string;
 		logo?: string;
+		defaultRole?: string | null;
 	};
 	path?: never;
 	query?: never;
@@ -26268,3 +28689,138 @@ export type PatchCleanPatchReposResponses = {
 
 export type PatchCleanPatchReposResponse =
 	PatchCleanPatchReposResponses[keyof PatchCleanPatchReposResponses];
+
+export type OverviewServicesData = {
+	body?: never;
+	path?: never;
+	query?: never;
+	url: "/overview.services";
+};
+
+export type OverviewServicesErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Not found
+	 */
+	404: ErrorNotFound;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type OverviewServicesError =
+	OverviewServicesErrors[keyof OverviewServicesErrors];
+
+export type OverviewServicesResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type OverviewServicesResponse =
+	OverviewServicesResponses[keyof OverviewServicesResponses];
+
+export type OverviewBackupsData = {
+	body?: never;
+	path?: never;
+	query?: never;
+	url: "/overview.backups";
+};
+
+export type OverviewBackupsErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Not found
+	 */
+	404: ErrorNotFound;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type OverviewBackupsError =
+	OverviewBackupsErrors[keyof OverviewBackupsErrors];
+
+export type OverviewBackupsResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type OverviewBackupsResponse =
+	OverviewBackupsResponses[keyof OverviewBackupsResponses];
+
+export type OverviewDomainsData = {
+	body?: never;
+	path?: never;
+	query?: never;
+	url: "/overview.domains";
+};
+
+export type OverviewDomainsErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Not found
+	 */
+	404: ErrorNotFound;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type OverviewDomainsError =
+	OverviewDomainsErrors[keyof OverviewDomainsErrors];
+
+export type OverviewDomainsResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type OverviewDomainsResponse =
+	OverviewDomainsResponses[keyof OverviewDomainsResponses];
