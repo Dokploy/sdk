@@ -3031,6 +3031,48 @@ export type NetworkRecreateResponses = {
 export type NetworkRecreateResponse =
 	NetworkRecreateResponses[keyof NetworkRecreateResponses];
 
+export type NetworkResyncData = {
+	body: {
+		networkId: string;
+	};
+	path?: never;
+	query?: never;
+	url: "/network.resync";
+};
+
+export type NetworkResyncErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type NetworkResyncError = NetworkResyncErrors[keyof NetworkResyncErrors];
+
+export type NetworkResyncResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type NetworkResyncResponse =
+	NetworkResyncResponses[keyof NetworkResyncResponses];
+
 export type NetworkRemoveData = {
 	body: {
 		networkId: string;
@@ -8099,7 +8141,7 @@ export type DomainDeleteResponse =
 export type DomainValidateDomainData = {
 	body: {
 		domain: string;
-		serverIp?: string;
+		serverId?: string;
 	};
 	path?: never;
 	query?: never;

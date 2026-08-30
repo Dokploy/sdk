@@ -920,6 +920,9 @@ import type {
 	NetworkRemoveData,
 	NetworkRemoveErrors,
 	NetworkRemoveResponses,
+	NetworkResyncData,
+	NetworkResyncErrors,
+	NetworkResyncResponses,
 	NotificationAllData,
 	NotificationAllErrors,
 	NotificationAllResponses,
@@ -2672,6 +2675,22 @@ export const networkRecreate = <ThrowOnError extends boolean = false>(
 		ThrowOnError
 	>({
 		url: "/network.recreate",
+		...options,
+		headers: {
+			"Content-Type": "application/json",
+			...options.headers,
+		},
+	});
+
+export const networkResync = <ThrowOnError extends boolean = false>(
+	options: Options<NetworkResyncData, ThrowOnError>,
+) =>
+	(options.client ?? client).post<
+		NetworkResyncResponses,
+		NetworkResyncErrors,
+		ThrowOnError
+	>({
+		url: "/network.resync",
 		...options,
 		headers: {
 			"Content-Type": "application/json",
