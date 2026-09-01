@@ -5696,6 +5696,11 @@ export type DnsProviderCreateData = {
 					providerType: "route53";
 					accessKeyId: string;
 					secretAccessKey: string;
+			  }
+			| {
+					providerType: "porkbun";
+					apiKey: string;
+					secretApiKey: string;
 			  };
 	};
 	path?: never;
@@ -5750,6 +5755,11 @@ export type DnsProviderUpdateData = {
 					providerType: "route53";
 					accessKeyId: string;
 					secretAccessKey: string;
+			  }
+			| {
+					providerType: "porkbun";
+					apiKey: string;
+					secretApiKey: string;
 			  };
 	};
 	path?: never;
@@ -5938,6 +5948,11 @@ export type DnsProviderTestConnectionData = {
 					providerType: "route53";
 					accessKeyId: string;
 					secretAccessKey: string;
+			  }
+			| {
+					providerType: "porkbun";
+					apiKey: string;
+					secretApiKey: string;
 			  };
 	};
 	path?: never;
@@ -6076,10 +6091,11 @@ export type DnsProviderListRecordsResponse =
 
 export type DnsProviderCreateRecordData = {
 	body: {
-		type: "A" | "CNAME";
+		type: "A" | "AAAA" | "CNAME" | "MX" | "TXT" | "NS" | "SRV" | "CAA" | "PTR";
 		name: string;
 		content: string;
 		ttl?: number;
+		proxied?: boolean;
 		dnsProviderId: string;
 		zoneId: string;
 	};
@@ -6124,10 +6140,11 @@ export type DnsProviderCreateRecordResponse =
 
 export type DnsProviderUpdateRecordData = {
 	body: {
-		type: "A" | "CNAME";
+		type: "A" | "AAAA" | "CNAME" | "MX" | "TXT" | "NS" | "SRV" | "CAA" | "PTR";
 		name: string;
 		content: string;
 		ttl?: number;
+		proxied?: boolean;
 		dnsProviderId: string;
 		zoneId: string;
 		recordId: string;
@@ -13796,6 +13813,7 @@ export type NotificationCreateGotifyData = {
 		name: string;
 		appDeploy: boolean;
 		dockerCleanup: boolean;
+		serverThreshold: boolean;
 		serverUrl: string;
 		appToken: string;
 		priority: number;
@@ -13850,6 +13868,7 @@ export type NotificationUpdateGotifyData = {
 		name?: string;
 		appDeploy?: boolean;
 		dockerCleanup?: boolean;
+		serverThreshold?: boolean;
 		serverUrl?: string;
 		appToken?: string;
 		priority?: number;
@@ -13953,6 +13972,7 @@ export type NotificationCreateNtfyData = {
 		name: string;
 		appDeploy: boolean;
 		dockerCleanup: boolean;
+		serverThreshold: boolean;
 		serverUrl: string;
 		topic: string;
 		accessToken: string;
@@ -14007,6 +14027,7 @@ export type NotificationUpdateNtfyData = {
 		name?: string;
 		appDeploy?: boolean;
 		dockerCleanup?: boolean;
+		serverThreshold?: boolean;
 		serverUrl?: string;
 		topic?: string;
 		accessToken?: string;
@@ -18157,6 +18178,53 @@ export type ServerGetDefaultCommandResponses = {
 
 export type ServerGetDefaultCommandResponse =
 	ServerGetDefaultCommandResponses[keyof ServerGetDefaultCommandResponses];
+
+export type ServerGetServicesData = {
+	body?: never;
+	path?: never;
+	query: {
+		serverId: string;
+	};
+	url: "/server.getServices";
+};
+
+export type ServerGetServicesErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Not found
+	 */
+	404: ErrorNotFound;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type ServerGetServicesError =
+	ServerGetServicesErrors[keyof ServerGetServicesErrors];
+
+export type ServerGetServicesResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type ServerGetServicesResponse =
+	ServerGetServicesResponses[keyof ServerGetServicesResponses];
 
 export type ServerAllData = {
 	body?: never;
@@ -23249,6 +23317,14 @@ export type VaultProviderCreateData = {
 					projectId: string;
 					secretKey: string;
 					apiUrl?: string;
+			  }
+			| {
+					providerType: "phase";
+					token: string;
+					appId: string;
+					env: string;
+					path?: string;
+					apiUrl?: string;
 			  };
 		assignments: Array<{
 			projectId: string;
@@ -23340,6 +23416,14 @@ export type VaultProviderUpdateData = {
 					region?: string;
 					projectId: string;
 					secretKey: string;
+					apiUrl?: string;
+			  }
+			| {
+					providerType: "phase";
+					token: string;
+					appId: string;
+					env: string;
+					path?: string;
 					apiUrl?: string;
 			  };
 		assignments: Array<{
@@ -23566,6 +23650,14 @@ export type VaultProviderTestConnectionData = {
 					region?: string;
 					projectId: string;
 					secretKey: string;
+					apiUrl?: string;
+			  }
+			| {
+					providerType: "phase";
+					token: string;
+					appId: string;
+					env: string;
+					path?: string;
 					apiUrl?: string;
 			  };
 	};

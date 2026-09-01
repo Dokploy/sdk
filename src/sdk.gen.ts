@@ -1373,6 +1373,9 @@ import type {
 	ServerGetServerTimeData,
 	ServerGetServerTimeErrors,
 	ServerGetServerTimeResponses,
+	ServerGetServicesData,
+	ServerGetServicesErrors,
+	ServerGetServicesResponses,
 	ServerOneData,
 	ServerOneErrors,
 	ServerOneResponses,
@@ -7028,6 +7031,15 @@ export const serverGetDefaultCommand = <ThrowOnError extends boolean = false>(
 		ServerGetDefaultCommandErrors,
 		ThrowOnError
 	>({ url: "/server.getDefaultCommand", ...options });
+
+export const serverGetServices = <ThrowOnError extends boolean = false>(
+	options: Options<ServerGetServicesData, ThrowOnError>,
+) =>
+	(options.client ?? client).get<
+		ServerGetServicesResponses,
+		ServerGetServicesErrors,
+		ThrowOnError
+	>({ url: "/server.getServices", ...options });
 
 export const serverAll = <ThrowOnError extends boolean = false>(
 	options?: Options<ServerAllData, ThrowOnError>,
