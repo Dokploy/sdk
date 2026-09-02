@@ -70,6 +70,9 @@ import type {
 	ApplicationDeleteResponses,
 	ApplicationDeployData,
 	ApplicationDeployErrors,
+	ApplicationDeployNginxQuickstartData,
+	ApplicationDeployNginxQuickstartErrors,
+	ApplicationDeployNginxQuickstartResponses,
 	ApplicationDeployResponses,
 	ApplicationDisconnectGitProviderData,
 	ApplicationDisconnectGitProviderErrors,
@@ -1202,6 +1205,9 @@ import type {
 	ProjectAllForPermissionsErrors,
 	ProjectAllForPermissionsResponses,
 	ProjectAllResponses,
+	ProjectCompleteOnboardingData,
+	ProjectCompleteOnboardingErrors,
+	ProjectCompleteOnboardingResponses,
 	ProjectCreateData,
 	ProjectCreateErrors,
 	ProjectCreateResponses,
@@ -1211,6 +1217,9 @@ import type {
 	ProjectHomeStatsData,
 	ProjectHomeStatsErrors,
 	ProjectHomeStatsResponses,
+	ProjectOnboardingStatusData,
+	ProjectOnboardingStatusErrors,
+	ProjectOnboardingStatusResponses,
 	ProjectOneData,
 	ProjectOneErrors,
 	ProjectOneResponses,
@@ -1625,6 +1634,9 @@ import type {
 	StripeCreateCustomerPortalSessionData,
 	StripeCreateCustomerPortalSessionErrors,
 	StripeCreateCustomerPortalSessionResponses,
+	StripeGetBillingStatusData,
+	StripeGetBillingStatusErrors,
+	StripeGetBillingStatusResponses,
 	StripeGetCurrentPlanData,
 	StripeGetCurrentPlanErrors,
 	StripeGetCurrentPlanResponses,
@@ -1634,6 +1646,9 @@ import type {
 	StripeGetProductsData,
 	StripeGetProductsErrors,
 	StripeGetProductsResponses,
+	StripeStartFreeTrialData,
+	StripeStartFreeTrialErrors,
+	StripeStartFreeTrialResponses,
 	StripeUpdateInvoiceNotificationsData,
 	StripeUpdateInvoiceNotificationsErrors,
 	StripeUpdateInvoiceNotificationsResponses,
@@ -1850,6 +1865,24 @@ export const applicationCreate = <ThrowOnError extends boolean = false>(
 		ThrowOnError
 	>({
 		url: "/application.create",
+		...options,
+		headers: {
+			"Content-Type": "application/json",
+			...options.headers,
+		},
+	});
+
+export const applicationDeployNginxQuickstart = <
+	ThrowOnError extends boolean = false,
+>(
+	options: Options<ApplicationDeployNginxQuickstartData, ThrowOnError>,
+) =>
+	(options.client ?? client).post<
+		ApplicationDeployNginxQuickstartResponses,
+		ApplicationDeployNginxQuickstartErrors,
+		ThrowOnError
+	>({
+		url: "/application.deployNginxQuickstart",
 		...options,
 		headers: {
 			"Content-Type": "application/json",
@@ -6494,6 +6527,24 @@ export const projectHomeStats = <ThrowOnError extends boolean = false>(
 		ThrowOnError
 	>({ url: "/project.homeStats", ...options });
 
+export const projectOnboardingStatus = <ThrowOnError extends boolean = false>(
+	options?: Options<ProjectOnboardingStatusData, ThrowOnError>,
+) =>
+	(options?.client ?? client).get<
+		ProjectOnboardingStatusResponses,
+		ProjectOnboardingStatusErrors,
+		ThrowOnError
+	>({ url: "/project.onboardingStatus", ...options });
+
+export const projectCompleteOnboarding = <ThrowOnError extends boolean = false>(
+	options?: Options<ProjectCompleteOnboardingData, ThrowOnError>,
+) =>
+	(options?.client ?? client).post<
+		ProjectCompleteOnboardingResponses,
+		ProjectCompleteOnboardingErrors,
+		ThrowOnError
+	>({ url: "/project.completeOnboarding", ...options });
+
 export const projectSearch = <ThrowOnError extends boolean = false>(
 	options?: Options<ProjectSearchData, ThrowOnError>,
 ) =>
@@ -7994,6 +8045,24 @@ export const stripeGetCurrentPlan = <ThrowOnError extends boolean = false>(
 		StripeGetCurrentPlanErrors,
 		ThrowOnError
 	>({ url: "/stripe.getCurrentPlan", ...options });
+
+export const stripeGetBillingStatus = <ThrowOnError extends boolean = false>(
+	options?: Options<StripeGetBillingStatusData, ThrowOnError>,
+) =>
+	(options?.client ?? client).get<
+		StripeGetBillingStatusResponses,
+		StripeGetBillingStatusErrors,
+		ThrowOnError
+	>({ url: "/stripe.getBillingStatus", ...options });
+
+export const stripeStartFreeTrial = <ThrowOnError extends boolean = false>(
+	options?: Options<StripeStartFreeTrialData, ThrowOnError>,
+) =>
+	(options?.client ?? client).post<
+		StripeStartFreeTrialResponses,
+		StripeStartFreeTrialErrors,
+		ThrowOnError
+	>({ url: "/stripe.startFreeTrial", ...options });
 
 export const stripeGetProducts = <ThrowOnError extends boolean = false>(
 	options?: Options<StripeGetProductsData, ThrowOnError>,

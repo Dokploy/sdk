@@ -232,6 +232,50 @@ export type ApplicationCreateResponses = {
 export type ApplicationCreateResponse =
 	ApplicationCreateResponses[keyof ApplicationCreateResponses];
 
+export type ApplicationDeployNginxQuickstartData = {
+	body: {
+		environmentId: string;
+		serverId?: string;
+	};
+	path?: never;
+	query?: never;
+	url: "/application.deployNginxQuickstart";
+};
+
+export type ApplicationDeployNginxQuickstartErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type ApplicationDeployNginxQuickstartError =
+	ApplicationDeployNginxQuickstartErrors[keyof ApplicationDeployNginxQuickstartErrors];
+
+export type ApplicationDeployNginxQuickstartResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type ApplicationDeployNginxQuickstartResponse =
+	ApplicationDeployNginxQuickstartResponses[keyof ApplicationDeployNginxQuickstartResponses];
+
 export type ApplicationOneData = {
 	body?: never;
 	path?: never;
@@ -4213,6 +4257,7 @@ export type ComposeDeployData = {
 		composeId: string;
 		title?: string;
 		description?: string;
+		freshVolumes?: boolean;
 	};
 	path?: never;
 	query?: never;
@@ -4257,6 +4302,7 @@ export type ComposeRedeployData = {
 		composeId: string;
 		title?: string;
 		description?: string;
+		freshVolumes?: boolean;
 	};
 	path?: never;
 	query?: never;
@@ -16346,6 +16392,92 @@ export type ProjectHomeStatsResponses = {
 export type ProjectHomeStatsResponse =
 	ProjectHomeStatsResponses[keyof ProjectHomeStatsResponses];
 
+export type ProjectOnboardingStatusData = {
+	body?: never;
+	path?: never;
+	query?: never;
+	url: "/project.onboardingStatus";
+};
+
+export type ProjectOnboardingStatusErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Not found
+	 */
+	404: ErrorNotFound;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type ProjectOnboardingStatusError =
+	ProjectOnboardingStatusErrors[keyof ProjectOnboardingStatusErrors];
+
+export type ProjectOnboardingStatusResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type ProjectOnboardingStatusResponse =
+	ProjectOnboardingStatusResponses[keyof ProjectOnboardingStatusResponses];
+
+export type ProjectCompleteOnboardingData = {
+	body?: never;
+	path?: never;
+	query?: never;
+	url: "/project.completeOnboarding";
+};
+
+export type ProjectCompleteOnboardingErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type ProjectCompleteOnboardingError =
+	ProjectCompleteOnboardingErrors[keyof ProjectCompleteOnboardingErrors];
+
+export type ProjectCompleteOnboardingResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type ProjectCompleteOnboardingResponse =
+	ProjectCompleteOnboardingResponses[keyof ProjectCompleteOnboardingResponses];
+
 export type ProjectSearchData = {
 	body?: never;
 	path?: never;
@@ -21570,6 +21702,92 @@ export type StripeGetCurrentPlanResponses = {
 
 export type StripeGetCurrentPlanResponse =
 	StripeGetCurrentPlanResponses[keyof StripeGetCurrentPlanResponses];
+
+export type StripeGetBillingStatusData = {
+	body?: never;
+	path?: never;
+	query?: never;
+	url: "/stripe.getBillingStatus";
+};
+
+export type StripeGetBillingStatusErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Not found
+	 */
+	404: ErrorNotFound;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type StripeGetBillingStatusError =
+	StripeGetBillingStatusErrors[keyof StripeGetBillingStatusErrors];
+
+export type StripeGetBillingStatusResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type StripeGetBillingStatusResponse =
+	StripeGetBillingStatusResponses[keyof StripeGetBillingStatusResponses];
+
+export type StripeStartFreeTrialData = {
+	body?: never;
+	path?: never;
+	query?: never;
+	url: "/stripe.startFreeTrial";
+};
+
+export type StripeStartFreeTrialErrors = {
+	/**
+	 * Invalid input data
+	 */
+	400: ErrorBadRequest;
+	/**
+	 * Authorization not provided
+	 */
+	401: ErrorUnauthorized;
+	/**
+	 * Insufficient access
+	 */
+	403: ErrorForbidden;
+	/**
+	 * Internal server error
+	 */
+	500: ErrorInternalServerError;
+};
+
+export type StripeStartFreeTrialError =
+	StripeStartFreeTrialErrors[keyof StripeStartFreeTrialErrors];
+
+export type StripeStartFreeTrialResponses = {
+	/**
+	 * Successful response
+	 */
+	200: {
+		[key: string]: never;
+	};
+};
+
+export type StripeStartFreeTrialResponse =
+	StripeStartFreeTrialResponses[keyof StripeStartFreeTrialResponses];
 
 export type StripeGetProductsData = {
 	body?: never;
