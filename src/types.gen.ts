@@ -5747,6 +5747,24 @@ export type DnsProviderCreateData = {
 					providerType: "porkbun";
 					apiKey: string;
 					secretApiKey: string;
+			  }
+			| {
+					providerType: "infomaniak";
+					apiToken: string;
+			  }
+			| {
+					providerType: "ovh";
+					endpoint?:
+						| "ovh-eu"
+						| "ovh-ca"
+						| "ovh-us"
+						| "kimsufi-eu"
+						| "kimsufi-ca"
+						| "soyoustart-eu"
+						| "soyoustart-ca";
+					applicationKey: string;
+					applicationSecret: string;
+					consumerKey: string;
 			  };
 	};
 	path?: never;
@@ -5806,6 +5824,24 @@ export type DnsProviderUpdateData = {
 					providerType: "porkbun";
 					apiKey: string;
 					secretApiKey: string;
+			  }
+			| {
+					providerType: "infomaniak";
+					apiToken: string;
+			  }
+			| {
+					providerType: "ovh";
+					endpoint?:
+						| "ovh-eu"
+						| "ovh-ca"
+						| "ovh-us"
+						| "kimsufi-eu"
+						| "kimsufi-ca"
+						| "soyoustart-eu"
+						| "soyoustart-ca";
+					applicationKey: string;
+					applicationSecret: string;
+					consumerKey: string;
 			  };
 	};
 	path?: never;
@@ -5999,6 +6035,24 @@ export type DnsProviderTestConnectionData = {
 					providerType: "porkbun";
 					apiKey: string;
 					secretApiKey: string;
+			  }
+			| {
+					providerType: "infomaniak";
+					apiToken: string;
+			  }
+			| {
+					providerType: "ovh";
+					endpoint?:
+						| "ovh-eu"
+						| "ovh-ca"
+						| "ovh-us"
+						| "kimsufi-eu"
+						| "kimsufi-ca"
+						| "soyoustart-eu"
+						| "soyoustart-ca";
+					applicationKey: string;
+					applicationSecret: string;
+					consumerKey: string;
 			  };
 	};
 	path?: never;
@@ -23517,6 +23571,14 @@ export type VaultProviderCreateData = {
 					endpoint?: string;
 			  }
 			| {
+					providerType: "aws-parameter-store";
+					region: string;
+					accessKeyId: string;
+					secretAccessKey: string;
+					endpoint?: string;
+					parameterPath?: string;
+			  }
+			| {
 					providerType: "doppler";
 					serviceToken: string;
 					project?: string;
@@ -23615,6 +23677,14 @@ export type VaultProviderUpdateData = {
 					accessKeyId: string;
 					secretAccessKey: string;
 					endpoint?: string;
+			  }
+			| {
+					providerType: "aws-parameter-store";
+					region: string;
+					accessKeyId: string;
+					secretAccessKey: string;
+					endpoint?: string;
+					parameterPath?: string;
 			  }
 			| {
 					providerType: "doppler";
@@ -23849,6 +23919,14 @@ export type VaultProviderTestConnectionData = {
 					accessKeyId: string;
 					secretAccessKey: string;
 					endpoint?: string;
+			  }
+			| {
+					providerType: "aws-parameter-store";
+					region: string;
+					accessKeyId: string;
+					secretAccessKey: string;
+					endpoint?: string;
+					parameterPath?: string;
 			  }
 			| {
 					providerType: "doppler";
@@ -26627,8 +26705,8 @@ export type WhitelabelingUpdateData = {
 			docsUrl: string | null;
 			errorPageTitle: string | null;
 			errorPageDescription: string | null;
-			metaTitle: string | null;
 			footerText: string | null;
+			ogImageUrl: string | null;
 		};
 	};
 	path?: never;
