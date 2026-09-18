@@ -8056,13 +8056,20 @@ export const stripeGetBillingStatus = <ThrowOnError extends boolean = false>(
 	>({ url: "/stripe.getBillingStatus", ...options });
 
 export const stripeStartFreeTrial = <ThrowOnError extends boolean = false>(
-	options?: Options<StripeStartFreeTrialData, ThrowOnError>,
+	options: Options<StripeStartFreeTrialData, ThrowOnError>,
 ) =>
-	(options?.client ?? client).post<
+	(options.client ?? client).post<
 		StripeStartFreeTrialResponses,
 		StripeStartFreeTrialErrors,
 		ThrowOnError
-	>({ url: "/stripe.startFreeTrial", ...options });
+	>({
+		url: "/stripe.startFreeTrial",
+		...options,
+		headers: {
+			"Content-Type": "application/json",
+			...options.headers,
+		},
+	});
 
 export const stripeGetProducts = <ThrowOnError extends boolean = false>(
 	options?: Options<StripeGetProductsData, ThrowOnError>,

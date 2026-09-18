@@ -21803,7 +21803,9 @@ export type StripeGetBillingStatusResponse =
 	StripeGetBillingStatusResponses[keyof StripeGetBillingStatusResponses];
 
 export type StripeStartFreeTrialData = {
-	body?: never;
+	body: {
+		tier: "hobby" | "startup";
+	};
 	path?: never;
 	query?: never;
 	url: "/stripe.startFreeTrial";
