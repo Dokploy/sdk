@@ -3273,9 +3273,6 @@
                       "null"
                     ]
                   },
-                  "environmentId": {
-                    "type": "string"
-                  },
                   "githubId": {
                     "type": [
                       "string",
@@ -8971,9 +8968,6 @@
                         "type": "null"
                       }
                     ]
-                  },
-                  "environmentId": {
-                    "type": "string"
                   },
                   "createdAt": {
                     "type": "string"
@@ -22629,9 +22623,6 @@
                   },
                   "createdAt": {
                     "type": "string"
-                  },
-                  "environmentId": {
-                    "type": "string"
                   }
                 },
                 "required": [
@@ -25761,9 +25752,6 @@
                   "createdAt": {
                     "type": "string"
                   },
-                  "environmentId": {
-                    "type": "string"
-                  },
                   "networkIds": {
                     "anyOf": [
                       {
@@ -27868,9 +27856,6 @@
                     "type": "number"
                   },
                   "createdAt": {
-                    "type": "string"
-                  },
-                  "environmentId": {
                     "type": "string"
                   },
                   "replicaSets": {
@@ -30692,9 +30677,6 @@
                     "type": "number"
                   },
                   "createdAt": {
-                    "type": "string"
-                  },
-                  "environmentId": {
                     "type": "string"
                   },
                   "networkIds": {
@@ -38048,9 +38030,6 @@
                   "createdAt": {
                     "type": "string"
                   },
-                  "environmentId": {
-                    "type": "string"
-                  },
                   "networkIds": {
                     "anyOf": [
                       {
@@ -39805,12 +39784,6 @@
                       "string",
                       "null"
                     ]
-                  },
-                  "createdAt": {
-                    "type": "string"
-                  },
-                  "organizationId": {
-                    "type": "string"
                   },
                   "env": {
                     "type": "string"
@@ -41855,9 +41828,6 @@
                   },
                   "replicas": {
                     "type": "number"
-                  },
-                  "environmentId": {
-                    "type": "string"
                   },
                   "networkIds": {
                     "anyOf": [
@@ -65768,9 +65738,6 @@
                     "minLength": 1
                   },
                   "description": {
-                    "type": "string"
-                  },
-                  "projectId": {
                     "type": "string"
                   },
                   "env": {
