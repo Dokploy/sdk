@@ -53688,36 +53688,14 @@
               "schema": {
                 "type": "object",
                 "properties": {
-                  "id": {
-                    "type": "string",
-                    "minLength": 1
-                  },
-                  "firstName": {
-                    "type": "string"
-                  },
-                  "lastName": {
-                    "type": "string"
-                  },
-                  "isRegistered": {
-                    "type": "boolean"
-                  },
-                  "expirationDate": {
-                    "type": "string"
-                  },
-                  "createdAt2": {
-                    "type": "string"
-                  },
-                  "createdAt": {
+                  "image": {
                     "type": [
                       "string",
                       "null"
                     ]
                   },
-                  "twoFactorEnabled": {
-                    "type": [
-                      "boolean",
-                      "null"
-                    ]
+                  "allowImpersonation": {
+                    "type": "boolean"
                   },
                   "email": {
                     "type": "string",
@@ -53725,73 +53703,16 @@
                     "format": "email",
                     "pattern": "^(?:[A-Za-z0-9_'+\\-]+\\.)*[A-Za-z0-9_'+\\-]*[A-Za-z0-9_+-]@(?:[A-Za-z0-9][A-Za-z0-9\\-]*\\.)+[A-Za-z]{2,}$"
                   },
-                  "emailVerified": {
-                    "type": "boolean"
-                  },
-                  "image": {
-                    "type": [
-                      "string",
-                      "null"
-                    ]
-                  },
-                  "banned": {
-                    "type": [
-                      "boolean",
-                      "null"
-                    ]
-                  },
-                  "banReason": {
-                    "type": [
-                      "string",
-                      "null"
-                    ]
-                  },
-                  "banExpires": {
-                    "type": [
-                      "string",
-                      "null"
-                    ]
-                  },
-                  "updatedAt": {
-                    "type": "string"
-                  },
-                  "enablePaidFeatures": {
-                    "type": "boolean"
-                  },
-                  "allowImpersonation": {
-                    "type": "boolean"
-                  },
-                  "enableEnterpriseFeatures": {
-                    "type": "boolean"
-                  },
-                  "licenseKey": {
-                    "type": [
-                      "string",
-                      "null"
-                    ]
-                  },
-                  "stripeCustomerId": {
-                    "type": [
-                      "string",
-                      "null"
-                    ]
-                  },
-                  "stripeSubscriptionId": {
-                    "type": [
-                      "string",
-                      "null"
-                    ]
-                  },
-                  "serversQuantity": {
-                    "type": "number"
-                  },
-                  "sendInvoiceNotifications": {
-                    "type": "boolean"
-                  },
                   "password": {
                     "type": "string"
                   },
                   "currentPassword": {
+                    "type": "string"
+                  },
+                  "firstName": {
+                    "type": "string"
+                  },
+                  "lastName": {
                     "type": "string"
                   }
                 }
