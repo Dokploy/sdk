@@ -28899,10 +28899,6 @@
               "schema": {
                 "type": "object",
                 "properties": {
-                  "mountId": {
-                    "type": "string",
-                    "minLength": 1
-                  },
                   "type": {
                     "type": "string",
                     "enum": [
@@ -28923,82 +28919,25 @@
                       "null"
                     ]
                   },
-                  "filePath": {
-                    "type": [
-                      "string",
-                      "null"
-                    ]
-                  },
                   "content": {
                     "type": [
                       "string",
                       "null"
                     ]
                   },
-                  "serviceType": {
-                    "type": "string",
-                    "enum": [
-                      "application",
-                      "postgres",
-                      "mysql",
-                      "mariadb",
-                      "mongo",
-                      "redis",
-                      "compose",
-                      "libsql"
-                    ]
-                  },
                   "mountPath": {
                     "type": "string",
                     "minLength": 1
                   },
-                  "applicationId": {
+                  "filePath": {
                     "type": [
                       "string",
                       "null"
                     ]
                   },
-                  "composeId": {
-                    "type": [
-                      "string",
-                      "null"
-                    ]
-                  },
-                  "libsqlId": {
-                    "type": [
-                      "string",
-                      "null"
-                    ]
-                  },
-                  "mariadbId": {
-                    "type": [
-                      "string",
-                      "null"
-                    ]
-                  },
-                  "mongoId": {
-                    "type": [
-                      "string",
-                      "null"
-                    ]
-                  },
-                  "mysqlId": {
-                    "type": [
-                      "string",
-                      "null"
-                    ]
-                  },
-                  "postgresId": {
-                    "type": [
-                      "string",
-                      "null"
-                    ]
-                  },
-                  "redisId": {
-                    "type": [
-                      "string",
-                      "null"
-                    ]
+                  "mountId": {
+                    "type": "string",
+                    "minLength": 1
                   },
                   "expectedContent": {
                     "type": [
