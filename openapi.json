@@ -1216,21 +1216,57 @@
                     ]
                   },
                   "dockerBuildStage": {
-                    "type": [
-                      "string",
-                      "null"
+                    "anyOf": [
+                      {
+                        "anyOf": [
+                          {
+                            "type": "string",
+                            "pattern": "^([a-zA-Z0-9][a-zA-Z0-9._-]*)?$"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "null"
+                      }
                     ]
                   },
                   "herokuVersion": {
-                    "type": [
-                      "string",
-                      "null"
+                    "anyOf": [
+                      {
+                        "anyOf": [
+                          {
+                            "type": "string",
+                            "pattern": "^([a-zA-Z0-9][a-zA-Z0-9._-]*)?$"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "null"
+                      }
                     ]
                   },
                   "railpackVersion": {
-                    "type": [
-                      "string",
-                      "null"
+                    "anyOf": [
+                      {
+                        "anyOf": [
+                          {
+                            "type": "string",
+                            "pattern": "^([a-zA-Z0-9][a-zA-Z0-9._-]*)?$"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "null"
+                      }
                     ]
                   },
                   "publishDirectory": {
@@ -2767,9 +2803,21 @@
                     ]
                   },
                   "dockerBuildStage": {
-                    "type": [
-                      "string",
-                      "null"
+                    "anyOf": [
+                      {
+                        "anyOf": [
+                          {
+                            "type": "string",
+                            "pattern": "^([a-zA-Z0-9][a-zA-Z0-9._-]*)?$"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "null"
+                      }
                     ]
                   },
                   "dropBuildPath": {
@@ -3232,15 +3280,39 @@
                     ]
                   },
                   "railpackVersion": {
-                    "type": [
-                      "string",
-                      "null"
+                    "anyOf": [
+                      {
+                        "anyOf": [
+                          {
+                            "type": "string",
+                            "pattern": "^([a-zA-Z0-9][a-zA-Z0-9._-]*)?$"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "null"
+                      }
                     ]
                   },
                   "herokuVersion": {
-                    "type": [
-                      "string",
-                      "null"
+                    "anyOf": [
+                      {
+                        "anyOf": [
+                          {
+                            "type": "string",
+                            "pattern": "^([a-zA-Z0-9][a-zA-Z0-9._-]*)?$"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "null"
+                      }
                     ]
                   },
                   "publishDirectory": {
@@ -17687,7 +17759,8 @@
                     "anyOf": [
                       {
                         "type": "string",
-                        "minLength": 1
+                        "minLength": 1,
+                        "pattern": "^(\\/[^`\\s$]*)?$"
                       },
                       {
                         "type": "null"
@@ -17769,9 +17842,14 @@
                     ]
                   },
                   "internalPath": {
-                    "type": [
-                      "string",
-                      "null"
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "pattern": "^(\\/[^`\\s$]*)?$"
+                      },
+                      {
+                        "type": "null"
+                      }
                     ]
                   },
                   "stripPath": {
@@ -18236,7 +18314,8 @@
                     "anyOf": [
                       {
                         "type": "string",
-                        "minLength": 1
+                        "minLength": 1,
+                        "pattern": "^(\\/[^`\\s$]*)?$"
                       },
                       {
                         "type": "null"
@@ -18300,9 +18379,14 @@
                     ]
                   },
                   "internalPath": {
-                    "type": [
-                      "string",
-                      "null"
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "pattern": "^(\\/[^`\\s$]*)?$"
+                      },
+                      {
+                        "type": "null"
+                      }
                     ]
                   },
                   "stripPath": {
