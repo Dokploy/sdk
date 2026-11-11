@@ -64735,13 +64735,22 @@
                       "libsql"
                     ]
                   },
-                  "appName": {
-                    "type": "string"
-                  },
                   "serviceName": {
-                    "type": [
-                      "string",
-                      "null"
+                    "anyOf": [
+                      {
+                        "anyOf": [
+                          {
+                            "type": "string",
+                            "pattern": "^[a-zA-Z0-9._-]*$"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "null"
+                      }
                     ]
                   },
                   "turnOff": {
@@ -65101,13 +65110,22 @@
                       "libsql"
                     ]
                   },
-                  "appName": {
-                    "type": "string"
-                  },
                   "serviceName": {
-                    "type": [
-                      "string",
-                      "null"
+                    "anyOf": [
+                      {
+                        "anyOf": [
+                          {
+                            "type": "string",
+                            "pattern": "^[a-zA-Z0-9._-]*$"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "null"
+                      }
                     ]
                   },
                   "turnOff": {
