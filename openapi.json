@@ -63676,9 +63676,6 @@
                   "cronExpression": {
                     "type": "string"
                   },
-                  "appName": {
-                    "type": "string"
-                  },
                   "serviceName": {
                     "type": [
                       "string",
@@ -63723,12 +63720,6 @@
                     ]
                   },
                   "serverId": {
-                    "type": [
-                      "string",
-                      "null"
-                    ]
-                  },
-                  "organizationId": {
                     "type": [
                       "string",
                       "null"
@@ -63847,9 +63838,6 @@
                   "cronExpression": {
                     "type": "string"
                   },
-                  "appName": {
-                    "type": "string"
-                  },
                   "serviceName": {
                     "type": [
                       "string",
@@ -63894,12 +63882,6 @@
                     ]
                   },
                   "serverId": {
-                    "type": [
-                      "string",
-                      "null"
-                    ]
-                  },
-                  "organizationId": {
                     "type": [
                       "string",
                       "null"
