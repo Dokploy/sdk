@@ -42774,18 +42774,11 @@
                   "registryUrl": {
                     "type": "string"
                   },
-                  "createdAt": {
-                    "type": "string"
-                  },
                   "registryType": {
                     "type": "string",
                     "enum": [
                       "cloud"
                     ]
-                  },
-                  "organizationId": {
-                    "type": "string",
-                    "minLength": 1
                   },
                   "serverId": {
                     "type": "string"
